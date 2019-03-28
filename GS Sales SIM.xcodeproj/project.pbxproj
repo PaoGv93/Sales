@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		022D2CCE224D51C300C9BC65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D2CCD224D51C300C9BC65 /* AppDelegate.swift */; };
+		022D2CD0224D51C300C9BC65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D2CCF224D51C300C9BC65 /* ViewController.swift */; };
+		022D2CD3224D51C300C9BC65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022D2CD1224D51C300C9BC65 /* Main.storyboard */; };
+		022D2CD5224D51C300C9BC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 022D2CD4224D51C300C9BC65 /* Assets.xcassets */; };
+		022D2CD8224D51C300C9BC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022D2CD6224D51C300C9BC65 /* LaunchScreen.storyboard */; };
+		022D2CE3224D51C300C9BC65 /* GS_Sales_SIMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D2CE2224D51C300C9BC65 /* GS_Sales_SIMTests.swift */; };
+		022D2CEE224D51C400C9BC65 /* GS_Sales_SIMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D2CED224D51C400C9BC65 /* GS_Sales_SIMUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		022D2CDF224D51C300C9BC65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022D2CC2224D51C300C9BC65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 022D2CC9224D51C300C9BC65;
+			remoteInfo = "GS Sales SIM";
+		};
+		022D2CEA224D51C300C9BC65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 022D2CC2224D51C300C9BC65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 022D2CC9224D51C300C9BC65;
+			remoteInfo = "GS Sales SIM";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		022D2CCA224D51C300C9BC65 /* GS Sales SIM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GS Sales SIM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		022D2CCD224D51C300C9BC65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		022D2CCF224D51C300C9BC65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		022D2CD2224D51C300C9BC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		022D2CD4224D51C300C9BC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		022D2CD7224D51C300C9BC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		022D2CD9224D51C300C9BC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		022D2CDE224D51C300C9BC65 /* GS Sales SIMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GS Sales SIMTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		022D2CE2224D51C300C9BC65 /* GS_Sales_SIMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GS_Sales_SIMTests.swift; sourceTree = "<group>"; };
+		022D2CE4224D51C300C9BC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		022D2CE9224D51C300C9BC65 /* GS Sales SIMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GS Sales SIMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		022D2CED224D51C400C9BC65 /* GS_Sales_SIMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GS_Sales_SIMUITests.swift; sourceTree = "<group>"; };
+		022D2CEF224D51C400C9BC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		022D2CC7224D51C300C9BC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		022D2CDB224D51C300C9BC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		022D2CE6224D51C300C9BC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		022D2CC1224D51C300C9BC65 = {
+			isa = PBXGroup;
+			children = (
+				022D2CCC224D51C300C9BC65 /* GS Sales SIM */,
+				022D2CE1224D51C300C9BC65 /* GS Sales SIMTests */,
+				022D2CEC224D51C400C9BC65 /* GS Sales SIMUITests */,
+				022D2CCB224D51C300C9BC65 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		022D2CCB224D51C300C9BC65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				022D2CCA224D51C300C9BC65 /* GS Sales SIM.app */,
+				022D2CDE224D51C300C9BC65 /* GS Sales SIMTests.xctest */,
+				022D2CE9224D51C300C9BC65 /* GS Sales SIMUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		022D2CCC224D51C300C9BC65 /* GS Sales SIM */ = {
+			isa = PBXGroup;
+			children = (
+				022D2CCD224D51C300C9BC65 /* AppDelegate.swift */,
+				022D2CCF224D51C300C9BC65 /* ViewController.swift */,
+				022D2CD1224D51C300C9BC65 /* Main.storyboard */,
+				022D2CD4224D51C300C9BC65 /* Assets.xcassets */,
+				022D2CD6224D51C300C9BC65 /* LaunchScreen.storyboard */,
+				022D2CD9224D51C300C9BC65 /* Info.plist */,
+			);
+			path = "GS Sales SIM";
+			sourceTree = "<group>";
+		};
+		022D2CE1224D51C300C9BC65 /* GS Sales SIMTests */ = {
+			isa = PBXGroup;
+			children = (
+				022D2CE2224D51C300C9BC65 /* GS_Sales_SIMTests.swift */,
+				022D2CE4224D51C300C9BC65 /* Info.plist */,
+			);
+			path = "GS Sales SIMTests";
+			sourceTree = "<group>";
+		};
+		022D2CEC224D51C400C9BC65 /* GS Sales SIMUITests */ = {
+			isa = PBXGroup;
+			children = (
+				022D2CED224D51C400C9BC65 /* GS_Sales_SIMUITests.swift */,
+				022D2CEF224D51C400C9BC65 /* Info.plist */,
+			);
+			path = "GS Sales SIMUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		022D2CC9224D51C300C9BC65 /* GS Sales SIM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 022D2CF2224D51C400C9BC65 /* Build configuration list for PBXNativeTarget "GS Sales SIM" */;
+			buildPhases = (
+				022D2CC6224D51C300C9BC65 /* Sources */,
+				022D2CC7224D51C300C9BC65 /* Frameworks */,
+				022D2CC8224D51C300C9BC65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GS Sales SIM";
+			productName = "GS Sales SIM";
+			productReference = 022D2CCA224D51C300C9BC65 /* GS Sales SIM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		022D2CDD224D51C300C9BC65 /* GS Sales SIMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 022D2CF5224D51C400C9BC65 /* Build configuration list for PBXNativeTarget "GS Sales SIMTests" */;
+			buildPhases = (
+				022D2CDA224D51C300C9BC65 /* Sources */,
+				022D2CDB224D51C300C9BC65 /* Frameworks */,
+				022D2CDC224D51C300C9BC65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				022D2CE0224D51C300C9BC65 /* PBXTargetDependency */,
+			);
+			name = "GS Sales SIMTests";
+			productName = "GS Sales SIMTests";
+			productReference = 022D2CDE224D51C300C9BC65 /* GS Sales SIMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		022D2CE8224D51C300C9BC65 /* GS Sales SIMUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 022D2CF8224D51C400C9BC65 /* Build configuration list for PBXNativeTarget "GS Sales SIMUITests" */;
+			buildPhases = (
+				022D2CE5224D51C300C9BC65 /* Sources */,
+				022D2CE6224D51C300C9BC65 /* Frameworks */,
+				022D2CE7224D51C300C9BC65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				022D2CEB224D51C300C9BC65 /* PBXTargetDependency */,
+			);
+			name = "GS Sales SIMUITests";
+			productName = "GS Sales SIMUITests";
+			productReference = 022D2CE9224D51C300C9BC65 /* GS Sales SIMUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		022D2CC2224D51C300C9BC65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Paola Garzón";
+				TargetAttributes = {
+					022D2CC9224D51C300C9BC65 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+					022D2CDD224D51C300C9BC65 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 022D2CC9224D51C300C9BC65;
+					};
+					022D2CE8224D51C300C9BC65 = {
+						CreatedOnToolsVersion = 10.2;
+						TestTargetID = 022D2CC9224D51C300C9BC65;
+					};
+				};
+			};
+			buildConfigurationList = 022D2CC5224D51C300C9BC65 /* Build configuration list for PBXProject "GS Sales SIM" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 022D2CC1224D51C300C9BC65;
+			productRefGroup = 022D2CCB224D51C300C9BC65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				022D2CC9224D51C300C9BC65 /* GS Sales SIM */,
+				022D2CDD224D51C300C9BC65 /* GS Sales SIMTests */,
+				022D2CE8224D51C300C9BC65 /* GS Sales SIMUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		022D2CC8224D51C300C9BC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				022D2CD8224D51C300C9BC65 /* LaunchScreen.storyboard in Resources */,
+				022D2CD5224D51C300C9BC65 /* Assets.xcassets in Resources */,
+				022D2CD3224D51C300C9BC65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		022D2CDC224D51C300C9BC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		022D2CE7224D51C300C9BC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		022D2CC6224D51C300C9BC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				022D2CD0224D51C300C9BC65 /* ViewController.swift in Sources */,
+				022D2CCE224D51C300C9BC65 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		022D2CDA224D51C300C9BC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				022D2CE3224D51C300C9BC65 /* GS_Sales_SIMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		022D2CE5224D51C300C9BC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				022D2CEE224D51C400C9BC65 /* GS_Sales_SIMUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		022D2CE0224D51C300C9BC65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 022D2CC9224D51C300C9BC65 /* GS Sales SIM */;
+			targetProxy = 022D2CDF224D51C300C9BC65 /* PBXContainerItemProxy */;
+		};
+		022D2CEB224D51C300C9BC65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 022D2CC9224D51C300C9BC65 /* GS Sales SIM */;
+			targetProxy = 022D2CEA224D51C300C9BC65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		022D2CD1224D51C300C9BC65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				022D2CD2224D51C300C9BC65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		022D2CD6224D51C300C9BC65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				022D2CD7224D51C300C9BC65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		022D2CF0224D51C400C9BC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		022D2CF1224D51C400C9BC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		022D2CF3224D51C400C9BC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GS Sales SIM/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "a.GS-Sales-SIM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		022D2CF4224D51C400C9BC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GS Sales SIM/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "a.GS-Sales-SIM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		022D2CF6224D51C400C9BC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GS Sales SIMTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "a.GS-Sales-SIMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GS Sales SIM.app/GS Sales SIM";
+			};
+			name = Debug;
+		};
+		022D2CF7224D51C400C9BC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GS Sales SIMTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "a.GS-Sales-SIMTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GS Sales SIM.app/GS Sales SIM";
+			};
+			name = Release;
+		};
+		022D2CF9224D51C400C9BC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GS Sales SIMUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "a.GS-Sales-SIMUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GS Sales SIM";
+			};
+			name = Debug;
+		};
+		022D2CFA224D51C400C9BC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GS Sales SIMUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "a.GS-Sales-SIMUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GS Sales SIM";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		022D2CC5224D51C300C9BC65 /* Build configuration list for PBXProject "GS Sales SIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				022D2CF0224D51C400C9BC65 /* Debug */,
+				022D2CF1224D51C400C9BC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		022D2CF2224D51C400C9BC65 /* Build configuration list for PBXNativeTarget "GS Sales SIM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				022D2CF3224D51C400C9BC65 /* Debug */,
+				022D2CF4224D51C400C9BC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		022D2CF5224D51C400C9BC65 /* Build configuration list for PBXNativeTarget "GS Sales SIMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				022D2CF6224D51C400C9BC65 /* Debug */,
+				022D2CF7224D51C400C9BC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		022D2CF8224D51C400C9BC65 /* Build configuration list for PBXNativeTarget "GS Sales SIMUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				022D2CF9224D51C400C9BC65 /* Debug */,
+				022D2CFA224D51C400C9BC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 022D2CC2224D51C300C9BC65 /* Project object */;
+}
