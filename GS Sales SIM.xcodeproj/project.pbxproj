@@ -14,6 +14,15 @@
 		022D2CD8224D51C300C9BC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022D2CD6224D51C300C9BC65 /* LaunchScreen.storyboard */; };
 		022D2CE3224D51C300C9BC65 /* GS_Sales_SIMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D2CE2224D51C300C9BC65 /* GS_Sales_SIMTests.swift */; };
 		022D2CEE224D51C400C9BC65 /* GS_Sales_SIMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D2CED224D51C400C9BC65 /* GS_Sales_SIMUITests.swift */; };
+		02635540225BDF6E00687E08 /* SegundoCuadranteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0263553F225BDF6E00687E08 /* SegundoCuadranteViewController.swift */; };
+		02635542225BDF9E00687E08 /* PrimerCuadranteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02635541225BDF9E00687E08 /* PrimerCuadranteViewController.swift */; };
+		02635544225BDFBF00687E08 /* TercerCuadranteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02635543225BDFBF00687E08 /* TercerCuadranteViewController.swift */; };
+		02635546225BDFD800687E08 /* CuartoCuadranteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02635545225BDFD800687E08 /* CuartoCuadranteViewController.swift */; };
+		02635548225BDFFB00687E08 /* FinalPracticaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02635547225BDFFB00687E08 /* FinalPracticaViewController.swift */; };
+		0263554A225BE00700687E08 /* FinalRegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02635549225BE00700687E08 /* FinalRegistroViewController.swift */; };
+		A9C4134CEECDE1686DD49EE7 /* Pods_GS_Sales_SIMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFEEE5DF6FFE0894DCC7E133 /* Pods_GS_Sales_SIMUITests.framework */; };
+		C67EC5F997AAD25FD8482FE6 /* Pods_GS_Sales_SIM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 360DF77A588EC3B45E54B4EE /* Pods_GS_Sales_SIM.framework */; };
+		D94E8C5F210BDB410A5D736B /* Pods_GS_Sales_SIMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463F5C74FEDE2A1F56C57D57 /* Pods_GS_Sales_SIMTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +56,21 @@
 		022D2CE9224D51C300C9BC65 /* GS Sales SIMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GS Sales SIMUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		022D2CED224D51C400C9BC65 /* GS_Sales_SIMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GS_Sales_SIMUITests.swift; sourceTree = "<group>"; };
 		022D2CEF224D51C400C9BC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0263553F225BDF6E00687E08 /* SegundoCuadranteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegundoCuadranteViewController.swift; sourceTree = "<group>"; };
+		02635541225BDF9E00687E08 /* PrimerCuadranteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimerCuadranteViewController.swift; sourceTree = "<group>"; };
+		02635543225BDFBF00687E08 /* TercerCuadranteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TercerCuadranteViewController.swift; sourceTree = "<group>"; };
+		02635545225BDFD800687E08 /* CuartoCuadranteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuartoCuadranteViewController.swift; sourceTree = "<group>"; };
+		02635547225BDFFB00687E08 /* FinalPracticaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalPracticaViewController.swift; sourceTree = "<group>"; };
+		02635549225BE00700687E08 /* FinalRegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalRegistroViewController.swift; sourceTree = "<group>"; };
+		360DF77A588EC3B45E54B4EE /* Pods_GS_Sales_SIM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GS_Sales_SIM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		463F5C74FEDE2A1F56C57D57 /* Pods_GS_Sales_SIMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GS_Sales_SIMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FEDFA65B05905F4AA7C8729 /* Pods-GS Sales SIM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GS Sales SIM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GS Sales SIM/Pods-GS Sales SIM.debug.xcconfig"; sourceTree = "<group>"; };
+		686ADEB0469799966C7C48A1 /* Pods-GS Sales SIMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GS Sales SIMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GS Sales SIMTests/Pods-GS Sales SIMTests.release.xcconfig"; sourceTree = "<group>"; };
+		81530B4BF4C173EA8856D9B3 /* Pods-GS Sales SIMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GS Sales SIMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GS Sales SIMTests/Pods-GS Sales SIMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BFEEE5DF6FFE0894DCC7E133 /* Pods_GS_Sales_SIMUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GS_Sales_SIMUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB753F4E7EC0315AFC96B66E /* Pods-GS Sales SIMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GS Sales SIMUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GS Sales SIMUITests/Pods-GS Sales SIMUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF43146AF8A595D31AE07205 /* Pods-GS Sales SIM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GS Sales SIM.release.xcconfig"; path = "Pods/Target Support Files/Pods-GS Sales SIM/Pods-GS Sales SIM.release.xcconfig"; sourceTree = "<group>"; };
+		F9A81374D3B4CEE49B659329 /* Pods-GS Sales SIMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GS Sales SIMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GS Sales SIMUITests/Pods-GS Sales SIMUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67EC5F997AAD25FD8482FE6 /* Pods_GS_Sales_SIM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94E8C5F210BDB410A5D736B /* Pods_GS_Sales_SIMTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C4134CEECDE1686DD49EE7 /* Pods_GS_Sales_SIMUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +108,8 @@
 				022D2CE1224D51C300C9BC65 /* GS Sales SIMTests */,
 				022D2CEC224D51C400C9BC65 /* GS Sales SIMUITests */,
 				022D2CCB224D51C300C9BC65 /* Products */,
+				89330A8F4F876D262F5F6DB8 /* Pods */,
+				E80CFC48CB96173554951548 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +129,12 @@
 				022D2CCD224D51C300C9BC65 /* AppDelegate.swift */,
 				022D2CCF224D51C300C9BC65 /* ViewController.swift */,
 				022D2CD1224D51C300C9BC65 /* Main.storyboard */,
+				02635547225BDFFB00687E08 /* FinalPracticaViewController.swift */,
+				02635549225BE00700687E08 /* FinalRegistroViewController.swift */,
+				02635545225BDFD800687E08 /* CuartoCuadranteViewController.swift */,
+				02635543225BDFBF00687E08 /* TercerCuadranteViewController.swift */,
+				02635541225BDF9E00687E08 /* PrimerCuadranteViewController.swift */,
+				0263553F225BDF6E00687E08 /* SegundoCuadranteViewController.swift */,
 				022D2CD4224D51C300C9BC65 /* Assets.xcassets */,
 				022D2CD6224D51C300C9BC65 /* LaunchScreen.storyboard */,
 				022D2CD9224D51C300C9BC65 /* Info.plist */,
@@ -125,6 +160,29 @@
 			path = "GS Sales SIMUITests";
 			sourceTree = "<group>";
 		};
+		89330A8F4F876D262F5F6DB8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FEDFA65B05905F4AA7C8729 /* Pods-GS Sales SIM.debug.xcconfig */,
+				EF43146AF8A595D31AE07205 /* Pods-GS Sales SIM.release.xcconfig */,
+				81530B4BF4C173EA8856D9B3 /* Pods-GS Sales SIMTests.debug.xcconfig */,
+				686ADEB0469799966C7C48A1 /* Pods-GS Sales SIMTests.release.xcconfig */,
+				EB753F4E7EC0315AFC96B66E /* Pods-GS Sales SIMUITests.debug.xcconfig */,
+				F9A81374D3B4CEE49B659329 /* Pods-GS Sales SIMUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E80CFC48CB96173554951548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				360DF77A588EC3B45E54B4EE /* Pods_GS_Sales_SIM.framework */,
+				463F5C74FEDE2A1F56C57D57 /* Pods_GS_Sales_SIMTests.framework */,
+				BFEEE5DF6FFE0894DCC7E133 /* Pods_GS_Sales_SIMUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +190,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 022D2CF2224D51C400C9BC65 /* Build configuration list for PBXNativeTarget "GS Sales SIM" */;
 			buildPhases = (
+				36805C81B7A8D1B7561254BA /* [CP] Check Pods Manifest.lock */,
 				022D2CC6224D51C300C9BC65 /* Sources */,
 				022D2CC7224D51C300C9BC65 /* Frameworks */,
 				022D2CC8224D51C300C9BC65 /* Resources */,
+				2D59FBD13862F0BD4F22A1C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -149,6 +209,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 022D2CF5224D51C400C9BC65 /* Build configuration list for PBXNativeTarget "GS Sales SIMTests" */;
 			buildPhases = (
+				D3A9A86E8949DD79DED63D1B /* [CP] Check Pods Manifest.lock */,
 				022D2CDA224D51C300C9BC65 /* Sources */,
 				022D2CDB224D51C300C9BC65 /* Frameworks */,
 				022D2CDC224D51C300C9BC65 /* Resources */,
@@ -167,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 022D2CF8224D51C400C9BC65 /* Build configuration list for PBXNativeTarget "GS Sales SIMUITests" */;
 			buildPhases = (
+				79190610379CEC64D323D26A /* [CP] Check Pods Manifest.lock */,
 				022D2CE5224D51C300C9BC65 /* Sources */,
 				022D2CE6224D51C300C9BC65 /* Frameworks */,
 				022D2CE7224D51C300C9BC65 /* Resources */,
@@ -251,13 +313,94 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2D59FBD13862F0BD4F22A1C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GS Sales SIM/Pods-GS Sales SIM-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GS Sales SIM/Pods-GS Sales SIM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36805C81B7A8D1B7561254BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GS Sales SIM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79190610379CEC64D323D26A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GS Sales SIMUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3A9A86E8949DD79DED63D1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GS Sales SIMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		022D2CC6224D51C300C9BC65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02635548225BDFFB00687E08 /* FinalPracticaViewController.swift in Sources */,
 				022D2CD0224D51C300C9BC65 /* ViewController.swift in Sources */,
+				02635540225BDF6E00687E08 /* SegundoCuadranteViewController.swift in Sources */,
+				02635546225BDFD800687E08 /* CuartoCuadranteViewController.swift in Sources */,
+				0263554A225BE00700687E08 /* FinalRegistroViewController.swift in Sources */,
 				022D2CCE224D51C300C9BC65 /* AppDelegate.swift in Sources */,
+				02635542225BDF9E00687E08 /* PrimerCuadranteViewController.swift in Sources */,
+				02635544225BDFBF00687E08 /* TercerCuadranteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +573,7 @@
 		};
 		022D2CF3224D51C400C9BC65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FEDFA65B05905F4AA7C8729 /* Pods-GS Sales SIM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +591,7 @@
 		};
 		022D2CF4224D51C400C9BC65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF43146AF8A595D31AE07205 /* Pods-GS Sales SIM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -464,6 +609,7 @@
 		};
 		022D2CF6224D51C400C9BC65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81530B4BF4C173EA8856D9B3 /* Pods-GS Sales SIMTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -484,6 +630,7 @@
 		};
 		022D2CF7224D51C400C9BC65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686ADEB0469799966C7C48A1 /* Pods-GS Sales SIMTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -504,6 +651,7 @@
 		};
 		022D2CF9224D51C400C9BC65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB753F4E7EC0315AFC96B66E /* Pods-GS Sales SIMUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -523,6 +671,7 @@
 		};
 		022D2CFA224D51C400C9BC65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9A81374D3B4CEE49B659329 /* Pods-GS Sales SIMUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

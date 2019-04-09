@@ -1,0 +1,6 @@
+framework module Pods_GS_Sales_SIMTests {
+  umbrella header "Pods-GS Sales SIMTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
