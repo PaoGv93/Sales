@@ -15,33 +15,43 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
+    
     
     //VALIDACION DE SELECCION DE NOMBRE
     @IBAction func Practica(_ sender: Any) {
         
         //valor para saber si selecciono una empresa o en caso contrario manda alerta
-        if (rfc.text == "" || rfc.text == nil){
             performSegue(withIdentifier: "primerCuadrante", sender: self)
-        }
-        else{
-            let alert = UIAlertController(title: "Error", message: "Necesitas seleccionar la empresa para avanzar", preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
-            
-            self.present(alert, animated: true)
-        }
 
     }
     
     @IBAction func Registro(_ sender: Any) {
         //valor para saber si selecciono una empresa o en caso contrario manda alerta
-        if (rfc.text == "" || rfc.text == nil){
+        if let text = rfc.text, !text.isEmpty {
             performSegue(withIdentifier: "primerCuadrante", sender: self)
         }
         else{
-            let alert = UIAlertController(title: "Error", message: "Necesitas seleccionar la empresa para avanzar", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Error", message: "Necesitas escribir tu RFC para avanzar", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
             
@@ -50,6 +60,4 @@ class ViewController: UIViewController {
 
     }
     
-    
 }
-

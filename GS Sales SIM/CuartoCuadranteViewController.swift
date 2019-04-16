@@ -14,24 +14,27 @@ class CuartoCuadranteViewController: UIViewController {
     @IBOutlet weak var radarChartView: RadarChartView!
     @IBOutlet weak var barChart: BarChartView!
     
-    //los valores son los mismos parar las dos graficas
-    let months = ["January", "Febrary", "March", "April", "May"]
-    let unitsSold = [30.0, 50.0, 100.0, 75.0, 85.0]
+    //valores para grafica de radar
+    let nombresRadarChart = ["C1", "C2", "C3"]
+    let valoresRadarChart = [30.0, 50.0, 90.0]
+    
+    //valores para grafica de barras
+    let nombresBarChart = ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10", "p11", "p12"]
+    let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setRadarChart(dataPoints: months, values: unitsSold)
+        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
         let  xAxis : XAxis = self.radarChartView.xAxis
         xAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 14.0)!
         let  yAxis : YAxis = self.radarChartView.yAxis
         yAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 10.0)!
         
-        
         axisFormatDelegate = self as? IAxisValueFormatter
-        setBarChart(dataEntryX: months, dataEntryY: unitsSold)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
     }
     
     
@@ -44,7 +47,7 @@ class CuartoCuadranteViewController: UIViewController {
             let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
             dataEntries.append(dataEntry)
         }
-        let chartDataSet = RadarChartDataSet(values: dataEntries, label: "Units Sold")
+        let chartDataSet = RadarChartDataSet(values: dataEntries, label: "valores")
         
         //Options of radarChart
         radarChartView.sizeToFit()
@@ -53,8 +56,8 @@ class CuartoCuadranteViewController: UIViewController {
         //Options for the axis from here. The range is 0-100, the interval is 10
         radarChartView.yAxis.forceLabelsEnabled = true
         radarChartView.yAxis.labelCount = 10
+        radarChartView.yAxis.axisMinimum = 0.0
         radarChartView.yAxis.axisMaximum = 80.0
-        radarChartView.yAxis.axisMinimum = 0
         radarChartView.yAxis.drawLabelsEnabled = true
         
         radarChartView.rotationEnabled = false
@@ -65,12 +68,12 @@ class CuartoCuadranteViewController: UIViewController {
         numberFormatter.generatesDecimalNumbers = false
         chartDataSet.valueFormatter = numberFormatter as? IValueFormatter
         radarChartView.yAxis.valueFormatter = numberFormatter as? IAxisValueFormatter
-        radarChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:months)
+        radarChartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:nombresRadarChart)
         
         //Other options
         radarChartView.legend.enabled = false
         radarChartView.yAxis.gridAntialiasEnabled = true
-        radarChartView.animate(yAxisDuration: 1.0)
+        radarChartView.animate(yAxisDuration: 2.0)
         
         let chartData = RadarChartData(dataSet: chartDataSet)
         chartData.labels = dataPoints
@@ -79,21 +82,31 @@ class CuartoCuadranteViewController: UIViewController {
     
     
     //Funcion de la barChart
-    func setBarChart(dataEntryX forX:[String],dataEntryY forY: [Double]) {
+    func setBarChart(dataPoints: [String], values: [Double]) {
+        
         barChart.noDataText = "You need to provide data for the chart."
         
         var dataEntries:[BarChartDataEntry] = []
-        for i in 0..<forX.count{
-            let dataEntry = BarChartDataEntry(x: Double(i), y: Double(forY[i]) , data: months as AnyObject?)
+        
+        for i in 0..<dataPoints.count {
+            let dataEntry = BarChartDataEntry(x: Double(i), yValues: [Double(values[i])])
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Units Sold")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "valores")
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
-        let xAxisValue = barChart.xAxis
-        xAxisValue.valueFormatter = axisFormatDelegate
+        
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
+        barChart.xAxis.granularity = 1
+        
+        //quita labels de arriba
+        barChart.xAxis.labelPosition = .bottom
+        barChart.legend.enabled = false
+        //quitar highlight si se toca la barra
+        barChart.highlighter = nil
+        //Quita los numeros de lado derecho
+        barChart.rightAxis.enabled = false
     }
-    
     
 }
