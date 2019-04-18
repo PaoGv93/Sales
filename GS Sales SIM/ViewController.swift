@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     //VALIDACION DE SELECCION DE NOMBRE
     @IBAction func Practica(_ sender: Any) {
         
