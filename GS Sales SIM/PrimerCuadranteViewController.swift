@@ -13,7 +13,7 @@ class PrimerCuadranteViewController: UIViewController {
 
     @IBOutlet weak var radarChart: RadarChartView!
     @IBOutlet weak var barChart: BarChartView!
-    @IBOutlet weak var recomendaciones: UILabel!
+    @IBOutlet weak var recomendaciones: UITextView!
     
     //recomendaciones
     var arrayRecomendaciones = ["", "", "", "", "", "", "", "", "", "", "", "", ""]
@@ -58,7 +58,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "Es importante para obtener información valiosa del prospecto, comprender mejor sus necesidades, quien es, que es importante para el, y como ofrecerle eso que esta necesitando. \n"
+            arrayRecomendaciones[0] = "Es importante para obtener información valiosa del prospecto, comprender mejor sus necesidades, quien es, que es importante para el, y como ofrecerle eso que esta necesitando. \n\n"
             updateRecomendaciones()
         }
     }
@@ -70,7 +70,7 @@ class PrimerCuadranteViewController: UIViewController {
 
         }
         else{
-            arrayRecomendaciones[1] = "Es indispensable para hablar el mismo idioma en relación a las necesidades de su negocio. Conociendolo, es como aseguramos que el vea el valor de nuestro producto. \n"
+            arrayRecomendaciones[1] = "Es indispensable para hablar el mismo idioma en relación a las necesidades de su negocio. Conociendolo, es como aseguramos que el vea el valor de nuestro producto. \n\n"
             updateRecomendaciones()
         }
     }
@@ -82,7 +82,7 @@ class PrimerCuadranteViewController: UIViewController {
 
         }
         else{
-            arrayRecomendaciones[2] = "Nos dan información no sólo sobre los aspectos profresionales del prospecto al que nos estamos acercando, nos ayudan a saber más sobre la persona, con el fin de entablar una comunicación más empatica. \n"
+            arrayRecomendaciones[2] = "Nos dan información no sólo sobre los aspectos profresionales del prospecto al que nos estamos acercando, nos ayudan a saber más sobre la persona, con el fin de entablar una comunicación más empatica. \n\n"
             updateRecomendaciones()
         }
     }
@@ -93,7 +93,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[3] = "Nos habla de lo que al prospecto le hace negocio y como quiere llegar alla, nosotros debemos utilizar esta información con el fin de explicarle como a traves de las mejores practicas y el uso adecuado de la tecnología puede llegar a ese objetivo más rapido. \n"
+            arrayRecomendaciones[3] = "Nos habla de lo que al prospecto le hace negocio y como quiere llegar alla, nosotros debemos utilizar esta información con el fin de explicarle como a traves de las mejores practicas y el uso adecuado de la tecnología puede llegar a ese objetivo más rapido. \n\n"
             updateRecomendaciones()
         }
     }
@@ -104,7 +104,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[4] = "La implementeación de metodologías BIM debe de venir de altos mandos para que realmente se respete y exista un cambio de mentalidad interno. No podemos dejar de ver a las personas, cuando vendemos ARCHICAD / La cabeza de la orgranizaición es quien puede tomar la desicion de compra. \n"
+            arrayRecomendaciones[4] = "La implementeación de metodologías BIM debe de venir de altos mandos para que realmente se respete y exista un cambio de mentalidad interno. No podemos dejar de ver a las personas, cuando vendemos ARCHICAD / La cabeza de la orgranizaición es quien puede tomar la desicion de compra. \n\n"
             updateRecomendaciones()
         }
     }
@@ -115,7 +115,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[5] = "Observar que es lo que a lo largo del tiempo lo ha hecho exitoso, el tamaño del despacho al que nos acercamos, que es importante para ellos a la hora de crear nuevos proyectos. Y sobre todo, hacen sentir al prospecto comprendido, importante, y establecer un dialogo de confianza y empatía, basico para la venta de ARCHICAD. \n"
+            arrayRecomendaciones[5] = "Observar que es lo que a lo largo del tiempo lo ha hecho exitoso, el tamaño del despacho al que nos acercamos, que es importante para ellos a la hora de crear nuevos proyectos. Y sobre todo, hacen sentir al prospecto comprendido, importante, y establecer un dialogo de confianza y empatía, basico para la venta de ARCHICAD. \n\n"
             updateRecomendaciones()
         }
     }
@@ -126,7 +126,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[6] = "Confirma los datos de contacto, es necesario saber que te estas acercando a las personas correctas. \n"
+            arrayRecomendaciones[6] = "Confirma los datos de contacto, es necesario saber que te estas acercando a las personas correctas. \n\n"
             updateRecomendaciones()
         }
     }
@@ -137,7 +137,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[7] = "Te permite un número aproximado de licencias que va a necesitar, y el tiempo de cierre de venta que puede llevar. \n"
+            arrayRecomendaciones[7] = "Te permite un número aproximado de licencias que va a necesitar, y el tiempo de cierre de venta que puede llevar. \n\n"
             updateRecomendaciones()
         }
     }
@@ -148,7 +148,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[8] = "Esto te puede aportar nuevas oportunidades de venta. \n"
+            arrayRecomendaciones[8] = "Esto te puede aportar nuevas oportunidades de venta. \n\n"
             updateRecomendaciones()
         }
     }
@@ -159,7 +159,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[9] = "Al realizar la llamada recuerda modular tu tono de voz, estar relajado, presentarte y mencionar el producto. \n"
+            arrayRecomendaciones[9] = "Al realizar la llamada recuerda modular tu tono de voz, estar relajado, presentarte y mencionar el producto. \n\n"
             updateRecomendaciones()
         }
     }
@@ -170,7 +170,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[10] = "El primer argumento de valor para el cliente genera suficiente interes para que se cierre la cita. \n"
+            arrayRecomendaciones[10] = "El primer argumento de valor para el cliente genera suficiente interes para que se cierre la cita. \n\n"
             updateRecomendaciones()
         }
     }
@@ -181,7 +181,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[11] = "Lo importante para vender ARCHICAD es llegar a la mesa con el cliente. \n"
+            arrayRecomendaciones[11] = "Lo importante para vender ARCHICAD es llegar a la mesa con el cliente. \n\n"
             updateRecomendaciones()
         }
     }
@@ -192,7 +192,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[12] = "Es muy importante para despertar el interes, que nos ayude a llegar mejor a la cita. Envía un video con información no tecnica sobre lo que hace el programa y sus beneficios, o tambien podrías enviar la liga para que descarguen BIMx y un proyecto con el cual puedan empezar a jugar. \n"
+            arrayRecomendaciones[12] = "Es muy importante para despertar el interes, que nos ayude a llegar mejor a la cita. Envía un video con información no tecnica sobre lo que hace el programa y sus beneficios, o tambien podrías enviar la liga para que descarguen BIMx y un proyecto con el cual puedan empezar a jugar. \n\n"
             updateRecomendaciones()
         }
     }

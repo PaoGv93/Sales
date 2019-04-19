@@ -74,7 +74,7 @@ class CuartoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "Dejar pasar demasiado tiempo entre la visita y nuestro seguimiento, puede confundirse con desinteres o informalidad. No dejes pasar más de 24 horas en contactar a tu prospecto con información de valor. \n"
+            arrayRecomendaciones[0] = "Dejar pasar demasiado tiempo entre la visita y nuestro seguimiento, puede confundirse con desinteres o informalidad. No dejes pasar más de 24 horas en contactar a tu prospecto con información de valor. \n\n"
             updateRecomendaciones()
         }
     }
@@ -84,7 +84,7 @@ class CuartoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[1] = "Que tu correo tenga agradecimiento, compromisos, cotización, plan de adquisición, casos homologos, promociones vigentes y broshure de marca. No dejar claros los siguientes pasos de tu seguimiento puede hacerlo mas dificil de programar. Siempre deja claro cuando será tu proximo contacto y cumple. \n"
+            arrayRecomendaciones[1] = "Que tu correo tenga agradecimiento, compromisos, cotización, plan de adquisición, casos homologos, promociones vigentes y broshure de marca. No dejar claros los siguientes pasos de tu seguimiento puede hacerlo mas dificil de programar. Siempre deja claro cuando será tu proximo contacto y cumple. \n\n"
             updateRecomendaciones()
         }
     }
