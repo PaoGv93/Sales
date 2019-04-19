@@ -15,8 +15,8 @@ class FinalRegistroViewController: UIViewController {
     @IBOutlet weak var barChart: BarChartView!
     
     //valores para grafica de radar
-    let nombresRadarChart = ["C1", "C2", "C3"]
-    let valoresRadarChart = [30.0, 50.0, 90.0]
+    let nombresRadarChart = ["C1", "C2", "C3", "C4"]
+    let valoresRadarChart = [30.0, 50.0, 90.0, 60.0]
     
     //valores para grafica de barras
     let nombresBarChart = ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10", "p11", "p12"]
@@ -62,6 +62,8 @@ class FinalRegistroViewController: UIViewController {
         
         radarChart.rotationEnabled = false
         chartDataSet.drawFilledEnabled = true
+        chartDataSet.fillColor = .gray
+        chartDataSet.setColor(.gray)
         
         //Present the number as integer
         let numberFormatter = NumberFormatter()
@@ -96,6 +98,8 @@ class FinalRegistroViewController: UIViewController {
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "valores")
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
+        chartDataSet.setColor(.gray)
+
         
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
         barChart.xAxis.granularity = 1

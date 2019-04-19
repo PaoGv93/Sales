@@ -17,7 +17,7 @@ class CuartoCuadranteViewController: UIViewController {
     @IBOutlet weak var recomendaciones: UILabel!
     
     //recomendaciones
-    var arrayRecomendaciones = ["", "", "", "", "", "", "", "", ""]
+    var arrayRecomendaciones = ["", ""]
     
     var fraseFinal = String()
     
@@ -30,6 +30,17 @@ class CuartoCuadranteViewController: UIViewController {
     let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
+    
+    //Para las recomendaciones iguales
+    @IBOutlet weak var C4A2: UISwitch!
+    @IBOutlet weak var C4A3: UISwitch!
+    @IBOutlet weak var C4A4: UISwitch!
+    @IBOutlet weak var C4A5: UISwitch!
+    @IBOutlet weak var C4A6: UISwitch!
+    @IBOutlet weak var C4A7: UISwitch!
+    @IBOutlet weak var C4A8: UISwitch!
+    @IBOutlet weak var C4A9: UISwitch!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,107 +55,42 @@ class CuartoCuadranteViewController: UIViewController {
         setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
     }
     
+    @IBAction func siguiente(_ sender: Any) {
+        performSegue(withIdentifier: "finalRegistro", sender: self)
+
+
+        /*if(valor == 1){
+            performSegue(withIdentifier: "finalPractica", sender: self)
+
+        }else if(valor == 2) {
+            performSegue(withIdentifier: "finalRegistro", sender: self)
+
+        }*/
+    }
+    
     @IBAction func estadoUno(_ sender: UISwitch) {
         if (sender.isOn == true){
             arrayRecomendaciones[0] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "0 \n"
+            arrayRecomendaciones[0] = "Dejar pasar demasiado tiempo entre la visita y nuestro seguimiento, puede confundirse con desinteres o informalidad. No dejes pasar más de 24 horas en contactar a tu prospecto con información de valor. \n"
             updateRecomendaciones()
         }
     }
-    
     @IBAction func estadoDos(_ sender: UISwitch) {
-        if (sender.isOn == true){
+        if (C4A2.isOn == true && C4A3.isOn == true && C4A4.isOn == true && C4A5.isOn == true && C4A6.isOn == true && C4A7.isOn == true && C4A8.isOn == true && C4A9.isOn == true){
             arrayRecomendaciones[1] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[1] = "1 \n"
+            arrayRecomendaciones[1] = "Que tu correo tenga agradecimiento, compromisos, cotización, plan de adquisición, casos homologos, promociones vigentes y broshure de marca. No dejar claros los siguientes pasos de tu seguimiento puede hacerlo mas dificil de programar. Siempre deja claro cuando será tu proximo contacto y cumple. \n"
             updateRecomendaciones()
         }
     }
-    
-    @IBAction func estadoTres(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[2] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[2] = "2 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoCuatro(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[3] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[3] = "3 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoCinco(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[4] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[4] = "4 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoSeis(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[5] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[5] = "5 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoSiete(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[6] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[6] = "6 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoOcho(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[7] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[7] = "7 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoNueve(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[8] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[8] = "8 \n"
-            updateRecomendaciones()
-        }
-    }
-    
+
     func updateRecomendaciones(){
-        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8]
+        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1]
         
         recomendaciones.text = fraseFinal
     }
@@ -169,11 +115,13 @@ class CuartoCuadranteViewController: UIViewController {
         radarChart.yAxis.forceLabelsEnabled = true
         radarChart.yAxis.labelCount = 10
         radarChart.yAxis.axisMinimum = 0.0
-        radarChart.yAxis.axisMaximum = 80.0
+        radarChart.yAxis.axisMaximum = 90.0
         radarChart.yAxis.drawLabelsEnabled = true
         
         radarChart.rotationEnabled = false
         chartDataSet.drawFilledEnabled = true
+        chartDataSet.fillColor = .gray
+        chartDataSet.setColor(.gray)
         
         //Present the number as integer
         let numberFormatter = NumberFormatter()
@@ -208,6 +156,7 @@ class CuartoCuadranteViewController: UIViewController {
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "valores")
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
+        chartDataSet.setColor(.gray)
         
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
         barChart.xAxis.granularity = 1

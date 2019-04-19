@@ -16,7 +16,7 @@ class PrimerCuadranteViewController: UIViewController {
     @IBOutlet weak var recomendaciones: UILabel!
     
     //recomendaciones
-    var arrayRecomendaciones = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    var arrayRecomendaciones = ["", "", "", "", "", "", "", "", "", "", "", "", ""]
     
     var fraseFinal = String()
 
@@ -32,6 +32,11 @@ class PrimerCuadranteViewController: UIViewController {
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
+    //Para recomendaciones repetidas
+    @IBOutlet weak var C1A1: UISwitch!
+    @IBOutlet weak var C1B3: UISwitch!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,18 +49,18 @@ class PrimerCuadranteViewController: UIViewController {
         
         axisFormatDelegate = self as? IAxisValueFormatter
         setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
-
+        
     }
     
     @IBAction func estadoUno(_ sender: UISwitch) {
-        if (sender.isOn == true){
+        if (C1B3.isOn == true && C1A1.isOn == true){
             arrayRecomendaciones[0] = ""
             updateRecomendaciones()
         }
-            else{
-            arrayRecomendaciones[0] = "0 \n"
+        else{
+            arrayRecomendaciones[0] = "Es importante para obtener información valiosa del prospecto, comprender mejor sus necesidades, quien es, que es importante para el, y como ofrecerle eso que esta necesitando. \n"
             updateRecomendaciones()
-            }
+        }
     }
     
     @IBAction func estadoDos(_ sender: UISwitch) {
@@ -65,7 +70,7 @@ class PrimerCuadranteViewController: UIViewController {
 
         }
         else{
-            arrayRecomendaciones[1] = "1 \n"
+            arrayRecomendaciones[1] = "Es indispensable para hablar el mismo idioma en relación a las necesidades de su negocio. Conociendolo, es como aseguramos que el vea el valor de nuestro producto. \n"
             updateRecomendaciones()
         }
     }
@@ -77,7 +82,7 @@ class PrimerCuadranteViewController: UIViewController {
 
         }
         else{
-            arrayRecomendaciones[2] = "2 \n"
+            arrayRecomendaciones[2] = "Nos dan información no sólo sobre los aspectos profresionales del prospecto al que nos estamos acercando, nos ayudan a saber más sobre la persona, con el fin de entablar una comunicación más empatica. \n"
             updateRecomendaciones()
         }
     }
@@ -88,7 +93,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[3] = "3 \n"
+            arrayRecomendaciones[3] = "Nos habla de lo que al prospecto le hace negocio y como quiere llegar alla, nosotros debemos utilizar esta información con el fin de explicarle como a traves de las mejores practicas y el uso adecuado de la tecnología puede llegar a ese objetivo más rapido. \n"
             updateRecomendaciones()
         }
     }
@@ -99,7 +104,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[4] = "4 \n"
+            arrayRecomendaciones[4] = "La implementeación de metodologías BIM debe de venir de altos mandos para que realmente se respete y exista un cambio de mentalidad interno. No podemos dejar de ver a las personas, cuando vendemos ARCHICAD / La cabeza de la orgranizaición es quien puede tomar la desicion de compra. \n"
             updateRecomendaciones()
         }
     }
@@ -110,7 +115,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[5] = "5 \n"
+            arrayRecomendaciones[5] = "Observar que es lo que a lo largo del tiempo lo ha hecho exitoso, el tamaño del despacho al que nos acercamos, que es importante para ellos a la hora de crear nuevos proyectos. Y sobre todo, hacen sentir al prospecto comprendido, importante, y establecer un dialogo de confianza y empatía, basico para la venta de ARCHICAD. \n"
             updateRecomendaciones()
         }
     }
@@ -121,7 +126,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[6] = "6 \n"
+            arrayRecomendaciones[6] = "Confirma los datos de contacto, es necesario saber que te estas acercando a las personas correctas. \n"
             updateRecomendaciones()
         }
     }
@@ -132,7 +137,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[7] = "7 \n"
+            arrayRecomendaciones[7] = "Te permite un número aproximado de licencias que va a necesitar, y el tiempo de cierre de venta que puede llevar. \n"
             updateRecomendaciones()
         }
     }
@@ -143,7 +148,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[8] = "8 \n"
+            arrayRecomendaciones[8] = "Esto te puede aportar nuevas oportunidades de venta. \n"
             updateRecomendaciones()
         }
     }
@@ -154,7 +159,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[9] = "9 \n"
+            arrayRecomendaciones[9] = "Al realizar la llamada recuerda modular tu tono de voz, estar relajado, presentarte y mencionar el producto. \n"
             updateRecomendaciones()
         }
     }
@@ -165,7 +170,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[10] = "10 \n"
+            arrayRecomendaciones[10] = "El primer argumento de valor para el cliente genera suficiente interes para que se cierre la cita. \n"
             updateRecomendaciones()
         }
     }
@@ -176,7 +181,7 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[11] = "11 \n"
+            arrayRecomendaciones[11] = "Lo importante para vender ARCHICAD es llegar a la mesa con el cliente. \n"
             updateRecomendaciones()
         }
     }
@@ -187,68 +192,14 @@ class PrimerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[12] = "12 \n"
+            arrayRecomendaciones[12] = "Es muy importante para despertar el interes, que nos ayude a llegar mejor a la cita. Envía un video con información no tecnica sobre lo que hace el programa y sus beneficios, o tambien podrías enviar la liga para que descarguen BIMx y un proyecto con el cual puedan empezar a jugar. \n"
             updateRecomendaciones()
         }
     }
     
-    @IBAction func estadoCatorce(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[13] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[13] = "13 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoQuince(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[14] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[14] = "14 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoDieciseis(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[15] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[15] = "15 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoDiecisiete(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[16] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[16] = "16 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoDieciocho(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[17] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[17] = "17 \n"
-            updateRecomendaciones()
-        }
-    }
     
     func updateRecomendaciones(){
-        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8] + arrayRecomendaciones[9] + arrayRecomendaciones[10] + arrayRecomendaciones[11] + arrayRecomendaciones[12] + arrayRecomendaciones[13] + arrayRecomendaciones[14] + arrayRecomendaciones[15] + arrayRecomendaciones[16] + arrayRecomendaciones[17]
+        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8] + arrayRecomendaciones[9] + arrayRecomendaciones[10] + arrayRecomendaciones[11] + arrayRecomendaciones[12]
         
         recomendaciones.text = fraseFinal
     }
@@ -273,11 +224,13 @@ class PrimerCuadranteViewController: UIViewController {
         radarChart.yAxis.forceLabelsEnabled = true
         radarChart.yAxis.labelCount = 10
         radarChart.yAxis.axisMinimum = 0.0
-        radarChart.yAxis.axisMaximum = 80.0
+        radarChart.yAxis.axisMaximum = 90.0
         radarChart.yAxis.drawLabelsEnabled = true
         
         radarChart.rotationEnabled = false
         chartDataSet.drawFilledEnabled = true
+        chartDataSet.fillColor = .gray
+        chartDataSet.setColor(.gray)
         
         //Present the number as integer
         let numberFormatter = NumberFormatter()
@@ -312,6 +265,8 @@ class PrimerCuadranteViewController: UIViewController {
             let chartDataSet = BarChartDataSet(values: dataEntries, label: "valores")
             let chartData = BarChartData(dataSet: chartDataSet)
             barChart.data = chartData
+            chartDataSet.setColor(.gray)
+
             
             barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
             barChart.xAxis.granularity = 1

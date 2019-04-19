@@ -21,7 +21,7 @@ class TercerCuadranteViewController: UIViewController {
     @IBOutlet weak var recomendaciones: UILabel!
     
     //recomendaciones
-    var arrayRecomendaciones = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+    var arrayRecomendaciones = ["", "", "", "", "", "", "", "", "", "", "", "", "", ""]
     
     var fraseFinal = String()
     
@@ -34,6 +34,20 @@ class TercerCuadranteViewController: UIViewController {
     let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
+    
+    //Para las recomendaciones iguales
+    @IBOutlet weak var C3B2: UISwitch!
+    @IBOutlet weak var C3B3: UISwitch!
+    
+    @IBOutlet weak var C3C1: UIButton!
+    @IBOutlet weak var C3C2: UIButton!
+    @IBOutlet weak var C3C3: UIButton!
+    
+    @IBOutlet weak var C3D1: UISwitch!
+    @IBOutlet weak var C3D2: UISwitch!
+    @IBOutlet weak var C3D3: UISwitch!
+    @IBOutlet weak var C3D4: UISwitch!
+    @IBOutlet weak var C3D5: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +73,7 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "0 \n"
+            arrayRecomendaciones[0] = "Recuerda que no es lo mismo hablar con la persona que tiene los conocimientos tecnicos que con la persona que tiene como prioridad las finanzas del despacho o empresa. \n"
             updateRecomendaciones()
         }
     }
@@ -70,7 +84,7 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[1] = "1 \n"
+            arrayRecomendaciones[1] = "La identificación de las necesidades correctas del prospecto es indispensables para tener el correcto angulo de venta. ¿Hiciste suficientes preguntas correctas? \n"
             updateRecomendaciones()
         }
     }
@@ -81,7 +95,7 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[2] = "2 \n"
+            arrayRecomendaciones[2] = "No se trata de sólo ir identificando las necesidades tecnicas, ve estructurando un plan de las herramientas que podrías mostrarle que resuelvan su necesidad a traves de un BIMx. \n"
             updateRecomendaciones()
         }
     }
@@ -92,18 +106,18 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[3] = "3 \n"
+            arrayRecomendaciones[3] = "Lo más importante para crear una relación de confianza y credibilidad, es que sepas con quien estas hablando y lo que para el es importante en su negocio. \n"
             updateRecomendaciones()
         }
     }
     
     @IBAction func estadoCinco(_ sender: UISwitch) {
-        if (sender.isOn == true){
+        if (C3B2.isOn == true && C3B3.isOn == true){
             arrayRecomendaciones[4] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[4] = "4 \n"
+            arrayRecomendaciones[4] = "Si identifico la cantidad de personas, se determina el mejor uso de ArchiCAD y beneficios. (Corroborar complejidad colaborativa, niveles de aprobación) \n"
             updateRecomendaciones()
         }
     }
@@ -114,18 +128,18 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[5] = "5 \n"
+            arrayRecomendaciones[5] = "Recuerda que toda implementación BIM exitosa viene desde \"arriba\". \n"
             updateRecomendaciones()
         }
     }
     
-    @IBAction func estadoSiete(_ sender: UISwitch) {
-        if (sender.isOn == true){
+    @IBAction func estadoSiete(_ sender: AnyObject) {
+        if (C3C1.isSelected == false && C3C2.isSelected == false && C3C3.isSelected == false && C3D1.isOn == true && C3D2.isOn == true && C3D3.isOn == true && C3D4.isOn == true && C3D5.isOn == true){
             arrayRecomendaciones[6] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[6] = "6 \n"
+            arrayRecomendaciones[6] = "Entre mas preguntas hagas, mas información tendras para formular los argumentos correctos. \n"
             updateRecomendaciones()
         }
     }
@@ -136,7 +150,7 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[7] = "7 \n"
+            arrayRecomendaciones[7] = "Investiga y muestrale a tu cliente, como empresas similares que usan ArchiCAD, han logrado desarrollar proyectos exitosos. \n"
             updateRecomendaciones()
         }
     }
@@ -147,7 +161,7 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[8] = "8 \n"
+            arrayRecomendaciones[8] = "BIMx es la herramienta visual que nos ayuda a soportar de una forma didactica todos nuestros argumentos de venta. ¡No los desperdicies! \n"
             updateRecomendaciones()
         }
     }
@@ -158,7 +172,7 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[9] = "9 \n"
+            arrayRecomendaciones[9] = "Dar información sobre todo nuestro entorno de productos abre las posibilidades de crecer la cuenta. \n"
             updateRecomendaciones()
         }
     }
@@ -169,7 +183,7 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[10] = "10 \n"
+            arrayRecomendaciones[10] = "Abrir ArchiCAD sin hacer una demo, significa que probablemente no estes sentado con el tomado de desiciones. \n"
             updateRecomendaciones()
         }
     }
@@ -180,7 +194,7 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[11] = "11 \n"
+            arrayRecomendaciones[11] = "Mencionar nuestro servicio al cliente y servicios adicionales es uno de nuestros grandes distintivos como marca. \n"
             updateRecomendaciones()
         }
     }
@@ -191,7 +205,7 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[12] = "12 \n"
+            arrayRecomendaciones[12] = "Invitar al prospecto a que visite nuestras redes sociales, y que pueda ver nuestras campañas y videos, puede generar más interes. \n"
             updateRecomendaciones()
         }
     }
@@ -202,79 +216,14 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[13] = "13 \n"
+            arrayRecomendaciones[13] = "Solo si estas acompañado de alguien Técnico, es recomendable que se abra ArchiCAD y se demuestre su funcionamiento. \n"
             updateRecomendaciones()
         }
     }
     
-    @IBAction func estadoQuince(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[14] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[14] = "14 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoDieciseis(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[15] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[15] = "15 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoDiecisiete(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[16] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[16] = "16 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoDieciocho(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[17] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[17] = "17 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoDiecinueve(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[18] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[18] = "18 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoVeinte(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[19] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[19] = "19 \n"
-            updateRecomendaciones()
-        }
-    }
     
     func updateRecomendaciones(){
-        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8] + arrayRecomendaciones[9] + arrayRecomendaciones[10] + arrayRecomendaciones[11] + arrayRecomendaciones[12] + arrayRecomendaciones[13] + arrayRecomendaciones[14] + arrayRecomendaciones[15] + arrayRecomendaciones[16] + arrayRecomendaciones[17] + arrayRecomendaciones[18] + arrayRecomendaciones[19]
+        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8] + arrayRecomendaciones[9] + arrayRecomendaciones[10] + arrayRecomendaciones[11] + arrayRecomendaciones[12] + arrayRecomendaciones[13]
         
         recomendaciones.text = fraseFinal
     }
@@ -340,11 +289,13 @@ class TercerCuadranteViewController: UIViewController {
         radarChart.yAxis.forceLabelsEnabled = true
         radarChart.yAxis.labelCount = 10
         radarChart.yAxis.axisMinimum = 0.0
-        radarChart.yAxis.axisMaximum = 80.0
+        radarChart.yAxis.axisMaximum = 90.0
         radarChart.yAxis.drawLabelsEnabled = true
         
         radarChart.rotationEnabled = false
         chartDataSet.drawFilledEnabled = true
+        chartDataSet.fillColor = .gray
+        chartDataSet.setColor(.gray)
         
         //Present the number as integer
         let numberFormatter = NumberFormatter()
@@ -379,6 +330,8 @@ class TercerCuadranteViewController: UIViewController {
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "valores")
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
+        chartDataSet.setColor(.gray)
+
         
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
         barChart.xAxis.granularity = 1

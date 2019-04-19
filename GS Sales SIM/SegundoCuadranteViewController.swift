@@ -16,7 +16,7 @@ class SegundoCuadranteViewController: UIViewController {
     @IBOutlet weak var recomendaciones: UILabel!
     
     //recomendaciones
-    var arrayRecomendaciones = ["", "", "", "", "", "", "", "", "", "", "", ""]
+    var arrayRecomendaciones = ["", "", "", "", "", "", "", "", ""]
     
     var fraseFinal = String()
 
@@ -30,7 +30,15 @@ class SegundoCuadranteViewController: UIViewController {
     let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
-
+    
+    //Para las recomendaciones iguales
+    @IBOutlet weak var C2A3: UISwitch!
+    @IBOutlet weak var C2B2: UISwitch!
+    
+    @IBOutlet weak var C2B4: UISwitch!
+    @IBOutlet weak var C2C3: UISwitch!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +58,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "0 \n"
+            arrayRecomendaciones[0] = "Como nos vemos predispone a nuestro prospecto a sentir afinidad por nosotros y lo que tenemos que decir. Recuerda ir vestido de acuerdo al contexto. \n"
             updateRecomendaciones()
         }
     }
@@ -61,18 +69,18 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[1] = "1 \n"
+            arrayRecomendaciones[1] = "Para asegurar una presentación efectiva, recuerda asegurarte de cuanto tiempo para presentar, y que no por una confusión de tiempo, pierdas la oportunidad de hacer una entrevista de impacto. \n"
             updateRecomendaciones()
         }
     }
     
     @IBAction func estadoTres(_ sender: UISwitch) {
-        if (sender.isOn == true){
+        if (C2A3.isOn == true && C2B2.isOn == true){
             arrayRecomendaciones[2] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[2] = "2 \n"
+            arrayRecomendaciones[2] = "No dejes que un descuido te arruine una oportunidad de venta. Recuerda llevar todo lo que necesites, desde un Ipad, los adaptadores que puedas necesitar, llevar tu material de trabajo cargado etc. \n"
             updateRecomendaciones()
         }
     }
@@ -83,7 +91,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[3] = "3 \n"
+            arrayRecomendaciones[3] = "¿Pudiste constatar que lo que investigaste es congruente con lo que viste cuando entraste al despacho? Recuerda que todo prospecto requiere tiempo, y ese tiempo depende tambien de la inversión, aunque no hay cliente pequeño. \n"
             updateRecomendaciones()
         }
     }
@@ -94,7 +102,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[4] = "4 \n"
+            arrayRecomendaciones[4] = "Descubre la modalidad en la que puedo hacerlo mi cliente (Renta de 12 o Full). \n"
             updateRecomendaciones()
         }
     }
@@ -105,7 +113,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[5] = "5 \n"
+            arrayRecomendaciones[5] = "No tener una buena tecnica rompe hielo, puede costarte la calidad de la presentación. Recuerda siempre decir algo agradable sobre el contexto en el que te encuentras. \n"
             updateRecomendaciones()
         }
     }
@@ -116,18 +124,18 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[6] = "6 \n"
+            arrayRecomendaciones[6] = "Presta atención al ambiente y entorno de la empresa y usalo para resaltar los aspectos positivos que identifiques. \n"
             updateRecomendaciones()
         }
     }
     
     @IBAction func estadoOcho(_ sender: UISwitch) {
-        if (sender.isOn == true){
+        if (C2B4.isOn == true && C2C3.isOn == true){
             arrayRecomendaciones[7] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[7] = "7 \n"
+            arrayRecomendaciones[7] = "Identifica algo positivo a mencionar sobre el cliente y usalo para establecer un vinculo con el cliente. \n"
             updateRecomendaciones()
         }
     }
@@ -138,46 +146,14 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[8] = "8 \n"
+            arrayRecomendaciones[8] = "Para vender, siempre es mas importante escuchar. \n"
             updateRecomendaciones()
         }
     }
     
-    @IBAction func estadoDiez(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[9] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[9] = "9 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoOnce(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[10] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[10] = "10 \n"
-            updateRecomendaciones()
-        }
-    }
-    
-    @IBAction func estadoDoce(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[11] = ""
-            updateRecomendaciones()
-        }
-        else{
-            arrayRecomendaciones[11] = "11 \n"
-            updateRecomendaciones()
-        }
-    }
     
     func updateRecomendaciones(){
-        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8] + arrayRecomendaciones[9] + arrayRecomendaciones[10] + arrayRecomendaciones[11]
+        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8]
         
         recomendaciones.text = fraseFinal
     }
@@ -202,11 +178,13 @@ class SegundoCuadranteViewController: UIViewController {
         radarChart.yAxis.forceLabelsEnabled = true
         radarChart.yAxis.labelCount = 10
         radarChart.yAxis.axisMinimum = 0.0
-        radarChart.yAxis.axisMaximum = 80.0
+        radarChart.yAxis.axisMaximum = 90.0
         radarChart.yAxis.drawLabelsEnabled = true
         
         radarChart.rotationEnabled = false
         chartDataSet.drawFilledEnabled = true
+        chartDataSet.fillColor = .gray
+        chartDataSet.setColor(.gray)
         
         //Present the number as integer
         let numberFormatter = NumberFormatter()
@@ -241,6 +219,8 @@ class SegundoCuadranteViewController: UIViewController {
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "valores")
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
+        chartDataSet.setColor(.gray)
+
         
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
         barChart.xAxis.granularity = 1

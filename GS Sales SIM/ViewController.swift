@@ -12,12 +12,13 @@ import AVKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var rfc: UITextField!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -36,15 +37,16 @@ class ViewController: UIViewController {
         }
     }
     
+
     //VALIDACION DE SELECCION DE NOMBRE
     @IBAction func Practica(_ sender: Any) {
         
-        //valor para saber si selecciono una empresa o en caso contrario manda alerta
-            performSegue(withIdentifier: "primerCuadrante", sender: self)
+        performSegue(withIdentifier: "primerCuadrante", sender: self)
 
     }
     
     @IBAction func Registro(_ sender: Any) {
+        
         //valor para saber si selecciono una empresa o en caso contrario manda alerta
         if let text = rfc.text, !text.isEmpty {
             performSegue(withIdentifier: "primerCuadrante", sender: self)

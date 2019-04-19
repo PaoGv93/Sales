@@ -191,13 +191,13 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejJ-sJ-cgC">
                                                 <rect key="frame" x="675" y="180" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoUno:" destination="3ir-0e-Orv" eventType="valueChanged" id="Uah-cU-m6E"/>
+                                                    <action selector="estadoUno:" destination="3ir-0e-Orv" eventType="valueChanged" id="LFe-B2-AoA"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4N-Lm-BGb">
                                                 <rect key="frame" x="675" y="249" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="3ir-0e-Orv" eventType="valueChanged" id="s7m-Jf-XCY"/>
+                                                    <action selector="estadoDos:" destination="3ir-0e-Orv" eventType="valueChanged" id="ujF-Dh-l7B"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identifica el tipo de Arquitecto/Constructor/Diseñador" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1P-i8-amz">
@@ -218,97 +218,85 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0DG-NR-ptX">
                                                 <rect key="frame" x="675" y="318" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTres:" destination="3ir-0e-Orv" eventType="valueChanged" id="eGm-ty-xXa"/>
+                                                    <action selector="estadoTres:" destination="3ir-0e-Orv" eventType="valueChanged" id="FFp-ya-RLJ"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-pb-z1M">
                                                 <rect key="frame" x="675" y="387" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCuatro:" destination="3ir-0e-Orv" eventType="valueChanged" id="5Gk-4Q-GkP"/>
+                                                    <action selector="estadoCuatro:" destination="3ir-0e-Orv" eventType="valueChanged" id="lrY-Qb-9tP"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mxb-M1-5vc">
                                                 <rect key="frame" x="675" y="457" width="51" height="33"/>
                                                 <connections>
-                                                    <action selector="estadoCinco:" destination="3ir-0e-Orv" eventType="valueChanged" id="Ek4-a4-SbI"/>
+                                                    <action selector="estadoCinco:" destination="3ir-0e-Orv" eventType="valueChanged" id="N80-Jc-WQ1"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UKc-O9-Pwn">
                                                 <rect key="frame" x="675" y="527" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSeis:" destination="3ir-0e-Orv" eventType="valueChanged" id="vaQ-Sl-nko"/>
+                                                    <action selector="estadoSeis:" destination="3ir-0e-Orv" eventType="valueChanged" id="P9Y-Us-AWS"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1m-4T-4SB">
                                                 <rect key="frame" x="675" y="596" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSiete:" destination="3ir-0e-Orv" eventType="valueChanged" id="38w-1q-dxE"/>
+                                                    <action selector="estadoSiete:" destination="3ir-0e-Orv" eventType="valueChanged" id="yEa-Rf-HtD"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f64-tt-8QZ">
                                                 <rect key="frame" x="675" y="665" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOcho:" destination="3ir-0e-Orv" eventType="valueChanged" id="Mwn-Bq-M7R"/>
+                                                    <action selector="estadoOcho:" destination="3ir-0e-Orv" eventType="valueChanged" id="RhR-1W-mVo"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMZ-PI-QP7">
                                                 <rect key="frame" x="675" y="734" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoNueve:" destination="3ir-0e-Orv" eventType="valueChanged" id="PaA-ps-Tf0"/>
+                                                    <action selector="estadoUno:" destination="3ir-0e-Orv" eventType="valueChanged" id="pQu-bK-dcP"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ox9-Rp-rVU">
                                                 <rect key="frame" x="675" y="803" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDiez:" destination="3ir-0e-Orv" eventType="valueChanged" id="Yk4-gq-ULV"/>
+                                                    <action selector="estadoNueve:" destination="3ir-0e-Orv" eventType="valueChanged" id="zJp-C7-Y3x"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EKA-0o-V3X">
                                                 <rect key="frame" x="675" y="872" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOnce:" destination="3ir-0e-Orv" eventType="valueChanged" id="QZB-21-xEr"/>
+                                                    <action selector="estadoDiez:" destination="3ir-0e-Orv" eventType="valueChanged" id="eP5-k3-4U0"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uRM-8n-2F6">
                                                 <rect key="frame" x="675" y="941" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="estadoDoce:" destination="3ir-0e-Orv" eventType="valueChanged" id="Ktt-z5-VRq"/>
-                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iq3-Im-8wc">
                                                 <rect key="frame" x="675" y="1010" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTrece:" destination="3ir-0e-Orv" eventType="valueChanged" id="vpA-VX-x1d"/>
+                                                    <action selector="estadoOnce:" destination="3ir-0e-Orv" eventType="valueChanged" id="dOq-rl-nMC"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FSw-5c-SOh">
                                                 <rect key="frame" x="675" y="1079" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="estadoCatorce:" destination="3ir-0e-Orv" eventType="valueChanged" id="OCQ-8b-ujU"/>
-                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pE9-Fh-Doy">
                                                 <rect key="frame" x="675" y="1148" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="estadoQuince:" destination="3ir-0e-Orv" eventType="valueChanged" id="GFT-y6-sZ0"/>
-                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWh-8m-5Z3">
                                                 <rect key="frame" x="675" y="1217" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="estadoDieciseis:" destination="3ir-0e-Orv" eventType="valueChanged" id="v0u-Ug-zgG"/>
-                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l4D-CH-oTs">
                                                 <rect key="frame" x="675" y="1286" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDiecisiete:" destination="3ir-0e-Orv" eventType="valueChanged" id="65c-hE-jWB"/>
+                                                    <action selector="estadoDoce:" destination="3ir-0e-Orv" eventType="valueChanged" id="H7c-M7-Okz"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hBJ-uq-JP4">
                                                 <rect key="frame" x="675" y="1355" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDieciocho:" destination="3ir-0e-Orv" eventType="valueChanged" id="iRa-Dj-UWD"/>
+                                                    <action selector="estadoTrece:" destination="3ir-0e-Orv" eventType="valueChanged" id="Ccr-O7-xRR"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvD-Jc-dBC">
@@ -1042,6 +1030,8 @@
                     </view>
                     <size key="freeformSize" width="834" height="3500"/>
                     <connections>
+                        <outlet property="C1A1" destination="ejJ-sJ-cgC" id="Pm0-Ne-qI1"/>
+                        <outlet property="C1B3" destination="cMZ-PI-QP7" id="HC0-Ev-Wcc"/>
                         <outlet property="barChart" destination="hBZ-fb-f3r" id="o7m-iX-lZJ"/>
                         <outlet property="radarChart" destination="BNm-JQ-fa3" id="kDM-aj-dsE"/>
                         <outlet property="recomendaciones" destination="OSK-Fv-9lm" id="aCJ-Km-djR"/>
@@ -1168,12 +1158,6 @@
                                                     <segue destination="fCs-Pw-xX6" kind="show" id="s7G-Nq-AGz"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adX-eU-qXm">
-                                                <rect key="frame" x="56" y="1405" width="0.0" height="0.0"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipologia correcta identificada" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z5n-Av-Xle">
                                                 <rect key="frame" x="71" y="356" width="500" height="65"/>
                                                 <constraints>
@@ -1250,50 +1234,47 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbV-uW-Ycw">
                                                 <rect key="frame" x="680" y="166" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoUno:" destination="ahu-YV-COm" eventType="valueChanged" id="Tyq-60-wPw"/>
+                                                    <action selector="estadoUno:" destination="ahu-YV-COm" eventType="valueChanged" id="jZo-Mz-zEc"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDd-gZ-bCP">
                                                 <rect key="frame" x="680" y="235" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="ahu-YV-COm" eventType="valueChanged" id="DA6-c9-9e8"/>
+                                                    <action selector="estadoDos:" destination="ahu-YV-COm" eventType="valueChanged" id="Gu7-ae-36n"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQv-uZ-onB">
                                                 <rect key="frame" x="680" y="304" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTres:" destination="ahu-YV-COm" eventType="valueChanged" id="3g3-NW-SBm"/>
+                                                    <action selector="estadoTres:" destination="ahu-YV-COm" eventType="valueChanged" id="2c5-xZ-Hrg"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6c-0p-LZy">
                                                 <rect key="frame" x="680" y="373" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCuatro:" destination="ahu-YV-COm" eventType="valueChanged" id="Gyc-JR-yck"/>
+                                                    <action selector="estadoCuatro:" destination="ahu-YV-COm" eventType="valueChanged" id="zXk-kj-zPA"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9S-lR-5DX">
                                                 <rect key="frame" x="680" y="443" width="51" height="30.5"/>
                                                 <connections>
-                                                    <action selector="estadoCinco:" destination="ahu-YV-COm" eventType="valueChanged" id="EVM-ip-wDZ"/>
+                                                    <action selector="estadoCinco:" destination="ahu-YV-COm" eventType="valueChanged" id="Ze5-f7-a6R"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D3w-vm-dsE">
                                                 <rect key="frame" x="680" y="512.5" width="51" height="32"/>
                                                 <connections>
-                                                    <action selector="estadoSeis:" destination="ahu-YV-COm" eventType="valueChanged" id="qSB-Bt-wIx"/>
+                                                    <action selector="estadoCinco:" destination="ahu-YV-COm" eventType="valueChanged" id="5SN-2q-4TU"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="00H-we-Kez">
                                                 <rect key="frame" x="680" y="582.5" width="51" height="30"/>
                                                 <connections>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="valueChanged" id="Evp-lS-Bmg"/>
+                                                    <action selector="estadoSeis:" destination="ahu-YV-COm" eventType="valueChanged" id="mki-hi-QiI"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLD-Wb-wOG">
                                                 <rect key="frame" x="680" y="650.5" width="51" height="32"/>
-                                                <connections>
-                                                    <action selector="estadoOcho:" destination="ahu-YV-COm" eventType="valueChanged" id="NaE-rP-edq"/>
-                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O01-PL-aTV">
                                                 <rect key="frame" x="645" y="173" width="26" height="24"/>
@@ -1467,43 +1448,43 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D0N-2m-RGE">
                                                 <rect key="frame" x="682" y="996.5" width="51" height="30"/>
                                                 <connections>
-                                                    <action selector="estadoNueve:" destination="ahu-YV-COm" eventType="valueChanged" id="LYQ-w8-Tzm"/>
+                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="valueChanged" id="0ft-i4-cmc"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVe-ml-1nH">
                                                 <rect key="frame" x="680" y="1060.5" width="51" height="33.5"/>
                                                 <connections>
-                                                    <action selector="estadoDiez:" destination="ahu-YV-COm" eventType="valueChanged" id="Zse-x6-t9w"/>
+                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="valueChanged" id="VKb-3n-ZMu"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgJ-rJ-GQn">
                                                 <rect key="frame" x="680" y="1132" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOnce:" destination="ahu-YV-COm" eventType="valueChanged" id="jbb-vU-J4c"/>
+                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="valueChanged" id="Xoy-hL-qPK"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNH-TM-YcF">
                                                 <rect key="frame" x="680" y="1201" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDoce:" destination="ahu-YV-COm" eventType="valueChanged" id="l7z-8z-6xH"/>
+                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="valueChanged" id="Zn0-4h-lGX"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gGq-yU-QTh">
                                                 <rect key="frame" x="680" y="1271" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTrece:" destination="ahu-YV-COm" eventType="valueChanged" id="nRA-os-A8e"/>
+                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="valueChanged" id="Xed-kI-VyR"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0e-VC-Qkh">
                                                 <rect key="frame" x="680" y="1341" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCatorce:" destination="ahu-YV-COm" eventType="valueChanged" id="2cp-Wc-mfr"/>
+                                                    <action selector="estadoOcho:" destination="ahu-YV-COm" eventType="valueChanged" id="RtS-gf-FSx"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pIZ-sq-kQK">
                                                 <rect key="frame" x="680" y="1410" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoQuince:" destination="ahu-YV-COm" eventType="valueChanged" id="IMM-GU-yF7"/>
+                                                    <action selector="estadoNueve:" destination="ahu-YV-COm" eventType="valueChanged" id="zt7-IP-FwD"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHq-FM-Ss4">
@@ -1635,31 +1616,31 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5HR-qd-jsn">
                                                 <rect key="frame" x="680" y="1477" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDieciseis:" destination="ahu-YV-COm" eventType="valueChanged" id="HSF-lZ-5mK"/>
+                                                    <action selector="estadoDiez:" destination="ahu-YV-COm" eventType="valueChanged" id="0W8-VQ-DRi"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLc-vh-VE3">
                                                 <rect key="frame" x="680" y="1546" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDiecisiete:" destination="ahu-YV-COm" eventType="valueChanged" id="MvZ-jD-h7Y"/>
+                                                    <action selector="estadoOnce:" destination="ahu-YV-COm" eventType="valueChanged" id="7cx-IU-kF8"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-46-dKk">
                                                 <rect key="frame" x="680" y="1616" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDieciocho:" destination="ahu-YV-COm" eventType="valueChanged" id="JE3-f7-r3z"/>
+                                                    <action selector="estadoDoce:" destination="ahu-YV-COm" eventType="valueChanged" id="L2k-yH-YRg"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vC6-is-0vg">
                                                 <rect key="frame" x="680" y="1686" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDiecinueve:" destination="ahu-YV-COm" eventType="valueChanged" id="EQB-PW-iJG"/>
+                                                    <action selector="estadoTrece:" destination="ahu-YV-COm" eventType="valueChanged" id="c7J-7g-eHb"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qou-8a-yPe">
                                                 <rect key="frame" x="680" y="1755" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoVeinte:" destination="ahu-YV-COm" eventType="valueChanged" id="tZZ-iU-LLn"/>
+                                                    <action selector="estadoCatorce:" destination="ahu-YV-COm" eventType="valueChanged" id="aVg-az-lQy"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBz-vw-Whg">
@@ -1756,6 +1737,7 @@
                                                 <connections>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="mth-ou-rua"/>
                                                     <action selector="clicked:" destination="ahu-YV-COm" eventType="touchUpInside" id="J1Y-8i-5qn"/>
+                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="tGw-sa-9dx"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkh-WD-3Zb">
@@ -1768,6 +1750,7 @@
                                                 <connections>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="0G2-3e-pnV"/>
                                                     <action selector="clicked:" destination="ahu-YV-COm" eventType="touchUpInside" id="96c-Hb-7Lu"/>
+                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="MO6-OQ-T28"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mM5-3D-86u">
@@ -1780,6 +1763,7 @@
                                                 <connections>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="abJ-vb-sIw"/>
                                                     <action selector="clicked:" destination="ahu-YV-COm" eventType="touchUpInside" id="g32-Zu-uH4"/>
+                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="0Ry-Er-whC"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -1990,7 +1974,6 @@
                                             <constraint firstItem="c7F-Jh-BDp" firstAttribute="top" secondItem="cKf-gU-iDN" secondAttribute="top" constant="33" id="nmQ-5k-2wq"/>
                                             <constraint firstItem="FxM-16-igg" firstAttribute="centerY" secondItem="5HR-qd-jsn" secondAttribute="centerY" id="nvM-lv-uZn"/>
                                             <constraint firstAttribute="trailing" secondItem="9sg-ml-0lh" secondAttribute="trailing" constant="72" id="o3C-Qf-KKX"/>
-                                            <constraint firstItem="adX-eU-qXm" firstAttribute="top" secondItem="cKf-gU-iDN" secondAttribute="top" constant="1405" id="oEt-Yd-Mze"/>
                                             <constraint firstItem="wNb-Bl-DHL" firstAttribute="leading" secondItem="CrI-K4-NGv" secondAttribute="leading" id="odX-aq-UQB"/>
                                             <constraint firstItem="wNb-Bl-DHL" firstAttribute="trailing" secondItem="ODL-RT-MlH" secondAttribute="trailing" id="oih-9X-KJC"/>
                                             <constraint firstItem="Z5n-Av-Xle" firstAttribute="leading" secondItem="u3M-yP-qg1" secondAttribute="leading" id="oqa-O0-Gcy"/>
@@ -2167,6 +2150,16 @@
                     </view>
                     <size key="freeformSize" width="834" height="3900"/>
                     <connections>
+                        <outlet property="C3B2" destination="Z9S-lR-5DX" id="Qyd-za-KAm"/>
+                        <outlet property="C3B3" destination="D3w-vm-dsE" id="21g-z6-FWf"/>
+                        <outlet property="C3C1" destination="mM5-3D-86u" id="EHg-hY-2DS"/>
+                        <outlet property="C3C2" destination="XE3-88-1hQ" id="V5h-5S-rd9"/>
+                        <outlet property="C3C3" destination="kkh-WD-3Zb" id="VPX-kR-AVz"/>
+                        <outlet property="C3D1" destination="D0N-2m-RGE" id="cRh-9u-i18"/>
+                        <outlet property="C3D2" destination="AVe-ml-1nH" id="OG2-XE-9Mm"/>
+                        <outlet property="C3D3" destination="VgJ-rJ-GQn" id="nbk-q7-6lZ"/>
+                        <outlet property="C3D4" destination="WNH-TM-YcF" id="fRQ-qe-5Vi"/>
+                        <outlet property="C3D5" destination="gGq-yU-QTh" id="NfV-9q-FRO"/>
                         <outlet property="barChart" destination="FH9-qu-egD" id="0Vm-Vx-E5z"/>
                         <outlet property="btn1CheckBox" destination="mM5-3D-86u" id="3AE-Ot-cmP"/>
                         <outlet property="btn2CheckBox" destination="XE3-88-1hQ" id="Mkg-NG-YCc"/>
@@ -2245,6 +2238,9 @@
                                                 <rect key="frame" x="682" y="2807" width="113" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="Siguiente"/>
+                                                <connections>
+                                                    <action selector="siguiente:" destination="S6v-7u-F3v" eventType="touchUpInside" id="KkX-4s-3yV"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investiga la pagina web" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMe-fK-Ns5">
                                                 <rect key="frame" x="56" y="165" width="581" height="61"/>
@@ -2366,49 +2362,49 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5uC-8W-sDM">
                                                 <rect key="frame" x="680" y="181" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoUno:" destination="S6v-7u-F3v" eventType="valueChanged" id="RlR-UB-Mwh"/>
+                                                    <action selector="estadoUno:" destination="S6v-7u-F3v" eventType="valueChanged" id="dlX-Vm-fv3"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qhe-A1-wpa">
                                                 <rect key="frame" x="680" y="250" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="nZP-CX-wKi"/>
+                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="781-Rd-wXr"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0T1-ok-QG3">
                                                 <rect key="frame" x="680" y="319" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTres:" destination="S6v-7u-F3v" eventType="valueChanged" id="C8O-fg-284"/>
+                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="BBW-fS-sz2"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nmH-Gd-mDf">
                                                 <rect key="frame" x="680" y="388" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCuatro:" destination="S6v-7u-F3v" eventType="valueChanged" id="yXj-QH-NFm"/>
+                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="aaR-f9-CdT"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rin-Sb-1gb">
                                                 <rect key="frame" x="680" y="458" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCinco:" destination="S6v-7u-F3v" eventType="valueChanged" id="4GL-49-wPa"/>
+                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="xq0-df-aLO"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9BU-6L-RwH">
                                                 <rect key="frame" x="680" y="528" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSeis:" destination="S6v-7u-F3v" eventType="valueChanged" id="dFd-U0-jf8"/>
+                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="Eib-LG-jaZ"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8K-WL-USS">
                                                 <rect key="frame" x="680" y="597" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSiete:" destination="S6v-7u-F3v" eventType="valueChanged" id="0fl-yj-HEn"/>
+                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="C8y-Fm-P1Z"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sgm-BT-wX9">
                                                 <rect key="frame" x="680" y="666" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOcho:" destination="S6v-7u-F3v" eventType="valueChanged" id="ubz-jX-Kkr"/>
+                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="QVo-R3-I6s"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojW-A1-Nhm">
@@ -2520,7 +2516,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKW-PE-eZn">
                                                 <rect key="frame" x="680" y="735" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoNueve:" destination="S6v-7u-F3v" eventType="valueChanged" id="qff-y9-XzK"/>
+                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="Kgw-Oo-wuX"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-XD-Yn0">
@@ -2784,11 +2780,19 @@
                     </view>
                     <size key="freeformSize" width="834" height="2900"/>
                     <connections>
+                        <outlet property="C4A2" destination="Qhe-A1-wpa" id="R3i-ta-2JF"/>
+                        <outlet property="C4A3" destination="0T1-ok-QG3" id="fZg-KC-Y9i"/>
+                        <outlet property="C4A4" destination="nmH-Gd-mDf" id="GCD-O2-eld"/>
+                        <outlet property="C4A5" destination="Rin-Sb-1gb" id="kQV-BK-vS6"/>
+                        <outlet property="C4A6" destination="9BU-6L-RwH" id="EHg-2L-IHc"/>
+                        <outlet property="C4A7" destination="D8K-WL-USS" id="fWf-nw-BFC"/>
+                        <outlet property="C4A8" destination="Sgm-BT-wX9" id="x5W-ci-X6f"/>
+                        <outlet property="C4A9" destination="ZKW-PE-eZn" id="z5z-lU-NBa"/>
                         <outlet property="barChart" destination="x5J-WO-sLO" id="sD0-1G-xyK"/>
                         <outlet property="radarChart" destination="wA8-BO-ObT" id="LYs-Ft-wZk"/>
                         <outlet property="recomendaciones" destination="oGa-uJ-iH6" id="ZCy-nH-Wo9"/>
-                        <segue destination="vuG-cN-Cp4" kind="presentation" identifier="finalPractica" id="y8r-h7-aSX"/>
                         <segue destination="cyI-WA-Gtg" kind="presentation" identifier="finalRegistro" id="JfO-qe-fpR"/>
+                        <segue destination="wtL-00-Qai" kind="presentation" identifier="finalPractica" id="QX7-HA-RpB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdA-XG-dcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2796,99 +2800,115 @@
             <point key="canvasLocation" x="3235" y="592"/>
         </scene>
         <!--Final Practica View Controller-->
-        <scene sceneID="kuw-75-ysH">
+        <scene sceneID="Jcd-jy-TpD">
             <objects>
-                <viewController id="vuG-cN-Cp4" customClass="FinalPracticaViewController" customModule="GS_Sales_SIM" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Lru-Fe-OfO">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="1800"/>
+                <viewController id="wtL-00-Qai" customClass="FinalPracticaViewController" customModule="GS_Sales_SIM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eHV-W0-Lto">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A6N-vW-VU8">
-                                <rect key="frame" x="0.0" y="20" width="834" height="1780"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0r-QN-tdb">
+                                <rect key="frame" x="0.0" y="20" width="834" height="1680"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Tw-Sp-ety">
-                                        <rect key="frame" x="0.0" y="0.0" width="834" height="1800"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxj-cK-BBS">
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="1700"/>
                                         <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Y5-yf-NKg" customClass="RadarChartView" customModule="Charts">
-                                                <rect key="frame" x="117" y="170" width="600" height="598"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calificación Global" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8w-kt-e3f">
-                                                <rect key="frame" x="232" y="34" width="370" height="41"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calificación Global" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4G-Zf-i7u">
+                                                <rect key="frame" x="232" y="29" width="370" height="41"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="7pB-dM-BLl"/>
-                                                    <constraint firstAttribute="width" constant="370" id="FlM-Pv-70u"/>
+                                                    <constraint firstAttribute="height" constant="41" id="19r-Ju-q87"/>
+                                                    <constraint firstAttribute="width" constant="370" id="LG5-u9-Jfs"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rlp-CH-PJ9" customClass="BarChartView" customModule="Charts">
-                                                <rect key="frame" x="117" y="790" width="600" height="600"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tB4-WL-bQb" customClass="RadarChartView" customModule="Charts">
+                                                <rect key="frame" x="117" y="113" width="600" height="598"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anx-cB-DAC">
-                                                <rect key="frame" x="386" y="1495" width="63" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="seO-fb-VMl" customClass="BarChartView" customModule="Charts">
+                                                <rect key="frame" x="117" y="781" width="600" height="600"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m5t-6a-Uka">
+                                                <rect key="frame" x="385.5" y="1456" width="63" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="Atrás"/>
+                                                <connections>
+                                                    <segue destination="S6v-7u-F3v" kind="show" id="RAf-QR-wAM"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXD-xb-lnx">
-                                                <rect key="frame" x="252" y="1575" width="98" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QB-Lk-82H">
+                                                <rect key="frame" x="346" y="1572" width="144" height="46"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="Volver inicio"/>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="siX-AB-HF6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RtU-Fq-GeE">
+                                                <rect key="frame" x="265" y="1510" width="98" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="Guardar"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VeU-yv-9w0">
-                                                <rect key="frame" x="496" y="1575" width="75" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFq-ej-zp4">
+                                                <rect key="frame" x="494" y="1510" width="75" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="Enviar"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="i8w-kt-e3f" firstAttribute="top" secondItem="5Tw-Sp-ety" secondAttribute="top" constant="34" id="F57-MT-GfE"/>
-                                            <constraint firstAttribute="height" constant="1800" id="VY8-0A-INl"/>
-                                            <constraint firstItem="i8w-kt-e3f" firstAttribute="centerX" secondItem="5Tw-Sp-ety" secondAttribute="centerX" id="tIq-x5-Vnp"/>
+                                            <constraint firstItem="M4G-Zf-i7u" firstAttribute="top" secondItem="Wxj-cK-BBS" secondAttribute="top" constant="29" id="4Xe-DU-Oxp"/>
+                                            <constraint firstItem="4QB-Lk-82H" firstAttribute="centerX" secondItem="m5t-6a-Uka" secondAttribute="centerX" constant="1" id="7Zr-Cn-zaL"/>
+                                            <constraint firstItem="seO-fb-VMl" firstAttribute="top" secondItem="Wxj-cK-BBS" secondAttribute="top" constant="781" id="A91-rW-Wnu"/>
+                                            <constraint firstItem="M4G-Zf-i7u" firstAttribute="centerX" secondItem="tB4-WL-bQb" secondAttribute="centerX" id="FVx-hr-7fi"/>
+                                            <constraint firstItem="M4G-Zf-i7u" firstAttribute="centerX" secondItem="seO-fb-VMl" secondAttribute="centerX" id="L75-gm-EKl"/>
+                                            <constraint firstItem="tB4-WL-bQb" firstAttribute="leading" secondItem="seO-fb-VMl" secondAttribute="leading" id="LoT-AK-Mq2"/>
+                                            <constraint firstAttribute="bottom" secondItem="4QB-Lk-82H" secondAttribute="bottom" constant="82" id="Xyq-IJ-agA"/>
+                                            <constraint firstAttribute="trailing" secondItem="dFq-ej-zp4" secondAttribute="trailing" constant="265" id="YmE-6m-tqE"/>
+                                            <constraint firstItem="seO-fb-VMl" firstAttribute="top" secondItem="tB4-WL-bQb" secondAttribute="bottom" constant="70" id="cL1-NL-wh8"/>
+                                            <constraint firstAttribute="bottom" secondItem="seO-fb-VMl" secondAttribute="bottom" constant="319" id="cTa-bh-XEm"/>
+                                            <constraint firstItem="M4G-Zf-i7u" firstAttribute="centerX" secondItem="Wxj-cK-BBS" secondAttribute="centerX" id="cer-fl-3Bv"/>
+                                            <constraint firstItem="RtU-Fq-GeE" firstAttribute="baseline" secondItem="dFq-ej-zp4" secondAttribute="baseline" id="dbu-95-6xk"/>
+                                            <constraint firstItem="M4G-Zf-i7u" firstAttribute="centerX" secondItem="m5t-6a-Uka" secondAttribute="centerX" id="hPf-V4-eTX"/>
+                                            <constraint firstItem="tB4-WL-bQb" firstAttribute="leading" secondItem="Wxj-cK-BBS" secondAttribute="leading" constant="117" id="uST-gf-Ed9"/>
+                                            <constraint firstItem="m5t-6a-Uka" firstAttribute="top" secondItem="seO-fb-VMl" secondAttribute="bottom" constant="75" id="ujq-Pe-xzn"/>
+                                            <constraint firstItem="tB4-WL-bQb" firstAttribute="top" secondItem="M4G-Zf-i7u" secondAttribute="bottom" constant="43" id="vyK-tc-k21"/>
+                                            <constraint firstItem="RtU-Fq-GeE" firstAttribute="leading" secondItem="Wxj-cK-BBS" secondAttribute="leading" constant="265" id="wA2-p7-l0B"/>
+                                            <constraint firstItem="4QB-Lk-82H" firstAttribute="top" secondItem="RtU-Fq-GeE" secondAttribute="bottom" constant="16" id="wZy-Fv-azR"/>
+                                            <constraint firstAttribute="height" constant="1700" id="xhS-Ai-pau"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Vy-ME-SRu">
-                                        <rect key="frame" x="345" y="1661" width="144" height="46"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="Volver inicio"/>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="5Tw-Sp-ety" secondAttribute="bottom" constant="-20" id="LsS-1V-57H"/>
-                                    <constraint firstItem="5Tw-Sp-ety" firstAttribute="leading" secondItem="A6N-vW-VU8" secondAttribute="leading" id="c2d-iR-wtq"/>
-                                    <constraint firstItem="5Tw-Sp-ety" firstAttribute="centerX" secondItem="A6N-vW-VU8" secondAttribute="centerX" id="dyn-6C-258"/>
-                                    <constraint firstItem="5Tw-Sp-ety" firstAttribute="top" secondItem="A6N-vW-VU8" secondAttribute="top" id="n6g-FT-Z6C"/>
-                                    <constraint firstAttribute="trailing" secondItem="5Tw-Sp-ety" secondAttribute="trailing" id="zG0-m6-k2q"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wxj-cK-BBS" secondAttribute="bottom" id="ZaZ-9d-HLh"/>
+                                    <constraint firstItem="Wxj-cK-BBS" firstAttribute="leading" secondItem="h0r-QN-tdb" secondAttribute="leading" id="bTa-N3-uBT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wxj-cK-BBS" secondAttribute="trailing" id="tV4-eL-h5s"/>
+                                    <constraint firstItem="Wxj-cK-BBS" firstAttribute="top" secondItem="h0r-QN-tdb" secondAttribute="top" id="w8M-Yk-IMG"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="A6N-vW-VU8" firstAttribute="trailing" secondItem="iIh-a5-05G" secondAttribute="trailing" id="0IE-k2-Ngg"/>
-                            <constraint firstAttribute="bottom" secondItem="A6N-vW-VU8" secondAttribute="bottom" id="Byf-3B-NqX"/>
-                            <constraint firstItem="A6N-vW-VU8" firstAttribute="leading" secondItem="iIh-a5-05G" secondAttribute="leading" id="Srx-18-nuA"/>
-                            <constraint firstItem="A6N-vW-VU8" firstAttribute="top" secondItem="iIh-a5-05G" secondAttribute="top" id="x1Y-VC-MYO"/>
+                            <constraint firstItem="Wxj-cK-BBS" firstAttribute="width" secondItem="eHV-W0-Lto" secondAttribute="width" id="FU2-Iq-mhZ"/>
+                            <constraint firstItem="qkq-K9-Xf4" firstAttribute="trailing" secondItem="h0r-QN-tdb" secondAttribute="trailing" id="Q8a-gt-UJU"/>
+                            <constraint firstItem="qkq-K9-Xf4" firstAttribute="bottom" secondItem="h0r-QN-tdb" secondAttribute="bottom" id="QVX-kj-akH"/>
+                            <constraint firstItem="h0r-QN-tdb" firstAttribute="top" secondItem="qkq-K9-Xf4" secondAttribute="top" id="X9x-Ms-yfO"/>
+                            <constraint firstItem="h0r-QN-tdb" firstAttribute="leading" secondItem="qkq-K9-Xf4" secondAttribute="leading" id="so5-za-RgQ"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="iIh-a5-05G"/>
+                        <viewLayoutGuide key="safeArea" id="qkq-K9-Xf4"/>
                     </view>
-                    <size key="freeformSize" width="834" height="1800"/>
+                    <size key="freeformSize" width="834" height="1700"/>
                     <connections>
-                        <outlet property="barChart" destination="rlp-CH-PJ9" id="OTK-H9-MbD"/>
-                        <outlet property="radarChart" destination="8Y5-yf-NKg" id="Anv-GU-MhJ"/>
+                        <outlet property="barChart" destination="seO-fb-VMl" id="mRV-XC-YYG"/>
+                        <outlet property="radarChart" destination="tB4-WL-bQb" id="VWa-Er-yBl"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eja-Eq-v7I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMU-nZ-pSa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4086" y="-22"/>
+            <point key="canvasLocation" x="4086" y="-100"/>
         </scene>
         <!--Final Registro View Controller-->
         <scene sceneID="Zcj-el-7v6">
@@ -2898,75 +2918,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfe-9U-8QH">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anU-1Q-res">
                                 <rect key="frame" x="0.0" y="20" width="834" height="1580"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3C-ct-J1R">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8uy-pg-hEi">
                                         <rect key="frame" x="0.0" y="0.0" width="834" height="1600"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calificación Global" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbN-e7-syy">
-                                                <rect key="frame" x="232" y="34" width="370" height="41"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calificación Global" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtb-FB-cnv">
+                                                <rect key="frame" x="232" y="30" width="370" height="41"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="41" id="8e5-Nq-7Z0"/>
-                                                    <constraint firstAttribute="width" constant="370" id="B1P-o7-GYw"/>
+                                                    <constraint firstAttribute="width" constant="370" id="B5o-N0-IiC"/>
+                                                    <constraint firstAttribute="height" constant="41" id="clm-fq-eDd"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vKY-AJ-Coi" customClass="RadarChartView" customModule="Charts">
-                                                <rect key="frame" x="117" y="170" width="600" height="598"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpR-ij-JvB" customClass="RadarChartView" customModule="Charts">
+                                                <rect key="frame" x="117" y="114" width="600" height="598"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ciM-UL-lOt" customClass="BarChartView" customModule="Charts">
-                                                <rect key="frame" x="118" y="790" width="600" height="600"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qMB-rJ-eUR" customClass="BarChartView" customModule="Charts">
+                                                <rect key="frame" x="117" y="782" width="600" height="600"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dU3-G0-FcO">
-                                                <rect key="frame" x="257" y="1436" width="63" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                                <state key="normal" title="Atrás"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vin-24-9Vv">
-                                                <rect key="frame" x="488" y="1436" width="144" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvE-fg-dfU">
+                                                <rect key="frame" x="456" y="1457" width="144" height="46"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <state key="normal" title="Volver inicio"/>
+                                                <connections>
+                                                    <segue destination="BYZ-38-t0r" kind="show" id="JAI-Ko-TAq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qk-5o-gI9">
+                                                <rect key="frame" x="266" y="1457" width="63" height="46"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="Atrás"/>
+                                                <connections>
+                                                    <segue destination="S6v-7u-F3v" kind="show" id="oOK-WA-XV0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="wbN-e7-syy" firstAttribute="top" secondItem="l3C-ct-J1R" secondAttribute="top" constant="34" id="3Ln-nR-HWL"/>
-                                            <constraint firstAttribute="height" constant="1600" id="Fd7-Pc-wwQ"/>
-                                            <constraint firstItem="wbN-e7-syy" firstAttribute="leading" secondItem="l3C-ct-J1R" secondAttribute="leading" constant="232" id="J4n-k3-DLr"/>
-                                            <constraint firstItem="wbN-e7-syy" firstAttribute="centerX" secondItem="l3C-ct-J1R" secondAttribute="centerX" id="Qaf-3x-ZsK"/>
+                                            <constraint firstItem="xtb-FB-cnv" firstAttribute="centerX" secondItem="ZpR-ij-JvB" secondAttribute="centerX" id="0y0-iw-3Zd"/>
+                                            <constraint firstItem="ZpR-ij-JvB" firstAttribute="top" secondItem="xtb-FB-cnv" secondAttribute="bottom" constant="43" id="7hK-q1-G1Q"/>
+                                            <constraint firstAttribute="bottom" secondItem="qMB-rJ-eUR" secondAttribute="bottom" constant="218" id="Bh7-Qi-Wug"/>
+                                            <constraint firstItem="ZpR-ij-JvB" firstAttribute="leading" secondItem="8uy-pg-hEi" secondAttribute="leading" constant="117" id="Kor-MO-MFy"/>
+                                            <constraint firstAttribute="height" constant="1600" id="Qse-5y-CWd"/>
+                                            <constraint firstAttribute="trailing" secondItem="lvE-fg-dfU" secondAttribute="trailing" constant="234" id="YVP-4r-9XK"/>
+                                            <constraint firstItem="xtb-FB-cnv" firstAttribute="top" secondItem="8uy-pg-hEi" secondAttribute="top" constant="30" id="c7Q-3M-kZt"/>
+                                            <constraint firstItem="8Qk-5o-gI9" firstAttribute="leading" secondItem="8uy-pg-hEi" secondAttribute="leading" constant="266" id="fwA-jH-4V4"/>
+                                            <constraint firstItem="xtb-FB-cnv" firstAttribute="centerX" secondItem="qMB-rJ-eUR" secondAttribute="centerX" id="oFW-w8-hCZ"/>
+                                            <constraint firstItem="8Qk-5o-gI9" firstAttribute="top" secondItem="qMB-rJ-eUR" secondAttribute="bottom" constant="75" id="s1l-eM-qfM"/>
+                                            <constraint firstItem="xtb-FB-cnv" firstAttribute="centerX" secondItem="8uy-pg-hEi" secondAttribute="centerX" id="sft-ei-gbW"/>
+                                            <constraint firstItem="ZpR-ij-JvB" firstAttribute="leading" secondItem="qMB-rJ-eUR" secondAttribute="leading" id="xh3-Ov-PrQ"/>
+                                            <constraint firstItem="qMB-rJ-eUR" firstAttribute="top" secondItem="ZpR-ij-JvB" secondAttribute="bottom" constant="70" id="yr7-Rv-hg3"/>
+                                            <constraint firstItem="qMB-rJ-eUR" firstAttribute="top" secondItem="8uy-pg-hEi" secondAttribute="top" constant="782" id="z4t-W9-F3w"/>
+                                            <constraint firstItem="8Qk-5o-gI9" firstAttribute="baseline" secondItem="lvE-fg-dfU" secondAttribute="baseline" id="zpF-fa-K38"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="l3C-ct-J1R" firstAttribute="top" secondItem="nfe-9U-8QH" secondAttribute="top" id="VZa-FL-sJI"/>
-                                    <constraint firstAttribute="bottom" secondItem="l3C-ct-J1R" secondAttribute="bottom" id="f19-KW-99C"/>
-                                    <constraint firstAttribute="trailing" secondItem="l3C-ct-J1R" secondAttribute="trailing" id="t0T-q1-FDh"/>
-                                    <constraint firstItem="l3C-ct-J1R" firstAttribute="leading" secondItem="nfe-9U-8QH" secondAttribute="leading" id="wnr-z8-Vag"/>
+                                    <constraint firstAttribute="trailing" secondItem="8uy-pg-hEi" secondAttribute="trailing" id="V4W-Z9-Mga"/>
+                                    <constraint firstItem="8uy-pg-hEi" firstAttribute="leading" secondItem="anU-1Q-res" secondAttribute="leading" id="gEL-Nn-o2O"/>
+                                    <constraint firstAttribute="bottom" secondItem="8uy-pg-hEi" secondAttribute="bottom" id="gaE-6X-KZD"/>
+                                    <constraint firstItem="8uy-pg-hEi" firstAttribute="top" secondItem="anU-1Q-res" secondAttribute="top" id="xi3-hy-lqx"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="nfe-9U-8QH" firstAttribute="top" secondItem="z1T-6f-WY0" secondAttribute="top" id="HtR-vb-95z"/>
-                            <constraint firstItem="nfe-9U-8QH" firstAttribute="leading" secondItem="z1T-6f-WY0" secondAttribute="leading" id="VBL-nQ-SN1"/>
-                            <constraint firstItem="nfe-9U-8QH" firstAttribute="trailing" secondItem="z1T-6f-WY0" secondAttribute="trailing" id="WCx-6V-jck"/>
-                            <constraint firstAttribute="bottom" secondItem="nfe-9U-8QH" secondAttribute="bottom" id="kUG-wf-Ae8"/>
+                            <constraint firstItem="anU-1Q-res" firstAttribute="top" secondItem="z1T-6f-WY0" secondAttribute="top" id="8o1-lG-K67"/>
+                            <constraint firstItem="z1T-6f-WY0" firstAttribute="bottom" secondItem="anU-1Q-res" secondAttribute="bottom" id="BYU-oL-MsZ"/>
+                            <constraint firstItem="anU-1Q-res" firstAttribute="leading" secondItem="z1T-6f-WY0" secondAttribute="leading" id="GkN-AG-YRy"/>
+                            <constraint firstItem="8uy-pg-hEi" firstAttribute="width" secondItem="vi7-2K-Fs9" secondAttribute="width" id="QZB-UB-G6W"/>
+                            <constraint firstItem="z1T-6f-WY0" firstAttribute="trailing" secondItem="anU-1Q-res" secondAttribute="trailing" id="cJo-VO-wdF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="z1T-6f-WY0"/>
                     </view>
                     <size key="freeformSize" width="834" height="1600"/>
                     <connections>
-                        <outlet property="barChart" destination="ciM-UL-lOt" id="JaV-CV-ZaM"/>
-                        <outlet property="radarChart" destination="vKY-AJ-Coi" id="46g-9y-26x"/>
+                        <outlet property="barChart" destination="qMB-rJ-eUR" id="ptx-vQ-7IP"/>
+                        <outlet property="radarChart" destination="ZpR-ij-JvB" id="Nmz-8R-9Ny"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvl-E7-kFr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3173,73 +3207,70 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mT5-tw-qgr">
                                                 <rect key="frame" x="680" y="179" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoUno:" destination="fCs-Pw-xX6" eventType="valueChanged" id="mSH-Lo-wOE"/>
+                                                    <action selector="estadoUno:" destination="fCs-Pw-xX6" eventType="valueChanged" id="wEA-IU-EGN"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PhK-nH-6qn">
                                                 <rect key="frame" x="680" y="248" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="fCs-Pw-xX6" eventType="valueChanged" id="63L-97-2xC"/>
+                                                    <action selector="estadoDos:" destination="fCs-Pw-xX6" eventType="valueChanged" id="4pU-lL-QgG"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZHs-HP-PF9">
                                                 <rect key="frame" x="680" y="317" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTres:" destination="fCs-Pw-xX6" eventType="valueChanged" id="uta-iI-ucF"/>
+                                                    <action selector="estadoTres:" destination="fCs-Pw-xX6" eventType="valueChanged" id="ow6-En-M85"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNL-Th-atp">
                                                 <rect key="frame" x="680" y="386" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCuatro:" destination="fCs-Pw-xX6" eventType="valueChanged" id="XhQ-Ak-8ca"/>
+                                                    <action selector="estadoCuatro:" destination="fCs-Pw-xX6" eventType="valueChanged" id="Vki-cu-vKc"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-sK-g88">
                                                 <rect key="frame" x="680" y="456" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCinco:" destination="fCs-Pw-xX6" eventType="valueChanged" id="Mnv-St-AsI"/>
+                                                    <action selector="estadoCinco:" destination="fCs-Pw-xX6" eventType="valueChanged" id="l28-EU-5zQ"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-0i-Vtl">
                                                 <rect key="frame" x="680" y="526" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSeis:" destination="fCs-Pw-xX6" eventType="valueChanged" id="nwS-Xp-mn3"/>
+                                                    <action selector="estadoSeis:" destination="fCs-Pw-xX6" eventType="valueChanged" id="JSH-GO-MlU"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yt2-2y-Ucb">
                                                 <rect key="frame" x="680" y="595" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSiete:" destination="fCs-Pw-xX6" eventType="valueChanged" id="tg1-CB-Qck"/>
+                                                    <action selector="estadoTres:" destination="fCs-Pw-xX6" eventType="valueChanged" id="6u0-2s-zeM"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OiB-no-LOx">
                                                 <rect key="frame" x="680" y="664" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOcho:" destination="fCs-Pw-xX6" eventType="valueChanged" id="H9B-Rz-mgv"/>
+                                                    <action selector="estadoSiete:" destination="fCs-Pw-xX6" eventType="valueChanged" id="sDZ-hL-cus"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dmf-Ev-c1U">
                                                 <rect key="frame" x="680" y="733" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoNueve:" destination="fCs-Pw-xX6" eventType="valueChanged" id="a2u-j4-uk5"/>
+                                                    <action selector="estadoOcho:" destination="fCs-Pw-xX6" eventType="valueChanged" id="eyq-uK-HCh"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahS-yw-fWk">
                                                 <rect key="frame" x="680" y="802" width="51" height="31"/>
-                                                <connections>
-                                                    <action selector="estadoDiez:" destination="fCs-Pw-xX6" eventType="valueChanged" id="Nhh-5Q-RqF"/>
-                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xo-yp-Fhq">
                                                 <rect key="frame" x="680" y="871" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOnce:" destination="fCs-Pw-xX6" eventType="valueChanged" id="MJR-C2-LoD"/>
+                                                    <action selector="estadoNueve:" destination="fCs-Pw-xX6" eventType="valueChanged" id="q1v-Il-jmP"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egU-dw-Ul5">
                                                 <rect key="frame" x="680" y="940" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDoce:" destination="fCs-Pw-xX6" eventType="valueChanged" id="XNm-ma-wu8"/>
+                                                    <action selector="estadoOcho:" destination="fCs-Pw-xX6" eventType="valueChanged" id="8Ug-Um-pqD"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTU-FG-8yM">
@@ -3690,6 +3721,10 @@
                     </view>
                     <size key="freeformSize" width="834" height="3100"/>
                     <connections>
+                        <outlet property="C2A3" destination="ZHs-HP-PF9" id="teN-mB-33N"/>
+                        <outlet property="C2B2" destination="Yt2-2y-Ucb" id="Tsa-Jk-Ia9"/>
+                        <outlet property="C2B4" destination="Dmf-Ev-c1U" id="sx7-WP-1Aj"/>
+                        <outlet property="C2C3" destination="egU-dw-Ul5" id="gCi-P5-Onv"/>
                         <outlet property="barChart" destination="5b3-U3-U9b" id="PXT-lS-B2p"/>
                         <outlet property="radarChart" destination="EGL-lW-twM" id="Sus-0Y-kvq"/>
                         <outlet property="recomendaciones" destination="AO7-OV-4Y0" id="GFx-Yv-DuM"/>
@@ -3705,9 +3740,10 @@
         <image name="checkmarkempty" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3bA-G8-4Rs"/>
-        <segue reference="zul-ey-Ppp"/>
-        <segue reference="fIB-2o-vym"/>
-        <segue reference="zcY-Lh-r56"/>
+        <segue reference="s7G-Nq-AGz"/>
+        <segue reference="oOK-WA-XV0"/>
+        <segue reference="2hO-Pz-fGE"/>
+        <segue reference="lud-zc-aiC"/>
+        <segue reference="JAI-Ko-TAq"/>
     </inferredMetricsTieBreakers>
 </document>
