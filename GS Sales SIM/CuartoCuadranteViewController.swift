@@ -56,7 +56,7 @@ class CuartoCuadranteViewController: UIViewController {
     }
     
     @IBAction func siguiente(_ sender: Any) {
-        performSegue(withIdentifier: "finalRegistro", sender: self)
+        performSegue(withIdentifier: "finalPractica", sender: self)
 
 
         /*if(valor == 1){
@@ -74,7 +74,7 @@ class CuartoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "Dejar pasar demasiado tiempo entre la visita y nuestro seguimiento, puede confundirse con desinteres o informalidad. No dejes pasar más de 24 horas en contactar a tu prospecto con información de valor. \n\n"
+            arrayRecomendaciones[0] = "- Dejar pasar demasiado tiempo entre la visita y nuestro seguimiento, puede confundirse con desinteres o informalidad. No dejes pasar más de 24 horas en contactar a tu prospecto con información de valor. \n\n"
             updateRecomendaciones()
         }
     }
@@ -84,7 +84,7 @@ class CuartoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[1] = "Que tu correo tenga agradecimiento, compromisos, cotización, plan de adquisición, casos homologos, promociones vigentes y broshure de marca. No dejar claros los siguientes pasos de tu seguimiento puede hacerlo mas dificil de programar. Siempre deja claro cuando será tu proximo contacto y cumple. \n\n"
+            arrayRecomendaciones[1] = "- Que tu correo tenga agradecimiento, compromisos, cotización, plan de adquisición, casos homologos, promociones vigentes y broshure de marca. No dejar claros los siguientes pasos de tu seguimiento puede hacerlo mas dificil de programar. Siempre deja claro cuando será tu proximo contacto y cumple. \n\n"
             updateRecomendaciones()
         }
     }
@@ -98,7 +98,6 @@ class CuartoCuadranteViewController: UIViewController {
     
     //Funcion de la radarChart
     func setRadarChart(dataPoints: [String], values: [Double]) {
-        radarChart.noDataText = "You need to provide data for the chart."
         
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<dataPoints.count {
@@ -143,8 +142,6 @@ class CuartoCuadranteViewController: UIViewController {
     
     //Funcion de la barChart
     func setBarChart(dataPoints: [String], values: [Double]) {
-        
-        barChart.noDataText = "You need to provide data for the chart."
         
         var dataEntries:[BarChartDataEntry] = []
         

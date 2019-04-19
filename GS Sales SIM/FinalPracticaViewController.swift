@@ -8,6 +8,7 @@
 
 import UIKit
 import Charts
+import MessageUI
 
 class FinalPracticaViewController: UIViewController {
 
@@ -38,9 +39,29 @@ class FinalPracticaViewController: UIViewController {
     }
     
     
+    @IBAction func enviarCorreo(_ sender: Any) {
+        sendEmail()
+    }
+    
+    func sendEmail() {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
+            mail.setToRecipients(["Pao_Gv93@hotmail"])
+            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
+            
+            present(mail, animated: true)
+        } else {
+            // show failure alert
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true)
+    }
+    
     //Funcion de la radarChart
     func setRadarChart(dataPoints: [String], values: [Double]) {
-        radarChart.noDataText = "You need to provide data for the chart."
         
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<dataPoints.count {
@@ -86,8 +107,8 @@ class FinalPracticaViewController: UIViewController {
     //Funcion de la barChart
     func setBarChart(dataPoints: [String], values: [Double]) {
         
-        barChart.noDataText = "You need to provide data for the chart."
-        
+        let cuadrantes = ["","","","C1","","","","C2","","","","C3","","","","C4","","",""]
+
         var dataEntries:[BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
@@ -102,6 +123,7 @@ class FinalPracticaViewController: UIViewController {
 
         
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:cuadrantes)
         barChart.xAxis.granularity = 1
         
         //quita labels de arriba

@@ -58,7 +58,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "Como nos vemos predispone a nuestro prospecto a sentir afinidad por nosotros y lo que tenemos que decir. Recuerda ir vestido de acuerdo al contexto. \n\n"
+            arrayRecomendaciones[0] = "- Como nos vemos predispone a nuestro prospecto a sentir afinidad por nosotros y lo que tenemos que decir. Recuerda ir vestido de acuerdo al contexto. \n\n"
             updateRecomendaciones()
         }
     }
@@ -69,7 +69,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[1] = "Para asegurar una presentación efectiva, recuerda asegurarte de cuanto tiempo para presentar, y que no por una confusión de tiempo, pierdas la oportunidad de hacer una entrevista de impacto. \n\n"
+            arrayRecomendaciones[1] = "- Para asegurar una presentación efectiva, recuerda asegurarte de cuanto tiempo para presentar, y que no por una confusión de tiempo, pierdas la oportunidad de hacer una entrevista de impacto. \n\n"
             updateRecomendaciones()
         }
     }
@@ -80,7 +80,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[2] = "No dejes que un descuido te arruine una oportunidad de venta. Recuerda llevar todo lo que necesites, desde un Ipad, los adaptadores que puedas necesitar, llevar tu material de trabajo cargado etc. \n\n"
+            arrayRecomendaciones[2] = "- No dejes que un descuido te arruine una oportunidad de venta. Recuerda llevar todo lo que necesites, desde un Ipad, los adaptadores que puedas necesitar, llevar tu material de trabajo cargado etc. \n\n"
             updateRecomendaciones()
         }
     }
@@ -91,7 +91,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[3] = "¿Pudiste constatar que lo que investigaste es congruente con lo que viste cuando entraste al despacho? Recuerda que todo prospecto requiere tiempo, y ese tiempo depende tambien de la inversión, aunque no hay cliente pequeño. \n\n"
+            arrayRecomendaciones[3] = "- ¿Pudiste constatar que lo que investigaste es congruente con lo que viste cuando entraste al despacho? Recuerda que todo prospecto requiere tiempo, y ese tiempo depende tambien de la inversión, aunque no hay cliente pequeño. \n\n"
             updateRecomendaciones()
         }
     }
@@ -102,7 +102,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[4] = "Descubre la modalidad en la que puedo hacerlo mi cliente (Renta de 12 o Full). \n\n"
+            arrayRecomendaciones[4] = "- Descubre la modalidad en la que puedo hacerlo mi cliente (Renta de 12 o Full). \n\n"
             updateRecomendaciones()
         }
     }
@@ -113,7 +113,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[5] = "No tener una buena tecnica rompe hielo, puede costarte la calidad de la presentación. Recuerda siempre decir algo agradable sobre el contexto en el que te encuentras. \n\n"
+            arrayRecomendaciones[5] = "- No tener una buena tecnica rompe hielo, puede costarte la calidad de la presentación. Recuerda siempre decir algo agradable sobre el contexto en el que te encuentras. \n\n"
             updateRecomendaciones()
         }
     }
@@ -124,7 +124,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[6] = "Presta atención al ambiente y entorno de la empresa y usalo para resaltar los aspectos positivos que identifiques. \n\n"
+            arrayRecomendaciones[6] = "- Presta atención al ambiente y entorno de la empresa y usalo para resaltar los aspectos positivos que identifiques. \n\n"
             updateRecomendaciones()
         }
     }
@@ -135,7 +135,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[7] = "Identifica algo positivo a mencionar sobre el cliente y usalo para establecer un vinculo con el cliente. \n\n"
+            arrayRecomendaciones[7] = "- Identifica algo positivo a mencionar sobre el cliente y usalo para establecer un vinculo con el cliente. \n\n"
             updateRecomendaciones()
         }
     }
@@ -146,7 +146,7 @@ class SegundoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[8] = "Para vender, siempre es mas importante escuchar. \n\n"
+            arrayRecomendaciones[8] = "- Para vender, siempre es mas importante escuchar. \n\n"
             updateRecomendaciones()
         }
     }
@@ -161,7 +161,6 @@ class SegundoCuadranteViewController: UIViewController {
    
     //Funcion de la radarChart
     func setRadarChart(dataPoints: [String], values: [Double]) {
-        radarChart.noDataText = "You need to provide data for the chart."
         
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<dataPoints.count {
@@ -207,7 +206,6 @@ class SegundoCuadranteViewController: UIViewController {
     //Funcion de la barChart
     func setBarChart(dataPoints: [String], values: [Double]) {
         
-        barChart.noDataText = "You need to provide data for the chart."
         
         var dataEntries:[BarChartDataEntry] = []
         

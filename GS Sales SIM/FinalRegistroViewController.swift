@@ -40,7 +40,6 @@ class FinalRegistroViewController: UIViewController {
     
     //Funcion de la radarChart
     func setRadarChart(dataPoints: [String], values: [Double]) {
-        radarChart.noDataText = "You need to provide data for the chart."
         
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<dataPoints.count {
@@ -85,10 +84,11 @@ class FinalRegistroViewController: UIViewController {
     
     //Funcion de la barChart
     func setBarChart(dataPoints: [String], values: [Double]) {
-        
-        barChart.noDataText = "You need to provide data for the chart."
-        
+                
         var dataEntries:[BarChartDataEntry] = []
+        
+        let cuadrantes = ["","","","C1","","","","C2","","","","C3","","","","C4","","",""]
+
         
         for i in 0..<dataPoints.count {
             let dataEntry = BarChartDataEntry(x: Double(i), yValues: [Double(values[i])])
@@ -102,6 +102,7 @@ class FinalRegistroViewController: UIViewController {
 
         
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
+        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:cuadrantes)
         barChart.xAxis.granularity = 1
         
         //quita labels de arriba
