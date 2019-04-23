@@ -62,7 +62,7 @@ class FinalPracticaViewController: UIViewController {
     
     //Funcion de la radarChart
     func setRadarChart(dataPoints: [String], values: [Double]) {
-        
+                
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<dataPoints.count {
             let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
@@ -107,7 +107,7 @@ class FinalPracticaViewController: UIViewController {
     //Funcion de la barChart
     func setBarChart(dataPoints: [String], values: [Double]) {
         
-        let cuadrantes = ["","","","C1","","","","C2","","","","C3","","","","C4","","",""]
+        //let cuadrantes = ["","","","C1","","","","C2","","","","C3","","","","C4","","",""]
 
         var dataEntries:[BarChartDataEntry] = []
         
@@ -123,7 +123,7 @@ class FinalPracticaViewController: UIViewController {
 
         
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
-        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:cuadrantes)
+        //barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:cuadrantes)
         barChart.xAxis.granularity = 1
         
         //quita labels de arriba
