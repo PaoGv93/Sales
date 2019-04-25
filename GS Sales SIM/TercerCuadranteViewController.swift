@@ -26,12 +26,12 @@ class TercerCuadranteViewController: UIViewController {
     var fraseFinal = String()
     
     //valores para grafica de radar
-    let nombresRadarChart = ["C1", "C2", "C3"]
-    let valoresRadarChart = [30.0, 50.0, 90.0]
+    let nombresRadarChart = ["A", "B", "C", "D", "E"]
+    let valoresRadarChart = [30.0, 50.0, 90.0, 80.0, 40.0]
     
     //valores para grafica de barras
-    let nombresBarChart = ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10", "p11", "p12"]
-    let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0]
+    let nombresBarChart = ["A1", "A2", "A3", "B1", "B2", "B3", "B4", "B5", "C1", "D1", "D2", "D3", "D4", "E1", "E2", "E3", "E4", "E5", "E6", "E7"]
+    let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     

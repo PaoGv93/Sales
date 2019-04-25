@@ -22,11 +22,11 @@ class SegundoCuadranteViewController: UIViewController {
 
     
     //valores para grafica de radar
-    let nombresRadarChart = ["C1", "C2", "C3"]
+    let nombresRadarChart = ["A", "B", "C"]
     let valoresRadarChart = [30.0, 50.0, 90.0]
     
     //valores para grafica de barras
-    let nombresBarChart = ["p1", "p2", "p3", "p4", "p5", "p6", "p7", "p8", "p9", "p10", "p11", "p12"]
+    let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "B1", "B2", "B3", "B4", "C1", "C2", "C3"]
     let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
