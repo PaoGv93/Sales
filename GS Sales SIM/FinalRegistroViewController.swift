@@ -41,6 +41,18 @@ class FinalRegistroViewController: UIViewController {
     //Funcion de la radarChart
     func setRadarChart(dataPoints: [String], values: [Double]) {
         
+        let numAprobatorio = [60.0, 55.0, 43.0, 62.0]
+        
+        //set de los numeros aprobatorios
+        var dataEntriesA: [ChartDataEntry] = []
+        for i in 0..<numAprobatorio.count {
+            let dataEntryA = ChartDataEntry(x: Double(i), y: numAprobatorio[i])
+            dataEntriesA.append(dataEntryA)
+        }
+        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "valores")
+        chartDataSetA.setColor(.blue)
+        
+        //set de los numeros que saca el usuario
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<dataPoints.count {
             let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
@@ -54,15 +66,14 @@ class FinalRegistroViewController: UIViewController {
         
         //Options for the axis from here. The range is 0-100, the interval is 10
         radarChart.yAxis.forceLabelsEnabled = true
-        radarChart.yAxis.labelCount = 10
+        //radarChart.yAxis.labelCount = 10
         radarChart.yAxis.axisMinimum = 0.0
-        radarChart.yAxis.axisMaximum = 80.0
+        radarChart.yAxis.axisMaximum = 100.0
         radarChart.yAxis.drawLabelsEnabled = true
         
         radarChart.rotationEnabled = false
-        chartDataSet.drawFilledEnabled = true
-        chartDataSet.fillColor = .gray
-        chartDataSet.setColor(.gray)
+        chartDataSet.setColor(.blue)
+        chartDataSetA.setColor(.orange)
         
         //Present the number as integer
         let numberFormatter = NumberFormatter()
@@ -76,7 +87,16 @@ class FinalRegistroViewController: UIViewController {
         radarChart.yAxis.gridAntialiasEnabled = true
         radarChart.animate(yAxisDuration: 2.0)
         
-        let chartData = RadarChartData(dataSet: chartDataSet)
+        
+        chartDataSetA.valueFormatter = numberFormatter as? IValueFormatter
+        
+        //arreglo para cada dataSet
+        var dataSetssss: [RadarChartDataSet] = [RadarChartDataSet]()
+        
+        dataSetssss.append(chartDataSetA)
+        dataSetssss.append(chartDataSet)
+        
+        let chartData = RadarChartData(dataSets: dataSetssss)
         chartData.labels = dataPoints
         radarChart.data = chartData
     }
