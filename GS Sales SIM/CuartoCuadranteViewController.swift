@@ -98,6 +98,13 @@ class CuartoCuadranteViewController: UIViewController {
         
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "Peso")
         let chartData = BarChartData(dataSet: chartDataSet)
+        
+        //Quitar el double y pasarlo a Int
+        let format = NumberFormatter()
+        format.numberStyle = .none
+        let formatter = DefaultValueFormatter(formatter: format)
+        chartData.setValueFormatter(formatter)
+        
         barChart.data = chartData
         chartDataSet.setColor(.gray)
         

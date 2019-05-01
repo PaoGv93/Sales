@@ -395,6 +395,13 @@ class TercerCuadranteViewController: UIViewController {
         
         let chartData = RadarChartData(dataSets: dataSetssss)
         chartData.labels = dataPoints
+        
+        //Quitar el double y pasarlo a Int
+        let format = NumberFormatter()
+        format.numberStyle = .none
+        let formatter = DefaultValueFormatter(formatter: format)
+        chartData.setValueFormatter(formatter)
+        
         radarChart.data = chartData
     }
     
@@ -411,6 +418,13 @@ class TercerCuadranteViewController: UIViewController {
         
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "Peso")
         let chartData = BarChartData(dataSet: chartDataSet)
+        
+        //Quitar el double y pasarlo a Int
+        let format = NumberFormatter()
+        format.numberStyle = .none
+        let formatter = DefaultValueFormatter(formatter: format)
+        chartData.setValueFormatter(formatter)
+        
         barChart.data = chartData
         chartDataSet.setColor(.gray)
 

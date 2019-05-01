@@ -88,7 +88,6 @@ class FinalRegistroViewController: UIViewController {
         radarChart.yAxis.gridAntialiasEnabled = true
         radarChart.animate(yAxisDuration: 2.0)
         
-        
         chartDataSetA.valueFormatter = numberFormatter as? IValueFormatter
         
         //arreglo para cada dataSet
@@ -99,6 +98,13 @@ class FinalRegistroViewController: UIViewController {
         
         let chartData = RadarChartData(dataSets: dataSetssss)
         chartData.labels = dataPoints
+        
+        //Quitar el double y pasarlo a Int
+        let format = NumberFormatter()
+        format.numberStyle = .none
+        let formatter = DefaultValueFormatter(formatter: format)
+        chartData.setValueFormatter(formatter)
+        
         radarChart.data = chartData
     }
     
@@ -115,6 +121,13 @@ class FinalRegistroViewController: UIViewController {
         
         let chartDataSet = BarChartDataSet(values: dataEntries, label: "Peso")
         let chartData = BarChartData(dataSet: chartDataSet)
+        
+        //Quitar el double y pasarlo a Int
+        let format = NumberFormatter()
+        format.numberStyle = .none
+        let formatter = DefaultValueFormatter(formatter: format)
+        chartData.setValueFormatter(formatter)
+        
         barChart.data = chartData
         chartDataSet.setColor(.gray)
         

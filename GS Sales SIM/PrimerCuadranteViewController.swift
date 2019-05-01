@@ -260,6 +260,7 @@ class PrimerCuadranteViewController: UIViewController {
         
         chartDataSetA.valueFormatter = numberFormatter as? IValueFormatter
         
+        
         //arreglo para cada dataSet
         var dataSetssss: [RadarChartDataSet] = [RadarChartDataSet]()
         
@@ -268,7 +269,15 @@ class PrimerCuadranteViewController: UIViewController {
         
         let chartData = RadarChartData(dataSets: dataSetssss)
         chartData.labels = dataPoints
+        
+        //Quitar el double y pasarlo a Int
+        let format = NumberFormatter()
+        format.numberStyle = .none
+        let formatter = DefaultValueFormatter(formatter: format)
+        chartData.setValueFormatter(formatter)
+        
         radarChart.data = chartData
+        
     }
     
     
@@ -286,6 +295,12 @@ class PrimerCuadranteViewController: UIViewController {
             let chartData = BarChartData(dataSet: chartDataSet)
             barChart.data = chartData
             chartDataSet.setColor(.gray)
+        
+            //Quitar el double y pasarlo a Int
+            let format = NumberFormatter()
+            format.numberStyle = .none
+            let formatter = DefaultValueFormatter(formatter: format)
+            chartData.setValueFormatter(formatter)
             
             barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
             barChart.xAxis.granularity = 1
