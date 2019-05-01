@@ -380,7 +380,7 @@ class TercerCuadranteViewController: UIViewController {
         //Other options
         radarChart.legend.enabled = true
         radarChart.setExtraOffsets(left: 0, top: 10, right: 0, bottom: -100)
-        radarChart.legend.yOffset = 50
+        radarChart.legend.yOffset = 20
         radarChart.yAxis.gridAntialiasEnabled = true
         radarChart.animate(yAxisDuration: 2.0)
         
