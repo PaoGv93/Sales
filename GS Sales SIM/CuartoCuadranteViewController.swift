@@ -118,6 +118,8 @@ class CuartoCuadranteViewController: UIViewController {
         barChart.highlighter = nil
         //Quita los numeros de lado derecho
         barChart.rightAxis.enabled = false
+        
+        barChart.legend.font = UIFont(name: "Arial", size: 14.0)!
     }
     
 }

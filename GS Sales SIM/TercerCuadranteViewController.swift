@@ -68,7 +68,7 @@ class TercerCuadranteViewController: UIViewController {
         
         setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
         let  xAxis : XAxis = self.radarChart.xAxis
-        xAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 14.0)!
+        xAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 16.0)!
         let  yAxis : YAxis = self.radarChart.yAxis
         yAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 10.0)!
         
@@ -403,6 +403,8 @@ class TercerCuadranteViewController: UIViewController {
         chartData.setValueFormatter(formatter)
         
         radarChart.data = chartData
+        
+        radarChart.legend.font = UIFont(name: "Arial", size: 14.0)!
     }
     
     
@@ -439,6 +441,8 @@ class TercerCuadranteViewController: UIViewController {
         barChart.highlighter = nil
         //Quita los numeros de lado derecho
         barChart.rightAxis.enabled = false
+        
+        barChart.legend.font = UIFont(name: "Arial", size: 14.0)!
     }
     
 }
