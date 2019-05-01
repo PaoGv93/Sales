@@ -45,7 +45,7 @@ class CuartoCuadranteViewController: UIViewController {
     }
     
     @IBAction func siguiente(_ sender: Any) {
-        performSegue(withIdentifier: "finalPractica", sender: self)
+        performSegue(withIdentifier: "finalRegistro", sender: self)
 
 
         /*if(valor == 1){
@@ -67,6 +67,7 @@ class CuartoCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
     }
+    
     @IBAction func estadoDos(_ sender: UISwitch) {
         if (C4A2.isOn == true && C4A3.isOn == true && C4A4.isOn == true && C4A5.isOn == true && C4A6.isOn == true && C4A7.isOn == true && C4A8.isOn == true && C4A9.isOn == true){
             arrayRecomendaciones[1] = ""
@@ -95,7 +96,7 @@ class CuartoCuadranteViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "valores")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Peso")
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
         chartDataSet.setColor(.gray)
@@ -105,7 +106,7 @@ class CuartoCuadranteViewController: UIViewController {
         
         //quita labels de arriba
         barChart.xAxis.labelPosition = .bottom
-        barChart.legend.enabled = false
+        barChart.legend.enabled = true
         //quitar highlight si se toca la barra
         barChart.highlighter = nil
         //Quita los numeros de lado derecho

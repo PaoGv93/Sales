@@ -14,13 +14,22 @@ class TercerCuadranteViewController: UIViewController {
     @IBOutlet weak var radarChart: RadarChartView!
     @IBOutlet weak var barChart: BarChartView!
     
+    //Para asignar las imagenes
+    //Cuantas preguntas hiciste
     @IBOutlet weak var btn1CheckBox: UIButton!
     @IBOutlet weak var btn2CheckBox: UIButton!
     @IBOutlet weak var btn3CheckBox: UIButton!
+    @IBOutlet weak var btn4CheckBox: UIButton!
+    
+    //cuantas soluciones mencionaste
+    @IBOutlet weak var btn5CheckBox: UIButton!
+    @IBOutlet weak var btn6CheckBox: UIButton!
+    @IBOutlet weak var btn7CheckBox: UIButton!
+    @IBOutlet weak var btn8CheckBox: UIButton!
     
     @IBOutlet weak var recomendaciones: UITextView!
     
-    //recomendaciones
+    //Recomendaciones
     var arrayRecomendaciones = ["", "", "", "", "", "", "", "", "", "", "", "", "", ""]
     
     var fraseFinal = String()
@@ -39,15 +48,20 @@ class TercerCuadranteViewController: UIViewController {
     @IBOutlet weak var C3B2: UISwitch!
     @IBOutlet weak var C3B3: UISwitch!
     
-    @IBOutlet weak var C3C1: UIButton!
-    @IBOutlet weak var C3C2: UIButton!
-    @IBOutlet weak var C3C3: UIButton!
+    @IBOutlet weak var C3C1Opt1: UIButton!
+    @IBOutlet weak var C3C1Opt2: UIButton!
+    @IBOutlet weak var C3C1Opt3: UIButton!
+    @IBOutlet weak var C3C1Opt4: UIButton!
     
     @IBOutlet weak var C3D1: UISwitch!
     @IBOutlet weak var C3D2: UISwitch!
     @IBOutlet weak var C3D3: UISwitch!
-    @IBOutlet weak var C3D4: UISwitch!
-    @IBOutlet weak var C3D5: UISwitch!
+    
+    @IBOutlet weak var C3D4Opt1: UIButton!
+    @IBOutlet weak var C3D4Opt2: UIButton!
+    @IBOutlet weak var C3D4Opt3: UIButton!
+    @IBOutlet weak var C3D4Opt4: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,11 +74,15 @@ class TercerCuadranteViewController: UIViewController {
         
         axisFormatDelegate = self as? IAxisValueFormatter
         setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
-        
-        //tags para saber cual boton fue precionado
+
         btn1CheckBox.tag = 1
         btn2CheckBox.tag = 2
         btn3CheckBox.tag = 3
+        btn4CheckBox.tag = 4
+        btn5CheckBox.tag = 1
+        btn6CheckBox.tag = 2
+        btn7CheckBox.tag = 3
+        btn8CheckBox.tag = 4
     }
     
     @IBAction func estadoUno(_ sender: UISwitch) {
@@ -134,7 +152,7 @@ class TercerCuadranteViewController: UIViewController {
     }
     
     @IBAction func estadoSiete(_ sender: AnyObject) {
-        if (C3C1.isSelected == false && C3C2.isSelected == false && C3C3.isSelected == false && C3D1.isOn == true && C3D2.isOn == true && C3D3.isOn == true && C3D4.isOn == true && C3D5.isOn == true){
+        if (C3C1Opt1.isSelected == false && C3C1Opt2.isSelected == false && C3C1Opt3.isSelected == false && C3C1Opt4.isSelected == false && C3D1.isOn == true && C3D2.isOn == true && C3D3.isOn == true && C3D4Opt1.isSelected == false && C3D4Opt2.isSelected == false && C3D4Opt3.isSelected == false && C3D4Opt4.isSelected == false){
             arrayRecomendaciones[6] = ""
             updateRecomendaciones()
         }
@@ -230,30 +248,74 @@ class TercerCuadranteViewController: UIViewController {
     
     
     
-    @IBAction func clicked(_ sender: Any) {
+    @IBAction func clickedC1(_ sender: Any) {
         switch (sender as AnyObject).tag {
         case 1:            btn1CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
         btn2CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
         btn3CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        btn4CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
 
         break;
         case 2:
             btn1CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
             btn2CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
             btn3CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn4CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
             break;
         case 3:
             btn1CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
             btn2CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
             btn3CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
+            btn4CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            break;
+        case 4:
+            btn1CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn2CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn3CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn4CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
             break;
         default:
         btn1CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
         btn2CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
         btn3CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        btn4CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
         break;
         }
+    }
+    
+    @IBAction func clickedD4(_ sender: Any) {
+        switch (sender as AnyObject).tag {
+        case 1:            btn5CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
+        btn6CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        btn7CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        btn8CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
         
+        break;
+        case 2:
+            btn5CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn6CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
+            btn7CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn8CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            break;
+        case 3:
+            btn5CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn6CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn7CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
+            btn8CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            break;
+        case 4:
+            btn5CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn6CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn7CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn8CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
+            break;
+        default:
+            btn5CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn6CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn7CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            btn8CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            break;
+        }
     }
 
     
@@ -281,7 +343,7 @@ class TercerCuadranteViewController: UIViewController {
             let dataEntryA = ChartDataEntry(x: Double(i), y: numAprobatorio[i])
             dataEntriesA.append(dataEntryA)
         }
-        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "valores")
+        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "Número Aprobatorio")
         chartDataSetA.setColor(.blue)
         
         //set de los numeros que saca el usuario
@@ -290,11 +352,12 @@ class TercerCuadranteViewController: UIViewController {
             let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
             dataEntries.append(dataEntry)
         }
-        let chartDataSet = RadarChartDataSet(values: dataEntries, label: "valores")
+        let chartDataSet = RadarChartDataSet(values: dataEntries, label: "Calificación")
         
         //Options of radarChart
         radarChart.sizeToFit()
-        radarChart.chartDescription?.text = ""
+        radarChart.chartDescription?.text = nil
+        radarChart.legend.horizontalAlignment = .center
         
         //Options for the axis from here. The range is 0-100, the interval is 10
         radarChart.yAxis.forceLabelsEnabled = true
@@ -315,7 +378,9 @@ class TercerCuadranteViewController: UIViewController {
         radarChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:nombresRadarChart)
         
         //Other options
-        radarChart.legend.enabled = false
+        radarChart.legend.enabled = true
+        radarChart.setExtraOffsets(left: 0, top: 10, right: 0, bottom: -100)
+        radarChart.legend.yOffset = 50
         radarChart.yAxis.gridAntialiasEnabled = true
         radarChart.animate(yAxisDuration: 2.0)
         
@@ -337,7 +402,6 @@ class TercerCuadranteViewController: UIViewController {
     //Funcion de la barChart
     func setBarChart(dataPoints: [String], values: [Double]) {
         
-        
         var dataEntries:[BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
@@ -345,7 +409,7 @@ class TercerCuadranteViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "valores")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Peso")
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
         chartDataSet.setColor(.gray)
@@ -356,7 +420,7 @@ class TercerCuadranteViewController: UIViewController {
         
         //quita labels de arriba
         barChart.xAxis.labelPosition = .bottom
-        barChart.legend.enabled = false
+        barChart.legend.enabled = true
         //quitar highlight si se toca la barra
         barChart.highlighter = nil
         //Quita los numeros de lado derecho

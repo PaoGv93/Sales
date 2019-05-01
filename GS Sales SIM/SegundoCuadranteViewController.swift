@@ -170,7 +170,7 @@ class SegundoCuadranteViewController: UIViewController {
             let dataEntryA = ChartDataEntry(x: Double(i), y: numAprobatorio[i])
             dataEntriesA.append(dataEntryA)
         }
-        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "valores")
+        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "Número aprobatorio")
         chartDataSetA.setColor(.blue)
         
         //set de los numeros que saca el usuario
@@ -179,11 +179,12 @@ class SegundoCuadranteViewController: UIViewController {
             let dataEntry = ChartDataEntry(x: Double(i), y: values[i])
             dataEntries.append(dataEntry)
         }
-        let chartDataSet = RadarChartDataSet(values: dataEntries, label: "valores")
+        let chartDataSet = RadarChartDataSet(values: dataEntries, label: "Calificación")
         
         //Options of radarChart
         radarChart.sizeToFit()
-        radarChart.chartDescription?.text = ""
+        radarChart.chartDescription?.text = nil
+        radarChart.legend.horizontalAlignment = .center
         
         //Options for the axis from here. The range is 0-100, the interval is 10
         radarChart.yAxis.forceLabelsEnabled = true
@@ -204,7 +205,9 @@ class SegundoCuadranteViewController: UIViewController {
         radarChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:nombresRadarChart)
         
         //Other options
-        radarChart.legend.enabled = false
+        radarChart.legend.enabled = true
+        radarChart.setExtraOffsets(left: 0, top: 10, right: 0, bottom: -100)
+        radarChart.legend.yOffset = 50
         radarChart.yAxis.gridAntialiasEnabled = true
         radarChart.animate(yAxisDuration: 2.0)
         
@@ -226,7 +229,6 @@ class SegundoCuadranteViewController: UIViewController {
     //Funcion de la barChart
     func setBarChart(dataPoints: [String], values: [Double]) {
         
-        
         var dataEntries:[BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
@@ -234,7 +236,7 @@ class SegundoCuadranteViewController: UIViewController {
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "valores")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Peso")
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
         chartDataSet.setColor(.gray)
@@ -245,7 +247,7 @@ class SegundoCuadranteViewController: UIViewController {
         
         //quita labels de arriba
         barChart.xAxis.labelPosition = .bottom
-        barChart.legend.enabled = false
+        barChart.legend.enabled = true
         //quitar highlight si se toca la barra
         barChart.highlighter = nil
         //Quita los numeros de lado derecho
