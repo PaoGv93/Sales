@@ -162,13 +162,15 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejJ-sJ-cgC">
                                                 <rect key="frame" x="675" y="190" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoUno:" destination="3ir-0e-Orv" eventType="valueChanged" id="LFe-B2-AoA"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="809-3a-LkE"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="Edw-TN-HHv"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4N-Lm-BGb">
                                                 <rect key="frame" x="675" y="260" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="3ir-0e-Orv" eventType="valueChanged" id="ujF-Dh-l7B"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="nuF-Cz-iGq"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="mDz-aV-1za"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identifica el tipo de Arquitecto/Constructor/Diseñador" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1P-i8-amz">
@@ -189,85 +191,113 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0DG-NR-ptX">
                                                 <rect key="frame" x="675" y="330" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTres:" destination="3ir-0e-Orv" eventType="valueChanged" id="FFp-ya-RLJ"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="VLg-uM-7ZX"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="EMF-eW-FQd"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-pb-z1M">
                                                 <rect key="frame" x="675" y="400" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCuatro:" destination="3ir-0e-Orv" eventType="valueChanged" id="lrY-Qb-9tP"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="Ipz-tM-WTE"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="LvH-g4-tSK"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mxb-M1-5vc">
                                                 <rect key="frame" x="675" y="470" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCinco:" destination="3ir-0e-Orv" eventType="valueChanged" id="N80-Jc-WQ1"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="asB-5F-7fr"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="3rD-VA-cDR"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UKc-O9-Pwn">
                                                 <rect key="frame" x="675" y="540" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSeis:" destination="3ir-0e-Orv" eventType="valueChanged" id="P9Y-Us-AWS"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="lhL-7P-01e"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="Uwy-aV-kTt"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1m-4T-4SB">
                                                 <rect key="frame" x="675" y="610" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSiete:" destination="3ir-0e-Orv" eventType="valueChanged" id="yEa-Rf-HtD"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="dJU-vY-HQC"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="vPP-az-696"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f64-tt-8QZ">
                                                 <rect key="frame" x="675" y="680" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOcho:" destination="3ir-0e-Orv" eventType="valueChanged" id="RhR-1W-mVo"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="06G-sa-Rx0"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="UC8-2U-MUw"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cMZ-PI-QP7">
                                                 <rect key="frame" x="675" y="750" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoUno:" destination="3ir-0e-Orv" eventType="valueChanged" id="pQu-bK-dcP"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="Hj1-wg-H1y"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="tN6-UM-Gxe"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ox9-Rp-rVU">
                                                 <rect key="frame" x="675" y="820" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoNueve:" destination="3ir-0e-Orv" eventType="valueChanged" id="zJp-C7-Y3x"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="zSd-7p-uz8"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="FA2-gb-Xl9"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EKA-0o-V3X">
                                                 <rect key="frame" x="675" y="890" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDiez:" destination="3ir-0e-Orv" eventType="valueChanged" id="eP5-k3-4U0"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="P0B-gj-Xai"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="5Xv-PN-CVZ"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uRM-8n-2F6">
                                                 <rect key="frame" x="675" y="960" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="Vfl-qK-VU8"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="udu-VJ-VND"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iq3-Im-8wc">
                                                 <rect key="frame" x="675" y="1030" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOnce:" destination="3ir-0e-Orv" eventType="valueChanged" id="dOq-rl-nMC"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="1kg-RF-ubo"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="oN8-IS-H4h"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FSw-5c-SOh">
                                                 <rect key="frame" x="675" y="1100" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="G1z-dh-cfX"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="tl5-Hh-tIR"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pE9-Fh-Doy">
                                                 <rect key="frame" x="675" y="1170" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="IOR-hg-qGC"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="vda-yD-5z6"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWh-8m-5Z3">
                                                 <rect key="frame" x="675" y="1240" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="AvZ-lH-9fR"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="y03-5G-WfJ"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l4D-CH-oTs">
                                                 <rect key="frame" x="675" y="1310" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDoce:" destination="3ir-0e-Orv" eventType="valueChanged" id="H7c-M7-Okz"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="xf3-iE-edd"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="KAV-lU-Qar"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hBJ-uq-JP4">
                                                 <rect key="frame" x="675" y="1380" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTrece:" destination="3ir-0e-Orv" eventType="valueChanged" id="Ccr-O7-xRR"/>
+                                                    <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="Pte-94-2Uq"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="od2-pP-QHI"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvD-Jc-dBC">
@@ -1166,7 +1196,23 @@
                     <size key="freeformSize" width="834" height="3300"/>
                     <connections>
                         <outlet property="C1A1" destination="ejJ-sJ-cgC" id="Pm0-Ne-qI1"/>
+                        <outlet property="C1A2" destination="F4N-Lm-BGb" id="EHF-sL-3DF"/>
+                        <outlet property="C1A3" destination="0DG-NR-ptX" id="c8M-IP-yyg"/>
+                        <outlet property="C1A4" destination="OBn-pb-z1M" id="zJJ-qL-Xhn"/>
+                        <outlet property="C1A5" destination="Mxb-M1-5vc" id="lAm-g8-Rr1"/>
+                        <outlet property="C1A6" destination="UKc-O9-Pwn" id="5oJ-G8-dXB"/>
+                        <outlet property="C1B1" destination="f1m-4T-4SB" id="AXd-oq-fUv"/>
+                        <outlet property="C1B2" destination="f64-tt-8QZ" id="e0l-fI-Lbe"/>
                         <outlet property="C1B3" destination="cMZ-PI-QP7" id="HC0-Ev-Wcc"/>
+                        <outlet property="C1B4" destination="ox9-Rp-rVU" id="ozY-Hs-SSB"/>
+                        <outlet property="C1C1" destination="EKA-0o-V3X" id="Z9r-tp-XYC"/>
+                        <outlet property="C1C2" destination="uRM-8n-2F6" id="DTq-X1-iM7"/>
+                        <outlet property="C1C3" destination="Iq3-Im-8wc" id="B6U-ss-W0w"/>
+                        <outlet property="C1C4" destination="FSw-5c-SOh" id="7IO-mo-hf5"/>
+                        <outlet property="C1C5" destination="pE9-Fh-Doy" id="Ilu-We-lGF"/>
+                        <outlet property="C1C6" destination="fWh-8m-5Z3" id="bcf-rh-goN"/>
+                        <outlet property="C1C7" destination="l4D-CH-oTs" id="JHo-HV-cB0"/>
+                        <outlet property="C1C8" destination="hBJ-uq-JP4" id="daS-Aa-pBE"/>
                         <outlet property="barChart" destination="hBZ-fb-f3r" id="o7m-iX-lZJ"/>
                         <outlet property="radarChart" destination="BNm-JQ-fa3" id="kDM-aj-dsE"/>
                         <outlet property="recomendaciones" destination="JiA-De-vzG" id="OAk-ud-htS"/>
@@ -1359,47 +1405,57 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qbV-uW-Ycw">
                                                 <rect key="frame" x="680" y="190" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoUno:" destination="ahu-YV-COm" eventType="valueChanged" id="jZo-Mz-zEc"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="8WT-bY-ORO"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="GKl-V0-YU0"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vDd-gZ-bCP">
                                                 <rect key="frame" x="680" y="260" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="ahu-YV-COm" eventType="valueChanged" id="Gu7-ae-36n"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="0rt-sH-28J"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="p7a-Ui-wgr"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQv-uZ-onB">
                                                 <rect key="frame" x="680" y="330" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTres:" destination="ahu-YV-COm" eventType="valueChanged" id="2c5-xZ-Hrg"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="a2D-Hv-ZFA"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="rzk-iv-HcT"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M6c-0p-LZy">
                                                 <rect key="frame" x="680" y="400" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCuatro:" destination="ahu-YV-COm" eventType="valueChanged" id="zXk-kj-zPA"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="UHd-rL-rxJ"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="2en-Ts-c6R"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9S-lR-5DX">
                                                 <rect key="frame" x="680" y="470" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCinco:" destination="ahu-YV-COm" eventType="valueChanged" id="Ze5-f7-a6R"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="0ho-Nq-dAJ"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="HD5-ew-AEE"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D3w-vm-dsE">
                                                 <rect key="frame" x="680" y="540" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCinco:" destination="ahu-YV-COm" eventType="valueChanged" id="5SN-2q-4TU"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="vQM-zk-VyY"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="BUz-CQ-oVV"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="00H-we-Kez">
                                                 <rect key="frame" x="680" y="610" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSeis:" destination="ahu-YV-COm" eventType="valueChanged" id="mki-hi-QiI"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="v7b-6l-WeC"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="ifb-ew-WJI"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLD-Wb-wOG">
                                                 <rect key="frame" x="680" y="680" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="Rnf-k1-prC"/>
+                                                </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O01-PL-aTV">
                                                 <rect key="frame" x="645" y="190" width="26" height="24"/>
@@ -1566,31 +1622,36 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AVe-ml-1nH">
                                                 <rect key="frame" x="680" y="1100" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="valueChanged" id="VKb-3n-ZMu"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="R16-ST-AbQ"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="HHa-SD-aMZ"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VgJ-rJ-GQn">
                                                 <rect key="frame" x="680" y="1169" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="valueChanged" id="Xoy-hL-qPK"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="nzD-r1-odj"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="tvY-Y9-MBP"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNH-TM-YcF">
                                                 <rect key="frame" x="680" y="1241" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="valueChanged" id="Zn0-4h-lGX"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="Jeu-Z0-oci"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="n3X-QE-fXz"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g0e-VC-Qkh">
                                                 <rect key="frame" x="680" y="1648.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOcho:" destination="ahu-YV-COm" eventType="valueChanged" id="RtS-gf-FSx"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="Kff-kg-sYh"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="ehM-IT-tIN"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pIZ-sq-kQK">
                                                 <rect key="frame" x="680" y="1718.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoNueve:" destination="ahu-YV-COm" eventType="valueChanged" id="zt7-IP-FwD"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="DYH-dT-diq"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="rqW-h1-eoh"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1nh-2I-X3R">
@@ -1701,31 +1762,36 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5HR-qd-jsn">
                                                 <rect key="frame" x="680" y="1788.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDiez:" destination="ahu-YV-COm" eventType="valueChanged" id="0W8-VQ-DRi"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="ID0-d5-5Al"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="lv7-CM-A7H"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLc-vh-VE3">
                                                 <rect key="frame" x="680" y="1858.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOnce:" destination="ahu-YV-COm" eventType="valueChanged" id="7cx-IU-kF8"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="agF-TG-trT"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="OOX-Ol-mJX"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-46-dKk">
                                                 <rect key="frame" x="680" y="1928.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDoce:" destination="ahu-YV-COm" eventType="valueChanged" id="L2k-yH-YRg"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="euL-wG-fOi"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="l0I-AQ-jvJ"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vC6-is-0vg">
                                                 <rect key="frame" x="680" y="1998.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTrece:" destination="ahu-YV-COm" eventType="valueChanged" id="c7J-7g-eHb"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="umm-yp-TMQ"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="HjV-cC-ere"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qou-8a-yPe">
                                                 <rect key="frame" x="680" y="2068.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoCatorce:" destination="ahu-YV-COm" eventType="valueChanged" id="aVg-az-lQy"/>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="IkT-bm-Jxd"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="kbx-we-gsn"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBz-vw-Whg">
@@ -1803,9 +1869,10 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="checkmarkempty"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="touchUpInside" id="naQ-Gp-4QG"/>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="mth-ou-rua"/>
                                                     <action selector="clickedC1:" destination="ahu-YV-COm" eventType="touchUpInside" id="Br9-a1-qUM"/>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="tGw-sa-9dx"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="touchUpInside" id="J4p-QL-hvk"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkh-WD-3Zb">
@@ -1815,9 +1882,10 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="checkmarkempty"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="touchUpInside" id="GsJ-lo-39Z"/>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="0G2-3e-pnV"/>
                                                     <action selector="clickedC1:" destination="ahu-YV-COm" eventType="touchUpInside" id="mQu-js-Hqf"/>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="MO6-OQ-T28"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="touchUpInside" id="xzd-Gz-wNM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KH3-DI-IPM">
@@ -1827,9 +1895,10 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="checkmarkempty"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="touchUpInside" id="bhC-Lx-ifG"/>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="6eB-qW-S3E"/>
                                                     <action selector="clickedC1:" destination="ahu-YV-COm" eventType="touchUpInside" id="Kxy-Ve-b14"/>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="Wma-R1-LoX"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="touchUpInside" id="uUa-Te-dkx"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mM5-3D-86u">
@@ -1840,9 +1909,10 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="checkmarkempty"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="touchUpInside" id="erb-Cf-UEt"/>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="abJ-vb-sIw"/>
                                                     <action selector="clickedC1:" destination="ahu-YV-COm" eventType="touchUpInside" id="VaQ-ub-XEW"/>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="0Ry-Er-whC"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="touchUpInside" id="Z8R-tB-TGN"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6-10 preguntas" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAe-kd-Ffo">
@@ -1888,9 +1958,10 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="checkmarkempty"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="touchUpInside" id="cgl-CQ-2RF"/>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="ZXs-qf-L57"/>
                                                     <action selector="clickedD4:" destination="ahu-YV-COm" eventType="touchUpInside" id="2wS-Vv-KoP"/>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="MNN-DU-Rav"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="touchUpInside" id="rK1-7V-ZhM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozB-qb-n22">
@@ -1900,9 +1971,10 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="checkmarkempty"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="touchUpInside" id="93n-K5-Yor"/>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="Vfg-cn-GCZ"/>
                                                     <action selector="clickedD4:" destination="ahu-YV-COm" eventType="touchUpInside" id="jpS-me-zdR"/>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="jWM-Ui-f6w"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="touchUpInside" id="hjD-Uy-Z4R"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AWo-3o-8Kn">
@@ -1912,9 +1984,10 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="checkmarkempty"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="touchUpInside" id="TWV-2x-z37"/>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="GBX-gR-63B"/>
                                                     <action selector="clickedD4:" destination="ahu-YV-COm" eventType="touchUpInside" id="6mU-ul-kSZ"/>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="0JD-RH-tVU"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="touchUpInside" id="uTN-gE-3RV"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-jb-Gyk">
@@ -1924,9 +1997,10 @@
                                                 </constraints>
                                                 <state key="normal" backgroundImage="checkmarkempty"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="touchUpInside" id="iPq-gX-Hr3"/>
                                                     <action selector="checkMarkTapped:" destination="ahu-YV-COm" eventType="touchUpInside" id="9OB-q9-sho"/>
                                                     <action selector="clickedD4:" destination="ahu-YV-COm" eventType="touchUpInside" id="HPh-ah-Hnz"/>
-                                                    <action selector="estadoSiete:" destination="ahu-YV-COm" eventType="touchUpInside" id="b8J-Gm-xS4"/>
+                                                    <action selector="updateValor:" destination="ahu-YV-COm" eventType="touchUpInside" id="Fvt-fA-gkZ"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7-12 Soluciones" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gm-Cf-YEK">
@@ -2536,8 +2610,14 @@
                     </view>
                     <size key="freeformSize" width="834" height="4000"/>
                     <connections>
+                        <outlet property="C3A1" destination="qbV-uW-Ycw" id="Sdy-C6-ViM"/>
+                        <outlet property="C3A2" destination="vDd-gZ-bCP" id="Gvg-MX-cCK"/>
+                        <outlet property="C3A3" destination="hQv-uZ-onB" id="2wC-mc-f3M"/>
+                        <outlet property="C3B1" destination="M6c-0p-LZy" id="cts-6d-rGI"/>
                         <outlet property="C3B2" destination="Z9S-lR-5DX" id="Qyd-za-KAm"/>
                         <outlet property="C3B3" destination="D3w-vm-dsE" id="21g-z6-FWf"/>
+                        <outlet property="C3B4" destination="00H-we-Kez" id="hLU-tD-0WT"/>
+                        <outlet property="C3B5" destination="tLD-Wb-wOG" id="ACZ-AY-VMm"/>
                         <outlet property="C3C1Opt1" destination="mM5-3D-86u" id="qPd-ia-JSg"/>
                         <outlet property="C3C1Opt2" destination="XE3-88-1hQ" id="XO8-TV-1Bv"/>
                         <outlet property="C3C1Opt3" destination="kkh-WD-3Zb" id="1eL-ca-d0s"/>
@@ -2549,15 +2629,14 @@
                         <outlet property="C3D4Opt2" destination="o6f-xn-6Fj" id="lPv-cb-Y3a"/>
                         <outlet property="C3D4Opt3" destination="ozB-qb-n22" id="0aW-fY-2Ve"/>
                         <outlet property="C3D4Opt4" destination="AWo-3o-8Kn" id="Pam-Rw-xn6"/>
+                        <outlet property="C3E1" destination="g0e-VC-Qkh" id="7uk-9k-QfE"/>
+                        <outlet property="C3E2" destination="pIZ-sq-kQK" id="LSw-lt-zoM"/>
+                        <outlet property="C3E3" destination="5HR-qd-jsn" id="4eK-7O-si3"/>
+                        <outlet property="C3E4" destination="DLc-vh-VE3" id="YEj-R9-N2p"/>
+                        <outlet property="C3E5" destination="SnB-46-dKk" id="Mqg-pt-SXX"/>
+                        <outlet property="C3E6" destination="vC6-is-0vg" id="5g7-gv-SeE"/>
+                        <outlet property="C3E7" destination="Qou-8a-yPe" id="q6k-hj-3Ds"/>
                         <outlet property="barChart" destination="FH9-qu-egD" id="0Vm-Vx-E5z"/>
-                        <outlet property="btn1CheckBox" destination="mM5-3D-86u" id="Rxc-Iu-4uz"/>
-                        <outlet property="btn2CheckBox" destination="XE3-88-1hQ" id="7Dj-GN-ij0"/>
-                        <outlet property="btn3CheckBox" destination="kkh-WD-3Zb" id="M2Y-xx-3Ba"/>
-                        <outlet property="btn4CheckBox" destination="KH3-DI-IPM" id="LmC-XR-XoC"/>
-                        <outlet property="btn5CheckBox" destination="3lP-jb-Gyk" id="TC2-Pq-Rd0"/>
-                        <outlet property="btn6CheckBox" destination="o6f-xn-6Fj" id="BAY-ta-okD"/>
-                        <outlet property="btn7CheckBox" destination="ozB-qb-n22" id="jcR-ob-FTM"/>
-                        <outlet property="btn8CheckBox" destination="AWo-3o-8Kn" id="5qZ-M3-5z5"/>
                         <outlet property="radarChart" destination="WUf-Rw-ggU" id="uT2-Fe-eRC"/>
                         <outlet property="recomendaciones" destination="qa0-P8-ca9" id="Thx-dl-xuc"/>
                         <segue destination="S6v-7u-F3v" kind="presentation" identifier="cuartoCuadrante" id="IsQ-Wj-mwA"/>
@@ -2673,37 +2752,43 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0T1-ok-QG3">
                                                 <rect key="frame" x="680" y="332" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="BBW-fS-sz2"/>
+                                                    <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="lJ6-ZG-xQR"/>
+                                                    <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="cxO-7i-srj"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nmH-Gd-mDf">
                                                 <rect key="frame" x="680" y="400" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="aaR-f9-CdT"/>
+                                                    <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="T9U-ek-zFP"/>
+                                                    <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="htG-ii-8r1"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rin-Sb-1gb">
                                                 <rect key="frame" x="680" y="470" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="xq0-df-aLO"/>
+                                                    <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="DVt-Dx-Q0x"/>
+                                                    <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="0PC-pf-M7O"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9BU-6L-RwH">
                                                 <rect key="frame" x="680" y="540" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="Eib-LG-jaZ"/>
+                                                    <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="kz9-kz-ZgB"/>
+                                                    <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="ioi-dR-T86"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D8K-WL-USS">
                                                 <rect key="frame" x="680" y="610" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="C8y-Fm-P1Z"/>
+                                                    <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="q6B-oH-l6d"/>
+                                                    <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="oxG-ji-pz5"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sgm-BT-wX9">
                                                 <rect key="frame" x="680" y="680" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="QVo-R3-I6s"/>
+                                                    <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="syB-Eo-yVq"/>
+                                                    <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="tCh-c6-HhJ"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiT-2g-vCo">
@@ -2787,7 +2872,8 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZKW-PE-eZn">
                                                 <rect key="frame" x="680" y="750" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="Kgw-Oo-wuX"/>
+                                                    <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="ljX-aX-Ecq"/>
+                                                    <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="hVh-LV-4c4"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eMP-XD-Yn0">
@@ -2886,13 +2972,15 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5uC-8W-sDM">
                                                 <rect key="frame" x="680" y="189" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoUno:" destination="S6v-7u-F3v" eventType="valueChanged" id="dlX-Vm-fv3"/>
+                                                    <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="hRJ-o7-bp6"/>
+                                                    <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="2Tv-PE-Dkv"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qhe-A1-wpa">
                                                 <rect key="frame" x="680" y="262" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="S6v-7u-F3v" eventType="valueChanged" id="781-Rd-wXr"/>
+                                                    <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="PLG-3g-KGM"/>
+                                                    <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="Aq3-n0-RNb"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojW-A1-Nhm">
@@ -3161,9 +3249,9 @@
                                                 <exclude reference="b7N-td-S8w"/>
                                                 <exclude reference="ifs-Fn-RVK"/>
                                                 <exclude reference="Yf4-gd-Ez1"/>
+                                                <exclude reference="U2R-1V-Hf4"/>
                                                 <exclude reference="g6Z-fq-Xwl"/>
                                                 <exclude reference="xFW-yD-u2Y"/>
-                                                <exclude reference="U2R-1V-Hf4"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=regular">
@@ -3189,9 +3277,9 @@
                                                 <exclude reference="b7N-td-S8w"/>
                                                 <exclude reference="ifs-Fn-RVK"/>
                                                 <exclude reference="Yf4-gd-Ez1"/>
+                                                <exclude reference="U2R-1V-Hf4"/>
                                                 <exclude reference="g6Z-fq-Xwl"/>
                                                 <exclude reference="xFW-yD-u2Y"/>
-                                                <exclude reference="U2R-1V-Hf4"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -3262,6 +3350,7 @@
                     </view>
                     <size key="freeformSize" width="834" height="2100"/>
                     <connections>
+                        <outlet property="C4A1" destination="5uC-8W-sDM" id="whT-uO-rAI"/>
                         <outlet property="C4A2" destination="Qhe-A1-wpa" id="R3i-ta-2JF"/>
                         <outlet property="C4A3" destination="0T1-ok-QG3" id="fZg-KC-Y9i"/>
                         <outlet property="C4A4" destination="nmH-Gd-mDf" id="GCD-O2-eld"/>
@@ -3582,6 +3671,7 @@
                                                 <rect key="frame" x="680" y="960.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoOcho:" destination="fCs-Pw-xX6" eventType="valueChanged" id="8Ug-Um-pqD"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="Hal-Fo-2xU"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Fj-6S-rnm">
@@ -3740,63 +3830,76 @@
                                                 <rect key="frame" x="679" y="190.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoUno:" destination="fCs-Pw-xX6" eventType="valueChanged" id="wEA-IU-EGN"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="xRy-F6-41f"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PhK-nH-6qn">
                                                 <rect key="frame" x="679" y="259.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoDos:" destination="fCs-Pw-xX6" eventType="valueChanged" id="4pU-lL-QgG"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="zON-BC-gmb"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZHs-HP-PF9">
                                                 <rect key="frame" x="679" y="330.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoTres:" destination="fCs-Pw-xX6" eventType="valueChanged" id="ow6-En-M85"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="sVa-Mg-aey"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNL-Th-atp">
                                                 <rect key="frame" x="679" y="399.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoCuatro:" destination="fCs-Pw-xX6" eventType="valueChanged" id="Vki-cu-vKc"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="GSm-Rc-MN5"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-sK-g88">
                                                 <rect key="frame" x="679" y="470" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoCinco:" destination="fCs-Pw-xX6" eventType="valueChanged" id="l28-EU-5zQ"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="kRj-HY-1L4"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-0i-Vtl">
                                                 <rect key="frame" x="679" y="539" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoSeis:" destination="fCs-Pw-xX6" eventType="valueChanged" id="JSH-GO-MlU"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="pPe-Tc-A9J"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yt2-2y-Ucb">
                                                 <rect key="frame" x="679" y="610.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoTres:" destination="fCs-Pw-xX6" eventType="valueChanged" id="6u0-2s-zeM"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="r5N-vp-W45"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OiB-no-LOx">
                                                 <rect key="frame" x="679" y="679.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoSiete:" destination="fCs-Pw-xX6" eventType="valueChanged" id="sDZ-hL-cus"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="MgI-DI-Hsn"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dmf-Ev-c1U">
                                                 <rect key="frame" x="679" y="749.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoOcho:" destination="fCs-Pw-xX6" eventType="valueChanged" id="eyq-uK-HCh"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="DNu-wa-EPv"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahS-yw-fWk">
                                                 <rect key="frame" x="679" y="819.5" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="aF8-CK-w93"/>
+                                                </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xo-yp-Fhq">
                                                 <rect key="frame" x="679" y="889.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoNueve:" destination="fCs-Pw-xX6" eventType="valueChanged" id="q1v-Il-jmP"/>
+                                                    <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="22b-gL-tlo"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTU-FG-8yM">
@@ -4315,9 +4418,17 @@
                     </view>
                     <size key="freeformSize" width="834" height="2900"/>
                     <connections>
+                        <outlet property="C2A1" destination="mT5-tw-qgr" id="Pje-WF-Aw4"/>
+                        <outlet property="C2A2" destination="PhK-nH-6qn" id="lww-kn-XsH"/>
                         <outlet property="C2A3" destination="ZHs-HP-PF9" id="teN-mB-33N"/>
+                        <outlet property="C2A4" destination="WNL-Th-atp" id="FdL-3i-mi7"/>
+                        <outlet property="C2A5" destination="vuE-sK-g88" id="m4q-Kv-Dw1"/>
+                        <outlet property="C2B1" destination="LXY-0i-Vtl" id="fr7-Wf-JDe"/>
                         <outlet property="C2B2" destination="Yt2-2y-Ucb" id="Tsa-Jk-Ia9"/>
+                        <outlet property="C2B3" destination="OiB-no-LOx" id="6BL-kl-QW0"/>
                         <outlet property="C2B4" destination="Dmf-Ev-c1U" id="sx7-WP-1Aj"/>
+                        <outlet property="C2C1" destination="ahS-yw-fWk" id="xfk-gS-xUb"/>
+                        <outlet property="C2C2" destination="4xo-yp-Fhq" id="GF3-k5-KFR"/>
                         <outlet property="C2C3" destination="egU-dw-Ul5" id="gCi-P5-Onv"/>
                         <outlet property="barChart" destination="5b3-U3-U9b" id="PXT-lS-B2p"/>
                         <outlet property="radarChart" destination="EGL-lW-twM" id="Sus-0Y-kvq"/>
@@ -4337,7 +4448,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="s7G-Nq-AGz"/>
         <segue reference="IsQ-Wj-mwA"/>
-        <segue reference="fIB-2o-vym"/>
+        <segue reference="707-cP-BnH"/>
         <segue reference="lud-zc-aiC"/>
         <segue reference="d6T-V0-3XI"/>
     </inferredMetricsTieBreakers>

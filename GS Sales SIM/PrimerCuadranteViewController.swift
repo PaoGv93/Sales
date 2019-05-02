@@ -23,19 +23,33 @@ class PrimerCuadranteViewController: UIViewController {
 
     //valores para grafica de radar
     let nombresRadarChart = ["A", "B", "C"]
-    let valoresRadarChart = [30.0, 50.0, 90.0]
+    var valoresRadarChart = [100.0, 100.0, 100.0]
     
     //valores para grafica de barras
     let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "B3", "B4", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"]
-    let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0]
+    var valoresBarChart = [2.0, 5.0, 2.0, 2.0, 3.0, 3.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 5.0, 2.0, 2.0, 2.0, 10.0, 5.0]
 
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
-    //Para recomendaciones repetidas
     @IBOutlet weak var C1A1: UISwitch!
+    @IBOutlet weak var C1A2: UISwitch!
+    @IBOutlet weak var C1A3: UISwitch!
+    @IBOutlet weak var C1A4: UISwitch!
+    @IBOutlet weak var C1A5: UISwitch!
+    @IBOutlet weak var C1A6: UISwitch!
+    @IBOutlet weak var C1B1: UISwitch!
+    @IBOutlet weak var C1B2: UISwitch!
     @IBOutlet weak var C1B3: UISwitch!
-    
+    @IBOutlet weak var C1B4: UISwitch!
+    @IBOutlet weak var C1C1: UISwitch!
+    @IBOutlet weak var C1C2: UISwitch!
+    @IBOutlet weak var C1C3: UISwitch!
+    @IBOutlet weak var C1C4: UISwitch!
+    @IBOutlet weak var C1C5: UISwitch!
+    @IBOutlet weak var C1C6: UISwitch!
+    @IBOutlet weak var C1C7: UISwitch!
+    @IBOutlet weak var C1C8: UISwitch!
     
     
     override func viewDidLoad() {
@@ -52,7 +66,7 @@ class PrimerCuadranteViewController: UIViewController {
         
     }
     
-    @IBAction func estadoUno(_ sender: UISwitch) {
+    @IBAction func Recomendaciones(_ sender: UISwitch) {
         if (C1B3.isOn == true && C1A1.isOn == true){
             arrayRecomendaciones[0] = ""
             updateRecomendaciones()
@@ -61,10 +75,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[0] = "- Es importante para obtener información valiosa del prospecto, comprender mejor sus necesidades, quien es, que es importante para el, y como ofrecerle eso que esta necesitando. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoDos(_ sender: UISwitch) {
-        if (sender.isOn == true){
+        
+        if (C1A2.isOn == true){
             arrayRecomendaciones[1] = ""
             updateRecomendaciones()
 
@@ -73,10 +85,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[1] = "- Es indispensable para hablar el mismo idioma en relación a las necesidades de su negocio. Conociendolo, es como aseguramos que el vea el valor de nuestro producto. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoTres(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1A3.isOn == true){
             arrayRecomendaciones[2] = ""
             updateRecomendaciones()
 
@@ -85,10 +95,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[2] = "- Nos dan información no sólo sobre los aspectos profresionales del prospecto al que nos estamos acercando, nos ayudan a saber más sobre la persona, con el fin de entablar una comunicación más empatica. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoCuatro(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1A4.isOn == true){
             arrayRecomendaciones[3] = ""
             updateRecomendaciones()
         }
@@ -96,10 +104,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[3] = "- Nos habla de lo que al prospecto le hace negocio y como quiere llegar alla, nosotros debemos utilizar esta información con el fin de explicarle como a traves de las mejores practicas y el uso adecuado de la tecnología puede llegar a ese objetivo más rapido. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoCinco(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1A5.isOn == true){
             arrayRecomendaciones[4] = ""
             updateRecomendaciones()
         }
@@ -107,10 +113,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[4] = "- La implementeación de metodologías BIM debe de venir de altos mandos para que realmente se respete y exista un cambio de mentalidad interno. No podemos dejar de ver a las personas, cuando vendemos ARCHICAD / La cabeza de la orgranizaición es quien puede tomar la desicion de compra. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoSeis(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1A6.isOn == true){
             arrayRecomendaciones[5] = ""
             updateRecomendaciones()
         }
@@ -118,10 +122,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[5] = "- Observar que es lo que a lo largo del tiempo lo ha hecho exitoso, el tamaño del despacho al que nos acercamos, que es importante para ellos a la hora de crear nuevos proyectos. Y sobre todo, hacen sentir al prospecto comprendido, importante, y establecer un dialogo de confianza y empatía, basico para la venta de ARCHICAD. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoSiete(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1B1.isOn == true){
             arrayRecomendaciones[6] = ""
             updateRecomendaciones()
         }
@@ -129,10 +131,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[6] = "- Confirma los datos de contacto, es necesario saber que te estas acercando a las personas correctas. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoOcho(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1B2.isOn == true){
             arrayRecomendaciones[7] = ""
             updateRecomendaciones()
         }
@@ -140,10 +140,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[7] = "- Te permite un número aproximado de licencias que va a necesitar, y el tiempo de cierre de venta que puede llevar. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoNueve(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1B4.isOn == true){
             arrayRecomendaciones[8] = ""
             updateRecomendaciones()
         }
@@ -151,10 +149,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[8] = "- Esto te puede aportar nuevas oportunidades de venta. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoDiez(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1C1.isOn == true){
             arrayRecomendaciones[9] = ""
             updateRecomendaciones()
         }
@@ -162,10 +158,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[9] = "- Al realizar la llamada recuerda modular tu tono de voz, estar relajado, presentarte y mencionar el producto. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoOnce(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1C3.isOn == true){
             arrayRecomendaciones[10] = ""
             updateRecomendaciones()
         }
@@ -173,10 +167,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[10] = "- El primer argumento de valor para el cliente genera suficiente interes para que se cierre la cita. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoDoce(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1C7.isOn == true){
             arrayRecomendaciones[11] = ""
             updateRecomendaciones()
         }
@@ -184,10 +176,8 @@ class PrimerCuadranteViewController: UIViewController {
             arrayRecomendaciones[11] = "- Lo importante para vender ARCHICAD es llegar a la mesa con el cliente. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoTrece(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C1C8.isOn == true){
             arrayRecomendaciones[12] = ""
             updateRecomendaciones()
         }
@@ -202,6 +192,182 @@ class PrimerCuadranteViewController: UIViewController {
         fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8] + arrayRecomendaciones[9] + arrayRecomendaciones[10] + arrayRecomendaciones[11] + arrayRecomendaciones[12]
         
         recomendaciones.text = fraseFinal
+    }
+    
+    //FUNCIONES PARA EL CALCULO
+    @IBAction func updateValor(_ sender: UISwitch){
+        if(C1A1.isOn == true){
+            valoresBarChart[0] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[0] = 0
+            updateCharts()
+        }
+        if(C1A2.isOn == true){
+            valoresBarChart[1] = 5
+            updateCharts()
+        }
+        else{
+            valoresBarChart[1] = -2
+            updateCharts()
+        }
+        if(C1A3.isOn == true){
+            valoresBarChart[2] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[2] = 0
+            updateCharts()
+        }
+        if(C1A4.isOn == true){
+            valoresBarChart[3] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[3] = 0
+            updateCharts()
+        }
+        if(C1A5.isOn == true){
+            valoresBarChart[4] = 3
+            updateCharts()
+        }
+        else{
+            valoresBarChart[4] = 0
+            updateCharts()
+        }
+        if(C1A6.isOn == true){
+            valoresBarChart[5] = 3
+            updateCharts()
+        }
+        else{
+            valoresBarChart[5] = -2
+            updateCharts()
+        }
+        if(C1B1.isOn == true){
+            valoresBarChart[6] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[6] = 0
+            updateCharts()
+        }
+        if(C1B2.isOn == true){
+            valoresBarChart[7] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[7] = 0
+            updateCharts()
+        }
+        if(C1B3.isOn == true){
+            valoresBarChart[8] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[8] = 0
+            updateCharts()
+        }
+        if(C1B4.isOn == true){
+            valoresBarChart[9] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[9] = 0
+            updateCharts()
+        }
+        if(C1C1.isOn == true){
+            valoresBarChart[10] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[10] = -2
+            updateCharts()
+        }
+        if(C1C2.isOn == true){
+            valoresBarChart[11] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[11] = 0
+            updateCharts()
+        }
+        if(C1C3.isOn == true){
+            valoresBarChart[12] = 5
+            updateCharts()
+        }
+        else{
+            valoresBarChart[12] = 0
+            updateCharts()
+        }
+        if(C1C4.isOn == true){
+            valoresBarChart[13] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[13] = 0
+            updateCharts()
+        }
+        if(C1C5.isOn == true){
+            valoresBarChart[14] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[14] = 0
+            updateCharts()
+        }
+        if(C1C6.isOn == true){
+            valoresBarChart[15] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[15] = 0
+            updateCharts()
+        }
+        if(C1C7.isOn == true){
+            valoresBarChart[16] = 10
+            updateCharts()
+        }
+        else{
+            valoresBarChart[16] = -5
+            updateCharts()
+        }
+        if(C1C8.isOn == true){
+            valoresBarChart[17] = 5
+            updateCharts()
+        }
+        else{
+            valoresBarChart[17] = 0
+            updateCharts()
+        }
+        
+        //Para los cuadrantes en RadarChart
+        let valorA = (((valoresBarChart[0] + valoresBarChart[1] + valoresBarChart[2] + valoresBarChart[3] + valoresBarChart[4] + valoresBarChart[5]) * 100) / 17)
+        if(valorA > 0){
+            valoresRadarChart[0] = valorA
+        }else{
+            valoresRadarChart[0] = 0
+        }
+        
+        let valorB = (((valoresBarChart[6] + valoresBarChart[7] + valoresBarChart[8] + valoresBarChart[9]) * 100) / 5)
+        if(valorB > 0){
+            valoresRadarChart[1] = valorB
+        }else{
+            valoresRadarChart[1] = 0
+        }
+        
+        let valorC = (((valoresBarChart[10] + valoresBarChart[11] + valoresBarChart[12] + valoresBarChart[13] + valoresBarChart[14] + valoresBarChart[15] + valoresBarChart[16] + valoresBarChart[17]) * 100) / 30)
+        if(valorC > 0){
+            valoresRadarChart[2] = valorC
+        }else{
+            valoresRadarChart[2] = 0
+        }
+        updateCharts()
+    }
+    
+    func updateCharts(){
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
+        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
     }
     
     

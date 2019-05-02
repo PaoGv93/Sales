@@ -14,19 +14,6 @@ class TercerCuadranteViewController: UIViewController {
     @IBOutlet weak var radarChart: RadarChartView!
     @IBOutlet weak var barChart: BarChartView!
     
-    //Para asignar las imagenes
-    //Cuantas preguntas hiciste
-    @IBOutlet weak var btn1CheckBox: UIButton!
-    @IBOutlet weak var btn2CheckBox: UIButton!
-    @IBOutlet weak var btn3CheckBox: UIButton!
-    @IBOutlet weak var btn4CheckBox: UIButton!
-    
-    //cuantas soluciones mencionaste
-    @IBOutlet weak var btn5CheckBox: UIButton!
-    @IBOutlet weak var btn6CheckBox: UIButton!
-    @IBOutlet weak var btn7CheckBox: UIButton!
-    @IBOutlet weak var btn8CheckBox: UIButton!
-    
     @IBOutlet weak var recomendaciones: UITextView!
     
     //Recomendaciones
@@ -36,17 +23,22 @@ class TercerCuadranteViewController: UIViewController {
     
     //valores para grafica de radar
     let nombresRadarChart = ["A", "B", "C", "D", "E"]
-    let valoresRadarChart = [30.0, 50.0, 90.0, 80.0, 40.0]
+    var valoresRadarChart = [100.0, 100.0, 100.0, 100.0, 100.0]
     
     //valores para grafica de barras
     let nombresBarChart = ["A1", "A2", "A3", "B1", "B2", "B3", "B4", "B5", "C1", "D1", "D2", "D3", "D4", "E1", "E2", "E3", "E4", "E5", "E6", "E7"]
-    let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0]
+    var valoresBarChart = [2.0, 3.0, 2.0, 10.0, 1.0, 4.0, 2.0, 1.0, 0.0, 1.0, 5.0, 3.0, 0.0, 2.0, 3.0, 1.0, -2.0, 2.0, 1.0, 2.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
-    //Para las recomendaciones iguales
+    @IBOutlet weak var C3A1: UISwitch!
+    @IBOutlet weak var C3A2: UISwitch!
+    @IBOutlet weak var C3A3: UISwitch!
+    @IBOutlet weak var C3B1: UISwitch!
     @IBOutlet weak var C3B2: UISwitch!
     @IBOutlet weak var C3B3: UISwitch!
+    @IBOutlet weak var C3B4: UISwitch!
+    @IBOutlet weak var C3B5: UISwitch!
     
     @IBOutlet weak var C3C1Opt1: UIButton!
     @IBOutlet weak var C3C1Opt2: UIButton!
@@ -62,6 +54,13 @@ class TercerCuadranteViewController: UIViewController {
     @IBOutlet weak var C3D4Opt3: UIButton!
     @IBOutlet weak var C3D4Opt4: UIButton!
     
+    @IBOutlet weak var C3E1: UISwitch!
+    @IBOutlet weak var C3E2: UISwitch!
+    @IBOutlet weak var C3E3: UISwitch!
+    @IBOutlet weak var C3E4: UISwitch!
+    @IBOutlet weak var C3E5: UISwitch!
+    @IBOutlet weak var C3E6: UISwitch!
+    @IBOutlet weak var C3E7: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,18 +74,18 @@ class TercerCuadranteViewController: UIViewController {
         axisFormatDelegate = self as? IAxisValueFormatter
         setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
 
-        btn1CheckBox.tag = 1
-        btn2CheckBox.tag = 2
-        btn3CheckBox.tag = 3
-        btn4CheckBox.tag = 4
-        btn5CheckBox.tag = 1
-        btn6CheckBox.tag = 2
-        btn7CheckBox.tag = 3
-        btn8CheckBox.tag = 4
+        C3C1Opt1.tag = 1
+        C3C1Opt2.tag = 2
+        C3C1Opt3.tag = 3
+        C3C1Opt4.tag = 4
+        C3D4Opt1.tag = 1
+        C3D4Opt2.tag = 2
+        C3D4Opt3.tag = 3
+        C3D4Opt4.tag = 4
     }
     
-    @IBAction func estadoUno(_ sender: UISwitch) {
-        if (sender.isOn == true){
+    @IBAction func Recomendaciones(_ sender: Any) {
+        if (C3A1.isOn == true){
             arrayRecomendaciones[0] = ""
             updateRecomendaciones()
         }
@@ -94,10 +93,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[0] = "- Recuerda que no es lo mismo hablar con la persona que tiene los conocimientos tecnicos que con la persona que tiene como prioridad las finanzas del despacho o empresa. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoDos(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3A2.isOn == true){
             arrayRecomendaciones[1] = ""
             updateRecomendaciones()
         }
@@ -105,10 +102,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[1] = "- La identificación de las necesidades correctas del prospecto es indispensables para tener el correcto angulo de venta. ¿Hiciste suficientes preguntas correctas? \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoTres(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3A3.isOn == true){
             arrayRecomendaciones[2] = ""
             updateRecomendaciones()
         }
@@ -116,10 +111,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[2] = "- No se trata de sólo ir identificando las necesidades tecnicas, ve estructurando un plan de las herramientas que podrías mostrarle que resuelvan su necesidad a traves de un BIMx. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoCuatro(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3B1.isOn == true){
             arrayRecomendaciones[3] = ""
             updateRecomendaciones()
         }
@@ -127,9 +120,7 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[3] = "- Lo más importante para crear una relación de confianza y credibilidad, es que sepas con quien estas hablando y lo que para el es importante en su negocio. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoCinco(_ sender: UISwitch) {
+
         if (C3B2.isOn == true && C3B3.isOn == true){
             arrayRecomendaciones[4] = ""
             updateRecomendaciones()
@@ -138,10 +129,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[4] = "- Si identifico la cantidad de personas, se determina el mejor uso de ArchiCAD y beneficios. (Corroborar complejidad colaborativa, niveles de aprobación) \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoSeis(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3B4.isOn == true){
             arrayRecomendaciones[5] = ""
             updateRecomendaciones()
         }
@@ -149,9 +138,7 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[5] = "- Recuerda que toda implementación BIM exitosa viene desde \"arriba\". \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoSiete(_ sender: AnyObject) {
+ 
         if (C3C1Opt1.isSelected == false && C3C1Opt2.isSelected == false && C3C1Opt3.isSelected == false && C3C1Opt4.isSelected == false && C3D1.isOn == true && C3D2.isOn == true && C3D3.isOn == true && C3D4Opt1.isSelected == false && C3D4Opt2.isSelected == false && C3D4Opt3.isSelected == false && C3D4Opt4.isSelected == false){
             arrayRecomendaciones[6] = ""
             updateRecomendaciones()
@@ -160,10 +147,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[6] = "- Entre mas preguntas hagas, mas información tendras para formular los argumentos correctos. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoOcho(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3E1.isOn == true){
             arrayRecomendaciones[7] = ""
             updateRecomendaciones()
         }
@@ -171,10 +156,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[7] = "- Investiga y muestrale a tu cliente, como empresas similares que usan ArchiCAD, han logrado desarrollar proyectos exitosos. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoNueve(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3E2.isOn == true){
             arrayRecomendaciones[8] = ""
             updateRecomendaciones()
         }
@@ -182,10 +165,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[8] = "- BIMx es la herramienta visual que nos ayuda a soportar de una forma didactica todos nuestros argumentos de venta. ¡No los desperdicies! \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoDiez(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3E3.isOn == true){
             arrayRecomendaciones[9] = ""
             updateRecomendaciones()
         }
@@ -193,10 +174,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[9] = "- Dar información sobre todo nuestro entorno de productos abre las posibilidades de crecer la cuenta. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoOnce(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3E4.isOn == true){
             arrayRecomendaciones[10] = ""
             updateRecomendaciones()
         }
@@ -204,10 +183,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[10] = "- Abrir ArchiCAD sin hacer una demo, significa que probablemente no estes sentado con el tomado de desiciones. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoDoce(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3E5.isOn == true){
             arrayRecomendaciones[11] = ""
             updateRecomendaciones()
         }
@@ -215,10 +192,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[11] = "- Mencionar nuestro servicio al cliente y servicios adicionales es uno de nuestros grandes distintivos como marca. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoTrece(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3E6.isOn == true){
             arrayRecomendaciones[12] = ""
             updateRecomendaciones()
         }
@@ -226,10 +201,8 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendaciones[12] = "- Invitar al prospecto a que visite nuestras redes sociales, y que pueda ver nuestras campañas y videos, puede generar más interes. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoCatorce(_ sender: UISwitch) {
-        if (sender.isOn == true){
+
+        if (C3E7.isOn == true){
             arrayRecomendaciones[13] = ""
             updateRecomendaciones()
         }
@@ -239,7 +212,6 @@ class TercerCuadranteViewController: UIViewController {
         }
     }
     
-    
     func updateRecomendaciones(){
         fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8] + arrayRecomendaciones[9] + arrayRecomendaciones[10] + arrayRecomendaciones[11] + arrayRecomendaciones[12] + arrayRecomendaciones[13]
         
@@ -247,73 +219,297 @@ class TercerCuadranteViewController: UIViewController {
     }
     
     
+    //FUNCIONES PARA EL CALCULO
+    @IBAction func updateValor(_ sender: Any){
+        if(C3A1.isOn == true){
+            valoresBarChart[0] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[0] = 0
+            updateCharts()
+        }
+        if(C3A2.isOn == true){
+            valoresBarChart[1] = 3
+            updateCharts()
+        }
+        else{
+            valoresBarChart[1] = -1
+            updateCharts()
+        }
+        if(C3A3.isOn == true){
+            valoresBarChart[2] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[2] = 0
+            updateCharts()
+        }
+        if(C3B1.isOn == true){
+            valoresBarChart[3] = 10
+            updateCharts()
+        }
+        else{
+            valoresBarChart[3] = -5
+            updateCharts()
+        }
+        if(C3B2.isOn == true){
+            valoresBarChart[4] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[4] = 0
+            updateCharts()
+        }
+        if(C3B3.isOn == true){
+            valoresBarChart[5] = 4
+            updateCharts()
+        }
+        else{
+            valoresBarChart[5] = 0
+            updateCharts()
+        }
+        if(C3B4.isOn == true){
+            valoresBarChart[6] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[6] = 0
+            updateCharts()
+        }
+        if(C3B5.isOn == true){
+            valoresBarChart[7] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[7] = 0
+            updateCharts()
+        }
+        if(C3C1Opt1.isSelected == true){
+            valoresBarChart[8] = -2
+            updateCharts()
+        }
+        else if(C3C1Opt2.isSelected == true){
+            valoresBarChart[8] = 2
+            updateCharts()
+        }
+        else if(C3C1Opt3.isSelected == true){
+            valoresBarChart[8] = 3
+            updateCharts()
+        }
+        else if(C3C1Opt4.isSelected == true){
+            valoresBarChart[8] = 5
+            updateCharts()
+        }
+        if(C3D1.isOn == true){
+            valoresBarChart[9] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[9] = 0
+            updateCharts()
+        }
+        if(C3D2.isOn == true){
+            valoresBarChart[10] = 5
+            updateCharts()
+        }
+        else{
+            valoresBarChart[10] = -2
+            updateCharts()
+        }
+        if(C3D3.isOn == true){
+            valoresBarChart[11] = 3
+            updateCharts()
+        }
+        else{
+            valoresBarChart[11] = 0
+            updateCharts()
+        }
+        if(C3D4Opt1.isSelected == true){
+            valoresBarChart[12] = 1
+            updateCharts()
+        }
+        else if(C3D4Opt2.isSelected == true){
+            valoresBarChart[12] = 2
+            updateCharts()
+        }
+        else if(C3D4Opt3.isSelected == true){
+            valoresBarChart[12] = 4
+            updateCharts()
+        }
+        else if(C3D4Opt4.isSelected == true){
+            valoresBarChart[12] = 5
+            updateCharts()
+        }
+        if(C3E1.isOn == true){
+            valoresBarChart[13] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[13] = 0
+            updateCharts()
+        }
+        if(C3E2.isOn == true){
+            valoresBarChart[14] = 3
+            updateCharts()
+        }
+        else{
+            valoresBarChart[14] = 0
+            updateCharts()
+        }
+        if(C3E3.isOn == true){
+            valoresBarChart[15] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[15] = -2
+            updateCharts()
+        }
+        if(C3E4.isOn == true){
+            valoresBarChart[16] = -2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[16] = 0
+            updateCharts()
+        }
+        if(C3E5.isOn == true){
+            valoresBarChart[17] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[17] = 0
+            updateCharts()
+        }
+        if(C3E6.isOn == true){
+            valoresBarChart[18] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[18] = 0
+            updateCharts()
+        }
+        if(C3E7.isOn == true){
+            valoresBarChart[19] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[19] = 0
+            updateCharts()
+        }
+        
+        //Para los cuadrantes en RadarChart
+        let valorA = (((valoresBarChart[0] + valoresBarChart[1] + valoresBarChart[2]) * 100) / 7)
+        if(valorA > 0){
+            valoresRadarChart[0] = valorA
+        }else{
+            valoresRadarChart[0] = 0
+        }
+        
+        let valorB = (((valoresBarChart[3] + valoresBarChart[4] + valoresBarChart[5] + valoresBarChart[6] + valoresBarChart[7]) * 100) / 18)
+        if(valorB > 0){
+            valoresRadarChart[1] = valorB
+        }else{
+            valoresRadarChart[1] = 0
+        }
+        
+        let valorC = (((valoresBarChart[8]) * 100) / 5)
+        if(valorC > 0){
+            valoresRadarChart[2] = valorC
+        }else{
+            valoresRadarChart[2] = 0
+        }
+        
+        let valorD = (((valoresBarChart[9] + valoresBarChart[10] + valoresBarChart[11] + valoresBarChart[12]) * 100) / 16)
+        if(valorD > 0){
+            valoresRadarChart[3] = valorD
+        }else{
+            valoresRadarChart[3] = 0
+        }
+        
+        let valorE = (((valoresBarChart[13] + valoresBarChart[14] + valoresBarChart[15] + valoresBarChart[16] + valoresBarChart[17] + valoresBarChart[18] + valoresBarChart[19]) * 100) / 9)
+        if(valorE > 0){
+            valoresRadarChart[4] = valorE
+        }else{
+            valoresRadarChart[4] = 0
+        }
+        updateCharts()
+        
+    }
+    
+    func updateCharts(){
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
+        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
+    }
+    
+    
     
     @IBAction func clickedC1(_ sender: Any) {
         switch (sender as AnyObject).tag {
-        case 1:            btn1CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
-        btn2CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        btn3CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        btn4CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        case 1:            C3C1Opt1.setImage(UIImage(named:"checkmark"), for: .normal)
+        C3C1Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        C3C1Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        C3C1Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
 
         break;
         case 2:
-            btn1CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn2CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
-            btn3CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn4CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt2.setImage(UIImage(named:"checkmark"), for: .normal)
+            C3C1Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
             break;
         case 3:
-            btn1CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn2CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn3CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
-            btn4CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt3.setImage(UIImage(named:"checkmark"), for: .normal)
+            C3C1Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
             break;
         case 4:
-            btn1CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn2CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn3CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn4CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
+            C3C1Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt4.setImage(UIImage(named:"checkmark"), for: .normal)
             break;
         default:
-        btn1CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        btn2CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        btn3CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        btn4CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        C3C1Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        C3C1Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        C3C1Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        C3C1Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
         break;
         }
     }
     
     @IBAction func clickedD4(_ sender: Any) {
         switch (sender as AnyObject).tag {
-        case 1:            btn5CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
-        btn6CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        btn7CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        btn8CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        case 1:            C3D4Opt1.setImage(UIImage(named:"checkmark"), for: .normal)
+        C3D4Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        C3D4Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+        C3D4Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
         
         break;
         case 2:
-            btn5CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn6CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
-            btn7CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn8CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt2.setImage(UIImage(named:"checkmark"), for: .normal)
+            C3D4Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
             break;
         case 3:
-            btn5CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn6CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn7CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
-            btn8CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt3.setImage(UIImage(named:"checkmark"), for: .normal)
+            C3D4Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
             break;
         case 4:
-            btn5CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn6CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn7CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn8CheckBox.setImage(UIImage(named:"checkmark"), for: .normal)
+            C3D4Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt4.setImage(UIImage(named:"checkmark"), for: .normal)
             break;
         default:
-            btn5CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn6CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn7CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-            btn8CheckBox.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
             break;
         }
     }

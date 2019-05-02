@@ -23,19 +23,25 @@ class SegundoCuadranteViewController: UIViewController {
     
     //valores para grafica de radar
     let nombresRadarChart = ["A", "B", "C"]
-    let valoresRadarChart = [30.0, 50.0, 90.0]
+    var valoresRadarChart = [100.0, 100.0, 100.0]
     
     //valores para grafica de barras
     let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "B1", "B2", "B3", "B4", "C1", "C2", "C3"]
-    let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0, 4.0, 1.0, 3.0]
+    var valoresBarChart = [1.0, 2.0, 2.0, 2.0, 5.0, 5.0, 2.0, 1.0, 1.0, 2.0, 3.0, 3.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
-    //Para las recomendaciones iguales
+    @IBOutlet weak var C2A1: UISwitch!
+    @IBOutlet weak var C2A2: UISwitch!
     @IBOutlet weak var C2A3: UISwitch!
+    @IBOutlet weak var C2A4: UISwitch!
+    @IBOutlet weak var C2A5: UISwitch!
+    @IBOutlet weak var C2B1: UISwitch!
     @IBOutlet weak var C2B2: UISwitch!
-    
+    @IBOutlet weak var C2B3: UISwitch!
     @IBOutlet weak var C2B4: UISwitch!
+    @IBOutlet weak var C2C1: UISwitch!
+    @IBOutlet weak var C2C2: UISwitch!
     @IBOutlet weak var C2C3: UISwitch!
     
     
@@ -151,11 +157,140 @@ class SegundoCuadranteViewController: UIViewController {
         }
     }
     
-    
     func updateRecomendaciones(){
         fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8]
         
         recomendaciones.text = fraseFinal
+    }
+    
+    
+    //FUNCIONES PARA EL CALCULO
+    @IBAction func updateValor(_ sender: UISwitch){
+        if(C2A1.isOn == true){
+            valoresBarChart[0] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[0] = 0
+            updateCharts()
+        }
+        if(C2A2.isOn == true){
+            valoresBarChart[1] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[1] = 0
+            updateCharts()
+        }
+        if(C2A3.isOn == true){
+            valoresBarChart[2] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[2] = 0
+            updateCharts()
+        }
+        if(C2A4.isOn == true){
+            valoresBarChart[3] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[3] = -2
+            updateCharts()
+        }
+        if(C2A5.isOn == true){
+            valoresBarChart[4] = 5
+            updateCharts()
+        }
+        else{
+            valoresBarChart[4] = 0
+            updateCharts()
+        }
+        if(C2B1.isOn == true){
+            valoresBarChart[5] = 5
+            updateCharts()
+        }
+        else{
+            valoresBarChart[5] = 0
+            updateCharts()
+        }
+        if(C2B2.isOn == true){
+            valoresBarChart[6] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[6] = 0
+            updateCharts()
+        }
+        if(C2B3.isOn == true){
+            valoresBarChart[7] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[7] = 0
+            updateCharts()
+        }
+        if(C2B4.isOn == true){
+            valoresBarChart[8] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[8] = 0
+            updateCharts()
+        }
+        if(C2C1.isOn == true){
+            valoresBarChart[9] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[9] = 0
+            updateCharts()
+        }
+        if(C2C2.isOn == true){
+            valoresBarChart[10] = 3
+            updateCharts()
+        }
+        else{
+            valoresBarChart[10] = -3
+            updateCharts()
+        }
+        if(C2C3.isOn == true){
+            valoresBarChart[11] = 3
+            updateCharts()
+        }
+        else{
+            valoresBarChart[11] = 0
+            updateCharts()
+        }
+        
+        //Para los cuadrantes en RadarChart
+        let valorA = (((valoresBarChart[0] + valoresBarChart[1] + valoresBarChart[2] + valoresBarChart[3] + valoresBarChart[4]) * 100) / 12)
+        if(valorA > 0){
+            valoresRadarChart[0] = valorA
+        }else{
+            valoresRadarChart[0] = 0
+        }
+        
+        let valorB = (((valoresBarChart[5] + valoresBarChart[6] + valoresBarChart[7] + valoresBarChart[8]) * 100) / 9)
+        if(valorB > 0){
+            valoresRadarChart[1] = valorB
+        }else{
+            valoresRadarChart[1] = 0
+        }
+        
+        let valorC = (((valoresBarChart[9] + valoresBarChart[10] + valoresBarChart[11]) * 100) / 8)
+        if(valorC > 0){
+            valoresRadarChart[2] = valorC
+        }else{
+            valoresRadarChart[2] = 0
+        }
+        updateCharts()
+        
+    }
+    
+    func updateCharts(){
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
+        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
     }
     
    

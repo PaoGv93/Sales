@@ -22,11 +22,11 @@ class CuartoCuadranteViewController: UIViewController {
     
     //valores para grafica de barras
     let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9"]
-    let valoresBarChart = [3.0, 5.0, 9.0, 8.0, 5.0, 3.0, 6.0, 2.0, 5.0]
+    var valoresBarChart = [5.0, 2.0, 3.0, 4.0, 3.0, 2.0, 2.0, 1.0, 4.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
-    //Para las recomendaciones iguales
+    @IBOutlet weak var C4A1: UISwitch!
     @IBOutlet weak var C4A2: UISwitch!
     @IBOutlet weak var C4A3: UISwitch!
     @IBOutlet weak var C4A4: UISwitch!
@@ -57,8 +57,9 @@ class CuartoCuadranteViewController: UIViewController {
         }*/
     }
     
-    @IBAction func estadoUno(_ sender: UISwitch) {
-        if (sender.isOn == true){
+    //FUNCIONES PARA LAS RECOMENDACIONES
+    @IBAction func Recomendaciones(_ sender: UISwitch) {
+        if (C4A1.isOn == true){
             arrayRecomendaciones[0] = ""
             updateRecomendaciones()
         }
@@ -66,9 +67,7 @@ class CuartoCuadranteViewController: UIViewController {
             arrayRecomendaciones[0] = "- Dejar pasar demasiado tiempo entre la visita y nuestro seguimiento, puede confundirse con desinteres o informalidad. No dejes pasar más de 24 horas en contactar a tu prospecto con información de valor. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoDos(_ sender: UISwitch) {
+
         if (C4A2.isOn == true && C4A3.isOn == true && C4A4.isOn == true && C4A5.isOn == true && C4A6.isOn == true && C4A7.isOn == true && C4A8.isOn == true && C4A9.isOn == true){
             arrayRecomendaciones[1] = ""
             updateRecomendaciones()
@@ -79,12 +78,91 @@ class CuartoCuadranteViewController: UIViewController {
         }
     }
 
-    func updateRecomendaciones(){
+    func updateRecomendaciones() {
         fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1]
         
         recomendaciones.text = fraseFinal
     }
     
+    @IBAction func updateValor(_ sender: UISwitch){
+        if(C4A1.isOn == true){
+            valoresBarChart[0] = 5
+            updateCharts()
+        }
+        else{
+            valoresBarChart[0] = -2
+            updateCharts()
+        }
+        if(C4A2.isOn == true){
+            valoresBarChart[1] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[1] = 0
+            updateCharts()
+        }
+        if(C4A3.isOn == true){
+            valoresBarChart[2] = 3
+            updateCharts()
+        }
+        else{
+            valoresBarChart[2] = 0
+            updateCharts()
+        }
+        if(C4A4.isOn == true){
+            valoresBarChart[3] = 4
+            updateCharts()
+        }
+        else{
+            valoresBarChart[3] = -4
+            updateCharts()
+        }
+        if(C4A5.isOn == true){
+            valoresBarChart[4] = 3
+            updateCharts()
+        }
+        else{
+            valoresBarChart[4] = 0
+            updateCharts()
+        }
+        if(C4A6.isOn == true){
+            valoresBarChart[5] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[5] = 0
+            updateCharts()
+        }
+        if(C4A7.isOn == true){
+            valoresBarChart[6] = 2
+            updateCharts()
+        }
+        else{
+            valoresBarChart[6] = 0
+            updateCharts()
+        }
+        if(C4A8.isOn == true){
+            valoresBarChart[7] = 1
+            updateCharts()
+        }
+        else{
+            valoresBarChart[7] = 0
+            updateCharts()
+        }
+        if(C4A9.isOn == true){
+            valoresBarChart[8] = 4
+            updateCharts()
+        }
+        else{
+            valoresBarChart[8] = 0
+            updateCharts()
+        }
+    }
+    
+    func updateCharts(){
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
+    }
+
     
     //Funcion de la barChart
     func setBarChart(dataPoints: [String], values: [Double]) {
