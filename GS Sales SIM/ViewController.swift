@@ -9,20 +9,23 @@
 import UIKit
 import AVKit
 
+//Valor afuera de la clase para poder acceder a el valor en otro controller cuando cambio
+var botonElegido: Int = 0
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var rfc: UITextField!
+    
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //rfc.becomeFirstResponder()
-        
     }
-    
 
     //VALIDACION DE SELECCION DE NOMBRE
     @IBAction func Practica(_ sender: Any) {
+        
+        botonElegido = 1
         
         performSegue(withIdentifier: "primerCuadrante", sender: self)
 
@@ -30,6 +33,8 @@ class ViewController: UIViewController {
     
     @IBAction func Registro(_ sender: Any) {
         
+        botonElegido = 2
+
         //valor para saber si selecciono una empresa o en caso contrario manda alerta
         if let text = rfc.text, !text.isEmpty {
             performSegue(withIdentifier: "primerCuadrante", sender: self)

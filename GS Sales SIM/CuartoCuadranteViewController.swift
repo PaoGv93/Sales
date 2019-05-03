@@ -9,6 +9,10 @@
 import UIKit
 import Charts
 
+var valorGeneralC4: Int = 100
+var valoresBarChartC4 = [5.0, 2.0, 3.0, 4.0, 3.0, 2.0, 2.0, 1.0, 4.0]
+
+
 class CuartoCuadranteViewController: UIViewController {
 
     @IBOutlet weak var barChart: BarChartView!
@@ -22,7 +26,6 @@ class CuartoCuadranteViewController: UIViewController {
     
     //valores para grafica de barras
     let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9"]
-    var valoresBarChart = [5.0, 2.0, 3.0, 4.0, 3.0, 2.0, 2.0, 1.0, 4.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
@@ -41,20 +44,20 @@ class CuartoCuadranteViewController: UIViewController {
         super.viewDidLoad()
         
         axisFormatDelegate = self as? IAxisValueFormatter
-        setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC4)
     }
     
     @IBAction func siguiente(_ sender: Any) {
-        performSegue(withIdentifier: "finalRegistro", sender: self)
+        
+        let valor = botonElegido
 
-
-        /*if(valor == 1){
+        if(valor == 1){
             performSegue(withIdentifier: "finalPractica", sender: self)
 
         }else if(valor == 2) {
             performSegue(withIdentifier: "finalRegistro", sender: self)
 
-        }*/
+        }
     }
     
     //FUNCIONES PARA LAS RECOMENDACIONES
@@ -86,81 +89,84 @@ class CuartoCuadranteViewController: UIViewController {
     
     @IBAction func updateValor(_ sender: UISwitch){
         if(C4A1.isOn == true){
-            valoresBarChart[0] = 5
+            valoresBarChartC4[0] = 5
             updateCharts()
         }
         else{
-            valoresBarChart[0] = -2
+            valoresBarChartC4[0] = -2
             updateCharts()
         }
         if(C4A2.isOn == true){
-            valoresBarChart[1] = 2
+            valoresBarChartC4[1] = 2
             updateCharts()
         }
         else{
-            valoresBarChart[1] = 0
+            valoresBarChartC4[1] = 0
             updateCharts()
         }
         if(C4A3.isOn == true){
-            valoresBarChart[2] = 3
+            valoresBarChartC4[2] = 3
             updateCharts()
         }
         else{
-            valoresBarChart[2] = 0
+            valoresBarChartC4[2] = 0
             updateCharts()
         }
         if(C4A4.isOn == true){
-            valoresBarChart[3] = 4
+            valoresBarChartC4[3] = 4
             updateCharts()
         }
         else{
-            valoresBarChart[3] = -4
+            valoresBarChartC4[3] = -4
             updateCharts()
         }
         if(C4A5.isOn == true){
-            valoresBarChart[4] = 3
+            valoresBarChartC4[4] = 3
             updateCharts()
         }
         else{
-            valoresBarChart[4] = 0
+            valoresBarChartC4[4] = 0
             updateCharts()
         }
         if(C4A6.isOn == true){
-            valoresBarChart[5] = 2
+            valoresBarChartC4[5] = 2
             updateCharts()
         }
         else{
-            valoresBarChart[5] = 0
+            valoresBarChartC4[5] = 0
             updateCharts()
         }
         if(C4A7.isOn == true){
-            valoresBarChart[6] = 2
+            valoresBarChartC4[6] = 2
             updateCharts()
         }
         else{
-            valoresBarChart[6] = 0
+            valoresBarChartC4[6] = 0
             updateCharts()
         }
         if(C4A8.isOn == true){
-            valoresBarChart[7] = 1
+            valoresBarChartC4[7] = 1
             updateCharts()
         }
         else{
-            valoresBarChart[7] = 0
+            valoresBarChartC4[7] = 0
             updateCharts()
         }
         if(C4A9.isOn == true){
-            valoresBarChart[8] = 4
+            valoresBarChartC4[8] = 4
             updateCharts()
         }
         else{
-            valoresBarChart[8] = 0
+            valoresBarChartC4[8] = 0
             updateCharts()
         }
+        
+        valorGeneralC4 = Int((((valoresBarChartC4[0] + valoresBarChartC4[1] + valoresBarChartC4[2] + valoresBarChartC4[3] + valoresBarChartC4[4] + valoresBarChartC4[5] + valoresBarChartC4[6] + valoresBarChartC4[7] + valoresBarChartC4[8]) * 100) / 26))
+        print(valorGeneralC4)
     }
     
     func updateCharts(){
-        setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC4)
     }
 
     

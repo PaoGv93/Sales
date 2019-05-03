@@ -9,6 +9,10 @@
 import UIKit
 import Charts
 
+var valorGeneralC3: Int = 100
+var valoresBarChartC3 = [2.0, 3.0, 2.0, 10.0, 1.0, 4.0, 2.0, 1.0, 0.0, 1.0, 5.0, 3.0, 0.0, 2.0, 3.0, 1.0, -2.0, 2.0, 1.0, 2.0]
+
+
 class TercerCuadranteViewController: UIViewController {
     
     @IBOutlet weak var radarChart: RadarChartView!
@@ -27,7 +31,6 @@ class TercerCuadranteViewController: UIViewController {
     
     //valores para grafica de barras
     let nombresBarChart = ["A1", "A2", "A3", "B1", "B2", "B3", "B4", "B5", "C1", "D1", "D2", "D3", "D4", "E1", "E2", "E3", "E4", "E5", "E6", "E7"]
-    var valoresBarChart = [2.0, 3.0, 2.0, 10.0, 1.0, 4.0, 2.0, 1.0, 0.0, 1.0, 5.0, 3.0, 0.0, 2.0, 3.0, 1.0, -2.0, 2.0, 1.0, 2.0]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
     
@@ -72,7 +75,7 @@ class TercerCuadranteViewController: UIViewController {
         yAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 10.0)!
         
         axisFormatDelegate = self as? IAxisValueFormatter
-        setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC3)
 
         C3C1Opt1.tag = 1
         C3C1Opt2.tag = 2
@@ -220,214 +223,214 @@ class TercerCuadranteViewController: UIViewController {
     
     
     //FUNCIONES PARA EL CALCULO
-    @IBAction func updateValor(_ sender: Any){
+    @IBAction func updateValor(_ sender: AnyObject){
         if(C3A1.isOn == true){
-            valoresBarChart[0] = 2
+            valoresBarChartC3[0] = 2
             updateCharts()
         }
         else{
-            valoresBarChart[0] = 0
+            valoresBarChartC3[0] = 0
             updateCharts()
         }
         if(C3A2.isOn == true){
-            valoresBarChart[1] = 3
+            valoresBarChartC3[1] = 3
             updateCharts()
         }
         else{
-            valoresBarChart[1] = -1
+            valoresBarChartC3[1] = -1
             updateCharts()
         }
         if(C3A3.isOn == true){
-            valoresBarChart[2] = 2
+            valoresBarChartC3[2] = 2
             updateCharts()
         }
         else{
-            valoresBarChart[2] = 0
+            valoresBarChartC3[2] = 0
             updateCharts()
         }
         if(C3B1.isOn == true){
-            valoresBarChart[3] = 10
+            valoresBarChartC3[3] = 10
             updateCharts()
         }
         else{
-            valoresBarChart[3] = -5
+            valoresBarChartC3[3] = -5
             updateCharts()
         }
         if(C3B2.isOn == true){
-            valoresBarChart[4] = 1
+            valoresBarChartC3[4] = 1
             updateCharts()
         }
         else{
-            valoresBarChart[4] = 0
+            valoresBarChartC3[4] = 0
             updateCharts()
         }
         if(C3B3.isOn == true){
-            valoresBarChart[5] = 4
+            valoresBarChartC3[5] = 4
             updateCharts()
         }
         else{
-            valoresBarChart[5] = 0
+            valoresBarChartC3[5] = 0
             updateCharts()
         }
         if(C3B4.isOn == true){
-            valoresBarChart[6] = 2
+            valoresBarChartC3[6] = 2
             updateCharts()
         }
         else{
-            valoresBarChart[6] = 0
+            valoresBarChartC3[6] = 0
             updateCharts()
         }
         if(C3B5.isOn == true){
-            valoresBarChart[7] = 1
+            valoresBarChartC3[7] = 1
             updateCharts()
         }
         else{
-            valoresBarChart[7] = 0
+            valoresBarChartC3[7] = 0
             updateCharts()
         }
         if(C3C1Opt1.isSelected == true){
-            valoresBarChart[8] = -2
+            valoresBarChartC3[8] = -2
             updateCharts()
         }
-        else if(C3C1Opt2.isSelected == true){
-            valoresBarChart[8] = 2
+        if(C3C1Opt2.isSelected == true){
+            valoresBarChartC3[8] = 2
             updateCharts()
         }
-        else if(C3C1Opt3.isSelected == true){
-            valoresBarChart[8] = 3
+        if(C3C1Opt3.isSelected == true){
+            valoresBarChartC3[8] = 3
             updateCharts()
         }
-        else if(C3C1Opt4.isSelected == true){
-            valoresBarChart[8] = 5
+        if(C3C1Opt4.isSelected == true){
+            valoresBarChartC3[8] = 5
             updateCharts()
         }
         if(C3D1.isOn == true){
-            valoresBarChart[9] = 1
+            valoresBarChartC3[9] = 1
             updateCharts()
         }
         else{
-            valoresBarChart[9] = 0
+            valoresBarChartC3[9] = 0
             updateCharts()
         }
         if(C3D2.isOn == true){
-            valoresBarChart[10] = 5
+            valoresBarChartC3[10] = 5
             updateCharts()
         }
         else{
-            valoresBarChart[10] = -2
+            valoresBarChartC3[10] = -2
             updateCharts()
         }
         if(C3D3.isOn == true){
-            valoresBarChart[11] = 3
+            valoresBarChartC3[11] = 3
             updateCharts()
         }
         else{
-            valoresBarChart[11] = 0
+            valoresBarChartC3[11] = 0
             updateCharts()
         }
         if(C3D4Opt1.isSelected == true){
-            valoresBarChart[12] = 1
+            valoresBarChartC3[12] = 1
             updateCharts()
         }
-        else if(C3D4Opt2.isSelected == true){
-            valoresBarChart[12] = 2
+        if(C3D4Opt2.isSelected == true){
+            valoresBarChartC3[12] = 2
             updateCharts()
         }
-        else if(C3D4Opt3.isSelected == true){
-            valoresBarChart[12] = 4
+        if(C3D4Opt3.isSelected == true){
+            valoresBarChartC3[12] = 4
             updateCharts()
         }
-        else if(C3D4Opt4.isSelected == true){
-            valoresBarChart[12] = 5
+        if(C3D4Opt4.isSelected == true){
+            valoresBarChartC3[12] = 5
             updateCharts()
         }
         if(C3E1.isOn == true){
-            valoresBarChart[13] = 2
+            valoresBarChartC3[13] = 2
             updateCharts()
         }
         else{
-            valoresBarChart[13] = 0
+            valoresBarChartC3[13] = 0
             updateCharts()
         }
         if(C3E2.isOn == true){
-            valoresBarChart[14] = 3
+            valoresBarChartC3[14] = 3
             updateCharts()
         }
         else{
-            valoresBarChart[14] = 0
+            valoresBarChartC3[14] = 0
             updateCharts()
         }
         if(C3E3.isOn == true){
-            valoresBarChart[15] = 1
+            valoresBarChartC3[15] = 1
             updateCharts()
         }
         else{
-            valoresBarChart[15] = -2
+            valoresBarChartC3[15] = -2
             updateCharts()
         }
         if(C3E4.isOn == true){
-            valoresBarChart[16] = -2
+            valoresBarChartC3[16] = -2
             updateCharts()
         }
         else{
-            valoresBarChart[16] = 0
+            valoresBarChartC3[16] = 0
             updateCharts()
         }
         if(C3E5.isOn == true){
-            valoresBarChart[17] = 2
+            valoresBarChartC3[17] = 2
             updateCharts()
         }
         else{
-            valoresBarChart[17] = 0
+            valoresBarChartC3[17] = 0
             updateCharts()
         }
         if(C3E6.isOn == true){
-            valoresBarChart[18] = 1
+            valoresBarChartC3[18] = 1
             updateCharts()
         }
         else{
-            valoresBarChart[18] = 0
+            valoresBarChartC3[18] = 0
             updateCharts()
         }
         if(C3E7.isOn == true){
-            valoresBarChart[19] = 2
+            valoresBarChartC3[19] = 2
             updateCharts()
         }
         else{
-            valoresBarChart[19] = 0
+            valoresBarChartC3[19] = 0
             updateCharts()
         }
         
         //Para los cuadrantes en RadarChart
-        let valorA = (((valoresBarChart[0] + valoresBarChart[1] + valoresBarChart[2]) * 100) / 7)
+        let valorA = (((valoresBarChartC3[0] + valoresBarChartC3[1] + valoresBarChartC3[2]) * 100) / 7)
         if(valorA > 0){
             valoresRadarChart[0] = valorA
         }else{
             valoresRadarChart[0] = 0
         }
         
-        let valorB = (((valoresBarChart[3] + valoresBarChart[4] + valoresBarChart[5] + valoresBarChart[6] + valoresBarChart[7]) * 100) / 18)
+        let valorB = (((valoresBarChartC3[3] + valoresBarChartC3[4] + valoresBarChartC3[5] + valoresBarChartC3[6] + valoresBarChartC3[7]) * 100) / 18)
         if(valorB > 0){
             valoresRadarChart[1] = valorB
         }else{
             valoresRadarChart[1] = 0
         }
         
-        let valorC = (((valoresBarChart[8]) * 100) / 5)
+        let valorC = (((valoresBarChartC3[8]) * 100) / 5)
         if(valorC > 0){
             valoresRadarChart[2] = valorC
         }else{
             valoresRadarChart[2] = 0
         }
         
-        let valorD = (((valoresBarChart[9] + valoresBarChart[10] + valoresBarChart[11] + valoresBarChart[12]) * 100) / 16)
+        let valorD = (((valoresBarChartC3[9] + valoresBarChartC3[10] + valoresBarChartC3[11] + valoresBarChartC3[12]) * 100) / 16)
         if(valorD > 0){
             valoresRadarChart[3] = valorD
         }else{
             valoresRadarChart[3] = 0
         }
         
-        let valorE = (((valoresBarChart[13] + valoresBarChart[14] + valoresBarChart[15] + valoresBarChart[16] + valoresBarChart[17] + valoresBarChart[18] + valoresBarChart[19]) * 100) / 9)
+        let valorE = (((valoresBarChartC3[13] + valoresBarChartC3[14] + valoresBarChartC3[15] + valoresBarChartC3[16] + valoresBarChartC3[17] + valoresBarChartC3[18] + valoresBarChartC3[19]) * 100) / 9)
         if(valorE > 0){
             valoresRadarChart[4] = valorE
         }else{
@@ -435,10 +438,13 @@ class TercerCuadranteViewController: UIViewController {
         }
         updateCharts()
         
+        valorGeneralC3 = Int(((valorA + valorB + valorC + valorD + valorE) / 5))
+
+        
     }
     
     func updateCharts(){
-        setBarChart(dataPoints: nombresBarChart, values: valoresBarChart)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC3)
         setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
     }
     
