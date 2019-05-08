@@ -10,7 +10,9 @@ import UIKit
 import Charts
 
 var valorGeneralC4: Int = 100
-var valoresBarChartC4 = [5.0, 2.0, 3.0, 4.0, 3.0, 2.0, 2.0, 1.0, 4.0]
+var valoresBarChartC4 = [-2.0, 0.0, 0.0, -4.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+var bonoC4 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
 
 class CuartoCuadranteViewController: UIViewController {
@@ -24,7 +26,7 @@ class CuartoCuadranteViewController: UIViewController {
     
     var fraseFinal = String()
     
-    //valores para grafica de barras
+    //nombres para grafica de barras
     let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9"]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
@@ -44,8 +46,56 @@ class CuartoCuadranteViewController: UIViewController {
         super.viewDidLoad()
         
         axisFormatDelegate = self as? IAxisValueFormatter
-        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC4)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC4, values2: bonoC4, sortIndex: 0)
+        
+        C4A1.isOn =  UserDefaults.standard.bool(forKey: "StateC4A1")
+        C4A2.isOn =  UserDefaults.standard.bool(forKey: "StateC4A2")
+        C4A3.isOn =  UserDefaults.standard.bool(forKey: "StateC4A3")
+        C4A4.isOn =  UserDefaults.standard.bool(forKey: "StateC4A4")
+        C4A5.isOn =  UserDefaults.standard.bool(forKey: "StateC4A5")
+        C4A6.isOn =  UserDefaults.standard.bool(forKey: "StateC4A6")
+        C4A7.isOn =  UserDefaults.standard.bool(forKey: "StateC4A7")
+        C4A8.isOn =  UserDefaults.standard.bool(forKey: "StateC4A8")
+        C4A9.isOn =  UserDefaults.standard.bool(forKey: "StateC4A9")
+        
     }
+    
+    @IBAction func saveStateA1(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC4A1")
+    }
+    
+    @IBAction func saveStateA2(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC4A2")
+    }
+    
+    @IBAction func saveStateA3(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC4A3")
+    }
+    
+    @IBAction func saveStateA4(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC4A4")
+    }
+    
+    @IBAction func saveStateA5(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC4A5")
+    }
+    
+    @IBAction func saveStateA6(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC4A6")
+    }
+    
+    @IBAction func saveStateA7(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC4A7")
+    }
+    
+    @IBAction func saveStateA8(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC4A8")
+    }
+    
+    @IBAction func saveStateA9(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC4A9")
+    }
+    
     
     @IBAction func siguiente(_ sender: Any) {
         
@@ -166,31 +216,56 @@ class CuartoCuadranteViewController: UIViewController {
     }
     
     func updateCharts(){
-        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC4)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC4, values2: bonoC4, sortIndex: 0)
+    }
+    
+    //Funciones de los bonos
+    @IBAction func bonos(){
+        if (switchC3A2 == true && switchC3A2 == true && switchC3A2 == true && C4A1.isOn == true){
+            bonoC4[0] = 2
+        }else{
+            bonoC4[0] = 0
+        }
+        if(C4A1.isOn == true && C4A4.isOn == true){
+            bonoC4[3] = 1
+        }else{
+            bonoC4[3] = 0
+        }
+        if(switchC3B5 == true && C4A5.isOn == true){
+            bonoC4[4] = 1
+        }else{
+            bonoC4[4] = 0
+        }
+        if(switchC3E1 == true && C4A6.isOn == true){
+            bonoC4[5] = 1
+        }else{
+            bonoC4[5] = 0
+        }
     }
 
     
     //Funcion de la barChart
-    func setBarChart(dataPoints: [String], values: [Double]) {
+    func setBarChart(dataPoints: [String], values: [Double], values2: [Double],sortIndex:Int) {
         
         var dataEntries:[BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), yValues: [Double(values[i])])
+            let dataEntry = BarChartDataEntry(x: Double(i), yValues: [Double(values[i]), Double(values2[i])])
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Peso")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: " ")
+        chartDataSet.colors = [UIColor.blue, UIColor.orange]
+        chartDataSet.stackLabels = ["Puntos", "Bono"]
         let chartData = BarChartData(dataSet: chartDataSet)
+        barChart.data = chartData
+        chartDataSet.drawValuesEnabled = false
         
         //Quitar el double y pasarlo a Int
         let format = NumberFormatter()
         format.numberStyle = .none
         let formatter = DefaultValueFormatter(formatter: format)
         chartData.setValueFormatter(formatter)
-        
-        barChart.data = chartData
-        chartDataSet.setColor(.gray)
         
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
         barChart.xAxis.granularity = 1

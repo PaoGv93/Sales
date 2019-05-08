@@ -163,14 +163,17 @@
                                                 <rect key="frame" x="675" y="190" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="809-3a-LkE"/>
-                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="Edw-TN-HHv"/>
+                                                    <action selector="bonos" destination="3ir-0e-Orv" eventType="valueChanged" id="txX-19-RGW"/>
+                                                    <action selector="saveStateA1:" destination="3ir-0e-Orv" eventType="valueChanged" id="f5A-wH-nqC"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="maM-wI-EgX"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F4N-Lm-BGb">
                                                 <rect key="frame" x="675" y="260" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="nuF-Cz-iGq"/>
-                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="mDz-aV-1za"/>
+                                                    <action selector="saveStateA2:" destination="3ir-0e-Orv" eventType="valueChanged" id="ZzB-r0-apl"/>
+                                                    <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="C52-sX-AYr"/>
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Identifica el tipo de Arquitecto/Constructor/Diseñador" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1P-i8-amz">
@@ -192,6 +195,8 @@
                                                 <rect key="frame" x="675" y="330" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="VLg-uM-7ZX"/>
+                                                    <action selector="bonos" destination="3ir-0e-Orv" eventType="valueChanged" id="9IR-gS-2Vf"/>
+                                                    <action selector="saveStateA3:" destination="3ir-0e-Orv" eventType="valueChanged" id="z6e-xA-5oQ"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="EMF-eW-FQd"/>
                                                 </connections>
                                             </switch>
@@ -199,6 +204,7 @@
                                                 <rect key="frame" x="675" y="400" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="Ipz-tM-WTE"/>
+                                                    <action selector="saveStateA4:" destination="3ir-0e-Orv" eventType="valueChanged" id="SAx-Yf-XpR"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="LvH-g4-tSK"/>
                                                 </connections>
                                             </switch>
@@ -206,6 +212,8 @@
                                                 <rect key="frame" x="675" y="470" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="asB-5F-7fr"/>
+                                                    <action selector="bonos" destination="3ir-0e-Orv" eventType="valueChanged" id="b0q-Zs-aI9"/>
+                                                    <action selector="saveStateA5:" destination="3ir-0e-Orv" eventType="valueChanged" id="b2y-sc-jRr"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="3rD-VA-cDR"/>
                                                 </connections>
                                             </switch>
@@ -213,6 +221,8 @@
                                                 <rect key="frame" x="675" y="540" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="lhL-7P-01e"/>
+                                                    <action selector="bonos" destination="3ir-0e-Orv" eventType="valueChanged" id="z56-b3-0RH"/>
+                                                    <action selector="saveStateA6:" destination="3ir-0e-Orv" eventType="valueChanged" id="NB3-q5-yvx"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="Uwy-aV-kTt"/>
                                                 </connections>
                                             </switch>
@@ -220,6 +230,7 @@
                                                 <rect key="frame" x="675" y="610" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="dJU-vY-HQC"/>
+                                                    <action selector="saveStateB1:" destination="3ir-0e-Orv" eventType="valueChanged" id="UJu-Tb-gQ4"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="vPP-az-696"/>
                                                 </connections>
                                             </switch>
@@ -227,6 +238,7 @@
                                                 <rect key="frame" x="675" y="680" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="06G-sa-Rx0"/>
+                                                    <action selector="saveStateB2:" destination="3ir-0e-Orv" eventType="valueChanged" id="NZI-9I-T0e"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="UC8-2U-MUw"/>
                                                 </connections>
                                             </switch>
@@ -234,6 +246,7 @@
                                                 <rect key="frame" x="675" y="750" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="Hj1-wg-H1y"/>
+                                                    <action selector="saveStateB3:" destination="3ir-0e-Orv" eventType="valueChanged" id="qTY-vE-sId"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="tN6-UM-Gxe"/>
                                                 </connections>
                                             </switch>
@@ -241,6 +254,7 @@
                                                 <rect key="frame" x="675" y="820" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="zSd-7p-uz8"/>
+                                                    <action selector="saveStateB4:" destination="3ir-0e-Orv" eventType="valueChanged" id="Lht-Og-m6G"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="FA2-gb-Xl9"/>
                                                 </connections>
                                             </switch>
@@ -248,6 +262,7 @@
                                                 <rect key="frame" x="675" y="890" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="P0B-gj-Xai"/>
+                                                    <action selector="saveStateC1:" destination="3ir-0e-Orv" eventType="valueChanged" id="4Db-Qm-i4z"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="5Xv-PN-CVZ"/>
                                                 </connections>
                                             </switch>
@@ -255,6 +270,8 @@
                                                 <rect key="frame" x="675" y="960" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="Vfl-qK-VU8"/>
+                                                    <action selector="bonos" destination="3ir-0e-Orv" eventType="valueChanged" id="dsq-8q-KXg"/>
+                                                    <action selector="saveStateC2:" destination="3ir-0e-Orv" eventType="valueChanged" id="cwx-YR-0WV"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="udu-VJ-VND"/>
                                                 </connections>
                                             </switch>
@@ -262,6 +279,8 @@
                                                 <rect key="frame" x="675" y="1030" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="1kg-RF-ubo"/>
+                                                    <action selector="bonos" destination="3ir-0e-Orv" eventType="valueChanged" id="ph6-mJ-6dP"/>
+                                                    <action selector="saveStateC3:" destination="3ir-0e-Orv" eventType="valueChanged" id="90y-vk-O4o"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="oN8-IS-H4h"/>
                                                 </connections>
                                             </switch>
@@ -269,6 +288,7 @@
                                                 <rect key="frame" x="675" y="1100" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="G1z-dh-cfX"/>
+                                                    <action selector="saveStateC4:" destination="3ir-0e-Orv" eventType="valueChanged" id="g8E-6b-KWG"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="tl5-Hh-tIR"/>
                                                 </connections>
                                             </switch>
@@ -276,6 +296,8 @@
                                                 <rect key="frame" x="675" y="1170" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="IOR-hg-qGC"/>
+                                                    <action selector="bonos" destination="3ir-0e-Orv" eventType="valueChanged" id="G49-eg-PX7"/>
+                                                    <action selector="saveStateC5:" destination="3ir-0e-Orv" eventType="valueChanged" id="1hB-8z-XHG"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="vda-yD-5z6"/>
                                                 </connections>
                                             </switch>
@@ -283,6 +305,7 @@
                                                 <rect key="frame" x="675" y="1240" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="AvZ-lH-9fR"/>
+                                                    <action selector="saveStateC6:" destination="3ir-0e-Orv" eventType="valueChanged" id="ydm-Xx-IBG"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="y03-5G-WfJ"/>
                                                 </connections>
                                             </switch>
@@ -290,6 +313,8 @@
                                                 <rect key="frame" x="675" y="1310" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="xf3-iE-edd"/>
+                                                    <action selector="bonos" destination="3ir-0e-Orv" eventType="valueChanged" id="gyU-NW-jsa"/>
+                                                    <action selector="saveStateC7:" destination="3ir-0e-Orv" eventType="valueChanged" id="7zY-jV-ME8"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="KAV-lU-Qar"/>
                                                 </connections>
                                             </switch>
@@ -297,6 +322,7 @@
                                                 <rect key="frame" x="675" y="1380" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="3ir-0e-Orv" eventType="valueChanged" id="Pte-94-2Uq"/>
+                                                    <action selector="saveStateC8:" destination="3ir-0e-Orv" eventType="valueChanged" id="kVG-zI-tkw"/>
                                                     <action selector="updateValor:" destination="3ir-0e-Orv" eventType="valueChanged" id="od2-pP-QHI"/>
                                                 </connections>
                                             </switch>
@@ -1406,6 +1432,7 @@
                                                 <rect key="frame" x="680" y="190" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="8WT-bY-ORO"/>
+                                                    <action selector="saveStateA1:" destination="ahu-YV-COm" eventType="valueChanged" id="fjm-in-5TR"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="GKl-V0-YU0"/>
                                                 </connections>
                                             </switch>
@@ -1413,6 +1440,8 @@
                                                 <rect key="frame" x="680" y="260" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="0rt-sH-28J"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="aYy-TR-0F1"/>
+                                                    <action selector="saveStateA2:" destination="ahu-YV-COm" eventType="valueChanged" id="6kX-43-Ntt"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="p7a-Ui-wgr"/>
                                                 </connections>
                                             </switch>
@@ -1420,6 +1449,8 @@
                                                 <rect key="frame" x="680" y="330" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="a2D-Hv-ZFA"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="VnH-b9-6A0"/>
+                                                    <action selector="saveStateA3:" destination="ahu-YV-COm" eventType="valueChanged" id="7hV-SW-2gI"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="rzk-iv-HcT"/>
                                                 </connections>
                                             </switch>
@@ -1427,6 +1458,8 @@
                                                 <rect key="frame" x="680" y="400" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="UHd-rL-rxJ"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="Y6f-BK-Wt5"/>
+                                                    <action selector="saveStateB1:" destination="ahu-YV-COm" eventType="valueChanged" id="h6u-2t-utd"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="2en-Ts-c6R"/>
                                                 </connections>
                                             </switch>
@@ -1434,6 +1467,8 @@
                                                 <rect key="frame" x="680" y="470" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="0ho-Nq-dAJ"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="5Eq-JO-i8q"/>
+                                                    <action selector="saveStateB2:" destination="ahu-YV-COm" eventType="valueChanged" id="OSP-RL-mxU"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="HD5-ew-AEE"/>
                                                 </connections>
                                             </switch>
@@ -1441,6 +1476,7 @@
                                                 <rect key="frame" x="680" y="540" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="vQM-zk-VyY"/>
+                                                    <action selector="saveStateB3:" destination="ahu-YV-COm" eventType="valueChanged" id="DsV-cj-J6b"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="BUz-CQ-oVV"/>
                                                 </connections>
                                             </switch>
@@ -1448,12 +1484,15 @@
                                                 <rect key="frame" x="680" y="610" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="v7b-6l-WeC"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="kRv-zJ-Cuj"/>
+                                                    <action selector="saveStateB4:" destination="ahu-YV-COm" eventType="valueChanged" id="V4w-Av-5qM"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="ifb-ew-WJI"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tLD-Wb-wOG">
                                                 <rect key="frame" x="680" y="680" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="saveStateB5:" destination="ahu-YV-COm" eventType="valueChanged" id="weR-kM-j0X"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="Rnf-k1-prC"/>
                                                 </connections>
                                             </switch>
@@ -1623,6 +1662,8 @@
                                                 <rect key="frame" x="680" y="1100" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="R16-ST-AbQ"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="0kC-SM-1aW"/>
+                                                    <action selector="saveStateD1:" destination="ahu-YV-COm" eventType="valueChanged" id="Pbb-YF-erY"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="HHa-SD-aMZ"/>
                                                 </connections>
                                             </switch>
@@ -1630,6 +1671,7 @@
                                                 <rect key="frame" x="680" y="1169" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="nzD-r1-odj"/>
+                                                    <action selector="saveStateD2:" destination="ahu-YV-COm" eventType="valueChanged" id="wqi-mC-jEU"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="tvY-Y9-MBP"/>
                                                 </connections>
                                             </switch>
@@ -1637,6 +1679,8 @@
                                                 <rect key="frame" x="680" y="1241" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="Jeu-Z0-oci"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="24f-s2-UMW"/>
+                                                    <action selector="saveStateD3:" destination="ahu-YV-COm" eventType="valueChanged" id="98S-WS-YdZ"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="n3X-QE-fXz"/>
                                                 </connections>
                                             </switch>
@@ -1644,6 +1688,8 @@
                                                 <rect key="frame" x="680" y="1648.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="Kff-kg-sYh"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="E6j-06-TKM"/>
+                                                    <action selector="saveStateE1:" destination="ahu-YV-COm" eventType="valueChanged" id="Ffv-vP-tZd"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="ehM-IT-tIN"/>
                                                 </connections>
                                             </switch>
@@ -1651,6 +1697,8 @@
                                                 <rect key="frame" x="680" y="1718.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="DYH-dT-diq"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="Qlh-cz-xvr"/>
+                                                    <action selector="saveStateE2:" destination="ahu-YV-COm" eventType="valueChanged" id="52U-yM-RB4"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="rqW-h1-eoh"/>
                                                 </connections>
                                             </switch>
@@ -1763,6 +1811,8 @@
                                                 <rect key="frame" x="680" y="1788.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="ID0-d5-5Al"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="yXI-Wr-GJT"/>
+                                                    <action selector="saveStateE3:" destination="ahu-YV-COm" eventType="valueChanged" id="kYv-2C-LfC"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="lv7-CM-A7H"/>
                                                 </connections>
                                             </switch>
@@ -1770,6 +1820,8 @@
                                                 <rect key="frame" x="680" y="1858.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="agF-TG-trT"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="cLd-dE-sQo"/>
+                                                    <action selector="saveStateE4:" destination="ahu-YV-COm" eventType="valueChanged" id="NZD-u7-ztn"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="OOX-Ol-mJX"/>
                                                 </connections>
                                             </switch>
@@ -1777,6 +1829,7 @@
                                                 <rect key="frame" x="680" y="1928.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="euL-wG-fOi"/>
+                                                    <action selector="saveStateE5:" destination="ahu-YV-COm" eventType="valueChanged" id="SoH-vw-4gd"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="l0I-AQ-jvJ"/>
                                                 </connections>
                                             </switch>
@@ -1784,6 +1837,7 @@
                                                 <rect key="frame" x="680" y="1998.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="umm-yp-TMQ"/>
+                                                    <action selector="saveStateE6:" destination="ahu-YV-COm" eventType="valueChanged" id="7UK-tf-1iB"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="HjV-cC-ere"/>
                                                 </connections>
                                             </switch>
@@ -1791,6 +1845,8 @@
                                                 <rect key="frame" x="680" y="2068.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="ahu-YV-COm" eventType="valueChanged" id="IkT-bm-Jxd"/>
+                                                    <action selector="bonos" destination="ahu-YV-COm" eventType="valueChanged" id="F9r-Qr-r8s"/>
+                                                    <action selector="saveStateE7:" destination="ahu-YV-COm" eventType="valueChanged" id="0Kv-9e-XCe"/>
                                                     <action selector="updateValor:" destination="ahu-YV-COm" eventType="valueChanged" id="kbx-we-gsn"/>
                                                 </connections>
                                             </switch>
@@ -2753,6 +2809,7 @@
                                                 <rect key="frame" x="680" y="332" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="lJ6-ZG-xQR"/>
+                                                    <action selector="saveStateA3:" destination="S6v-7u-F3v" eventType="valueChanged" id="2TB-Xq-OqK"/>
                                                     <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="cxO-7i-srj"/>
                                                 </connections>
                                             </switch>
@@ -2760,6 +2817,8 @@
                                                 <rect key="frame" x="680" y="400" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="T9U-ek-zFP"/>
+                                                    <action selector="bonos" destination="S6v-7u-F3v" eventType="valueChanged" id="gwW-bl-8es"/>
+                                                    <action selector="saveStateA4:" destination="S6v-7u-F3v" eventType="valueChanged" id="unS-Uk-dnr"/>
                                                     <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="htG-ii-8r1"/>
                                                 </connections>
                                             </switch>
@@ -2767,6 +2826,8 @@
                                                 <rect key="frame" x="680" y="470" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="DVt-Dx-Q0x"/>
+                                                    <action selector="bonos" destination="S6v-7u-F3v" eventType="valueChanged" id="Jwf-yy-Qmb"/>
+                                                    <action selector="saveStateA5:" destination="S6v-7u-F3v" eventType="valueChanged" id="RTU-eO-f7l"/>
                                                     <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="0PC-pf-M7O"/>
                                                 </connections>
                                             </switch>
@@ -2774,6 +2835,8 @@
                                                 <rect key="frame" x="680" y="540" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="kz9-kz-ZgB"/>
+                                                    <action selector="bonos" destination="S6v-7u-F3v" eventType="valueChanged" id="N5X-rC-5Lb"/>
+                                                    <action selector="saveStateA6:" destination="S6v-7u-F3v" eventType="valueChanged" id="llE-ND-VEV"/>
                                                     <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="ioi-dR-T86"/>
                                                 </connections>
                                             </switch>
@@ -2781,6 +2844,7 @@
                                                 <rect key="frame" x="680" y="610" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="q6B-oH-l6d"/>
+                                                    <action selector="saveStateA7:" destination="S6v-7u-F3v" eventType="valueChanged" id="Vin-hX-Bh7"/>
                                                     <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="oxG-ji-pz5"/>
                                                 </connections>
                                             </switch>
@@ -2788,6 +2852,7 @@
                                                 <rect key="frame" x="680" y="680" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="syB-Eo-yVq"/>
+                                                    <action selector="saveStateA8:" destination="S6v-7u-F3v" eventType="valueChanged" id="NWt-jM-v0x"/>
                                                     <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="tCh-c6-HhJ"/>
                                                 </connections>
                                             </switch>
@@ -2873,6 +2938,7 @@
                                                 <rect key="frame" x="680" y="750" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="ljX-aX-Ecq"/>
+                                                    <action selector="saveStateA9:" destination="S6v-7u-F3v" eventType="valueChanged" id="HBx-ON-sg8"/>
                                                     <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="hVh-LV-4c4"/>
                                                 </connections>
                                             </switch>
@@ -2973,6 +3039,8 @@
                                                 <rect key="frame" x="680" y="189" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="hRJ-o7-bp6"/>
+                                                    <action selector="bonos" destination="S6v-7u-F3v" eventType="valueChanged" id="OdN-PK-zp8"/>
+                                                    <action selector="saveStateA1:" destination="S6v-7u-F3v" eventType="valueChanged" id="jkq-MT-QO5"/>
                                                     <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="2Tv-PE-Dkv"/>
                                                 </connections>
                                             </switch>
@@ -2980,6 +3048,7 @@
                                                 <rect key="frame" x="680" y="262" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="Recomendaciones:" destination="S6v-7u-F3v" eventType="valueChanged" id="PLG-3g-KGM"/>
+                                                    <action selector="saveStateA2:" destination="S6v-7u-F3v" eventType="valueChanged" id="2Wt-jf-kMz"/>
                                                     <action selector="updateValor:" destination="S6v-7u-F3v" eventType="valueChanged" id="Aq3-n0-RNb"/>
                                                 </connections>
                                             </switch>
@@ -3670,7 +3739,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egU-dw-Ul5">
                                                 <rect key="frame" x="680" y="960.5" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="bonos" destination="fCs-Pw-xX6" eventType="valueChanged" id="W9i-MR-VoT"/>
                                                     <action selector="estadoOcho:" destination="fCs-Pw-xX6" eventType="valueChanged" id="8Ug-Um-pqD"/>
+                                                    <action selector="saveStateC3:" destination="fCs-Pw-xX6" eventType="valueChanged" id="d0B-Xe-2s3"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="Hal-Fo-2xU"/>
                                                 </connections>
                                             </switch>
@@ -3830,6 +3901,7 @@
                                                 <rect key="frame" x="679" y="190.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoUno:" destination="fCs-Pw-xX6" eventType="valueChanged" id="wEA-IU-EGN"/>
+                                                    <action selector="saveStateA1:" destination="fCs-Pw-xX6" eventType="valueChanged" id="yZz-9f-3h9"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="xRy-F6-41f"/>
                                                 </connections>
                                             </switch>
@@ -3837,6 +3909,7 @@
                                                 <rect key="frame" x="679" y="259.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoDos:" destination="fCs-Pw-xX6" eventType="valueChanged" id="4pU-lL-QgG"/>
+                                                    <action selector="saveStateA2:" destination="fCs-Pw-xX6" eventType="valueChanged" id="RX6-a0-Myf"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="zON-BC-gmb"/>
                                                 </connections>
                                             </switch>
@@ -3844,27 +3917,34 @@
                                                 <rect key="frame" x="679" y="330.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoTres:" destination="fCs-Pw-xX6" eventType="valueChanged" id="ow6-En-M85"/>
+                                                    <action selector="saveStateA3:" destination="fCs-Pw-xX6" eventType="valueChanged" id="AT7-yK-vti"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="sVa-Mg-aey"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNL-Th-atp">
                                                 <rect key="frame" x="679" y="399.5" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="bonos" destination="fCs-Pw-xX6" eventType="valueChanged" id="KHb-Tg-4hw"/>
                                                     <action selector="estadoCuatro:" destination="fCs-Pw-xX6" eventType="valueChanged" id="Vki-cu-vKc"/>
+                                                    <action selector="saveStateA4:" destination="fCs-Pw-xX6" eventType="valueChanged" id="CMe-2K-Xdi"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="GSm-Rc-MN5"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-sK-g88">
                                                 <rect key="frame" x="679" y="470" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="bonos" destination="fCs-Pw-xX6" eventType="valueChanged" id="Ghs-Ai-ICZ"/>
                                                     <action selector="estadoCinco:" destination="fCs-Pw-xX6" eventType="valueChanged" id="l28-EU-5zQ"/>
+                                                    <action selector="saveStateA5:" destination="fCs-Pw-xX6" eventType="valueChanged" id="1xc-NF-tQg"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="kRj-HY-1L4"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-0i-Vtl">
                                                 <rect key="frame" x="679" y="539" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="bonos" destination="fCs-Pw-xX6" eventType="valueChanged" id="h6P-4v-W8l"/>
                                                     <action selector="estadoSeis:" destination="fCs-Pw-xX6" eventType="valueChanged" id="JSH-GO-MlU"/>
+                                                    <action selector="saveStateB1:" destination="fCs-Pw-xX6" eventType="valueChanged" id="fTs-iE-zZh"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="pPe-Tc-A9J"/>
                                                 </connections>
                                             </switch>
@@ -3872,6 +3952,7 @@
                                                 <rect key="frame" x="679" y="610.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoTres:" destination="fCs-Pw-xX6" eventType="valueChanged" id="6u0-2s-zeM"/>
+                                                    <action selector="saveStateB2:" destination="fCs-Pw-xX6" eventType="valueChanged" id="HNa-ki-MlV"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="r5N-vp-W45"/>
                                                 </connections>
                                             </switch>
@@ -3879,6 +3960,7 @@
                                                 <rect key="frame" x="679" y="679.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoSiete:" destination="fCs-Pw-xX6" eventType="valueChanged" id="sDZ-hL-cus"/>
+                                                    <action selector="saveStateB3:" destination="fCs-Pw-xX6" eventType="valueChanged" id="dQl-xn-PEe"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="MgI-DI-Hsn"/>
                                                 </connections>
                                             </switch>
@@ -3886,12 +3968,14 @@
                                                 <rect key="frame" x="679" y="749.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoOcho:" destination="fCs-Pw-xX6" eventType="valueChanged" id="eyq-uK-HCh"/>
+                                                    <action selector="saveStateB4:" destination="fCs-Pw-xX6" eventType="valueChanged" id="JLl-sA-yuP"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="DNu-wa-EPv"/>
                                                 </connections>
                                             </switch>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahS-yw-fWk">
                                                 <rect key="frame" x="679" y="819.5" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="saveStateC1:" destination="fCs-Pw-xX6" eventType="valueChanged" id="sYw-Sy-uam"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="aF8-CK-w93"/>
                                                 </connections>
                                             </switch>
@@ -3899,6 +3983,7 @@
                                                 <rect key="frame" x="679" y="889.5" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="estadoNueve:" destination="fCs-Pw-xX6" eventType="valueChanged" id="q1v-Il-jmP"/>
+                                                    <action selector="saveStateC2:" destination="fCs-Pw-xX6" eventType="valueChanged" id="vrQ-ST-fSf"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="22b-gL-tlo"/>
                                                 </connections>
                                             </switch>
@@ -4446,10 +4531,10 @@
         <image name="checkmarkempty" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3bA-G8-4Rs"/>
-        <segue reference="cON-CF-0Kp"/>
+        <segue reference="s7G-Nq-AGz"/>
+        <segue reference="aR2-TI-bcX"/>
         <segue reference="fIB-2o-vym"/>
         <segue reference="lud-zc-aiC"/>
-        <segue reference="VNr-yP-Jak"/>
+        <segue reference="Snu-zA-9tY"/>
     </inferredMetricsTieBreakers>
 </document>

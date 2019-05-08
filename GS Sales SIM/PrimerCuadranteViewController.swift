@@ -9,8 +9,20 @@
 import UIKit
 import Charts
 
-var valorGeneralC1: Int = 100
-var valoresBarChartC1 = [2.0, 5.0, 2.0, 2.0, 3.0, 3.0, 1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 5.0, 2.0, 2.0, 2.0, 10.0, 5.0]
+    var valorGeneralC1: Int = 100
+    var valoresRadarChartC1 = [0.0, 0.0, 0.0]
+    var valoresBarChartC1 = [0.0, -2.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0, -5.0, 0.0]
+
+    var bonoC1 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+    //valores para validar los bonos en otros viewControllers
+    var switchC1A1: Bool = true
+    var switchC1A2: Bool = true
+    var switchC1A5: Bool = true
+    var switchC1A6: Bool = true
+    var switchC1B2: Bool = true
+    var switchC1B3: Bool = true
+    var switchC1B4: Bool = true
 
 
 class PrimerCuadranteViewController: UIViewController {
@@ -19,18 +31,13 @@ class PrimerCuadranteViewController: UIViewController {
     @IBOutlet weak var barChart: BarChartView!
     @IBOutlet weak var recomendaciones: UITextView!
     
+    //nombres para las graficas
+    let nombresRadarChart = ["A", "B", "C"]
+    let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "B3", "B4", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"]
+    
     //recomendaciones
     var arrayRecomendaciones = ["", "", "", "", "", "", "", "", "", "", "", "", ""]
-    
     var fraseFinal = String()
-
-
-    //valores para grafica de radar
-    let nombresRadarChart = ["A", "B", "C"]
-    var valoresRadarChart = [100.0, 100.0, 100.0]
-    
-    //valores para grafica de barras
-    let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "B3", "B4", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"]
     
     
     weak var axisFormatDelegate: IAxisValueFormatter?
@@ -57,17 +64,109 @@ class PrimerCuadranteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
+        
+        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChartC1)
         let  xAxis : XAxis = self.radarChart.xAxis
         xAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 16.0)!
         let  yAxis : YAxis = self.radarChart.yAxis
         yAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 10.0)!
         
         axisFormatDelegate = self as? IAxisValueFormatter
-        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC1)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC1, values2: bonoC1, sortIndex: 0)
+        
+        C1A1.isOn =  UserDefaults.standard.bool(forKey: "StateC1A1")
+        C1A2.isOn =  UserDefaults.standard.bool(forKey: "StateC1A2")
+        C1A3.isOn =  UserDefaults.standard.bool(forKey: "StateC1A3")
+        C1A4.isOn =  UserDefaults.standard.bool(forKey: "StateC1A4")
+        C1A5.isOn =  UserDefaults.standard.bool(forKey: "StateC1A5")
+        C1A6.isOn =  UserDefaults.standard.bool(forKey: "StateC1A6")
+        C1B1.isOn =  UserDefaults.standard.bool(forKey: "StateC1B1")
+        C1B2.isOn =  UserDefaults.standard.bool(forKey: "StateC1B2")
+        C1B3.isOn =  UserDefaults.standard.bool(forKey: "StateC1B3")
+        C1B4.isOn =  UserDefaults.standard.bool(forKey: "StateC1B4")
+        C1C1.isOn =  UserDefaults.standard.bool(forKey: "StateC1C1")
+        C1C2.isOn =  UserDefaults.standard.bool(forKey: "StateC1C2")
+        C1C3.isOn =  UserDefaults.standard.bool(forKey: "StateC1C3")
+        C1C4.isOn =  UserDefaults.standard.bool(forKey: "StateC1C4")
+        C1C5.isOn =  UserDefaults.standard.bool(forKey: "StateC1C5")
+        C1C6.isOn =  UserDefaults.standard.bool(forKey: "StateC1C6")
+        C1C7.isOn =  UserDefaults.standard.bool(forKey: "StateC1C7")
+        C1C8.isOn =  UserDefaults.standard.bool(forKey: "StateC1C8")
         
     }
+    
+    @IBAction func saveStateA1(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1A1")
+    }
+    
+    @IBAction func saveStateA2(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1A2")
+    }
+    
+    @IBAction func saveStateA3(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1A3")
+    }
+    
+    @IBAction func saveStateA4(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1A4")
+    }
+    
+    @IBAction func saveStateA5(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1A5")
+    }
+    
+    @IBAction func saveStateA6(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1A6")
+    }
+    
+    @IBAction func saveStateB1(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1B1")
+    }
+    
+    @IBAction func saveStateB2(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1B2")
+    }
+    
+    @IBAction func saveStateB3(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1B3")
+    }
+    
+    @IBAction func saveStateB4(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1B4")
+    }
+    
+    @IBAction func saveStateC1(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1C1")
+    }
+    
+    @IBAction func saveStateC2(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1C2")
+    }
+    
+    @IBAction func saveStateC3(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1C3")
+    }
+    
+    @IBAction func saveStateC4(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1C4")
+    }
+    
+    @IBAction func saveStateC5(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1C5")
+    }
+    
+    @IBAction func saveStateC6(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1C6")
+    }
+    
+    @IBAction func saveStateC7(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1C7")
+    }
+    
+    @IBAction func saveStateC8(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC1C8")
+    }
+
     
     @IBAction func Recomendaciones(_ sender: UISwitch) {
         if (C1B3.isOn == true && C1A1.isOn == true){
@@ -190,7 +289,6 @@ class PrimerCuadranteViewController: UIViewController {
         }
     }
     
-    
     func updateRecomendaciones(){
         fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8] + arrayRecomendaciones[9] + arrayRecomendaciones[10] + arrayRecomendaciones[11] + arrayRecomendaciones[12]
         
@@ -201,18 +299,22 @@ class PrimerCuadranteViewController: UIViewController {
     @IBAction func updateValor(_ sender: UISwitch){
         if(C1A1.isOn == true){
             valoresBarChartC1[0] = 2
+            switchC1A1 = true
             updateCharts()
         }
         else{
             valoresBarChartC1[0] = 0
+            switchC1A1 = false
             updateCharts()
         }
         if(C1A2.isOn == true){
             valoresBarChartC1[1] = 5
+            switchC1A2 = true
             updateCharts()
         }
         else{
             valoresBarChartC1[1] = -2
+            switchC1A2 = false
             updateCharts()
         }
         if(C1A3.isOn == true){
@@ -233,18 +335,22 @@ class PrimerCuadranteViewController: UIViewController {
         }
         if(C1A5.isOn == true){
             valoresBarChartC1[4] = 3
+            switchC1A5 = true
             updateCharts()
         }
         else{
             valoresBarChartC1[4] = 0
+            switchC1A5 = false
             updateCharts()
         }
         if(C1A6.isOn == true){
             valoresBarChartC1[5] = 3
+            switchC1A6 = true
             updateCharts()
         }
         else{
             valoresBarChartC1[5] = -2
+            switchC1A6 = false
             updateCharts()
         }
         if(C1B1.isOn == true){
@@ -257,26 +363,32 @@ class PrimerCuadranteViewController: UIViewController {
         }
         if(C1B2.isOn == true){
             valoresBarChartC1[7] = 1
+            switchC1B2 = true
             updateCharts()
         }
         else{
             valoresBarChartC1[7] = 0
+            switchC1B2 = false
             updateCharts()
         }
         if(C1B3.isOn == true){
             valoresBarChartC1[8] = 1
+            switchC1B3 = true
             updateCharts()
         }
         else{
             valoresBarChartC1[8] = 0
+            switchC1B3 = false
             updateCharts()
         }
         if(C1B4.isOn == true){
             valoresBarChartC1[9] = 2
+            switchC1B4 = true
             updateCharts()
         }
         else{
             valoresBarChartC1[9] = 0
+            switchC1B4 = false
             updateCharts()
         }
         if(C1C1.isOn == true){
@@ -347,23 +459,23 @@ class PrimerCuadranteViewController: UIViewController {
         //Para los cuadrantes en RadarChart
         let valorA = (((valoresBarChartC1[0] + valoresBarChartC1[1] + valoresBarChartC1[2] + valoresBarChartC1[3] + valoresBarChartC1[4] + valoresBarChartC1[5]) * 100) / 17)
         if(valorA > 0){
-            valoresRadarChart[0] = valorA
+            valoresRadarChartC1[0] = valorA
         }else{
-            valoresRadarChart[0] = 0
+            valoresRadarChartC1[0] = 0
         }
         
         let valorB = (((valoresBarChartC1[6] + valoresBarChartC1[7] + valoresBarChartC1[8] + valoresBarChartC1[9]) * 100) / 5)
         if(valorB > 0){
-            valoresRadarChart[1] = valorB
+            valoresRadarChartC1[1] = valorB
         }else{
-            valoresRadarChart[1] = 0
+            valoresRadarChartC1[1] = 0
         }
         
         let valorC = (((valoresBarChartC1[10] + valoresBarChartC1[11] + valoresBarChartC1[12] + valoresBarChartC1[13] + valoresBarChartC1[14] + valoresBarChartC1[15] + valoresBarChartC1[16] + valoresBarChartC1[17]) * 100) / 30)
         if(valorC > 0){
-            valoresRadarChart[2] = valorC
+            valoresRadarChartC1[2] = valorC
         }else{
-            valoresRadarChart[2] = 0
+            valoresRadarChartC1[2] = 0
         }
         updateCharts()
         
@@ -371,10 +483,23 @@ class PrimerCuadranteViewController: UIViewController {
     }
     
     func updateCharts(){
-        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC1)
-        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC1, values2: bonoC1, sortIndex: 0)
+        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChartC1)
     }
     
+    //Funciones de los bonos
+    @IBAction func bonos(){
+        if (C1A1.isOn == true && C1A3.isOn == true && C1A5.isOn == true && C1A6.isOn == true){
+            bonoC1[5] = 1
+        }else{
+            bonoC1[5] = 0
+        }
+        if(C1C2.isOn == true && C1C3.isOn == true && C1C5.isOn == true && C1C7.isOn == true){
+            bonoC1[16] = 2
+        }else{
+            bonoC1[16] = 0
+        }
+    }
     
     //Funcion de la radarChart
     func setRadarChart(dataPoints: [String], values: [Double]) {
@@ -454,20 +579,22 @@ class PrimerCuadranteViewController: UIViewController {
     
     
     //Funcion de la barChart
-    func setBarChart(dataPoints: [String], values: [Double]) {
+    func setBarChart(dataPoints: [String], values: [Double], values2: [Double],sortIndex:Int) {
         
             var dataEntries:[BarChartDataEntry] = []
-            
+        
             for i in 0..<dataPoints.count {
-                let dataEntry = BarChartDataEntry(x: Double(i), yValues: [Double(values[i])])
+                let dataEntry = BarChartDataEntry(x: Double(i), yValues: [Double(values[i]), Double(values2[i])])
                 dataEntries.append(dataEntry)
             }
             
-            let chartDataSet = BarChartDataSet(values: dataEntries, label: "Peso")
+            let chartDataSet = BarChartDataSet(values: dataEntries, label: " ")
+            chartDataSet.colors = [UIColor.blue, UIColor.orange]
+            chartDataSet.stackLabels = ["Puntos", "Bono"]
             let chartData = BarChartData(dataSet: chartDataSet)
             barChart.data = chartData
-            chartDataSet.setColor(.gray)
-        
+            chartDataSet.drawValuesEnabled = false
+
             //Quitar el double y pasarlo a Int
             let format = NumberFormatter()
             format.numberStyle = .none
@@ -476,7 +603,9 @@ class PrimerCuadranteViewController: UIViewController {
             
             barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
             barChart.xAxis.granularity = 1
-            
+        
+            //lengens en el centro
+            barChart.legend.horizontalAlignment = .center
             //quita labels de arriba
             barChart.xAxis.labelPosition = .bottom
             barChart.legend.enabled = true
@@ -486,5 +615,5 @@ class PrimerCuadranteViewController: UIViewController {
             barChart.rightAxis.enabled = false
             barChart.legend.font = UIFont(name: "Arial", size: 14.0)!
         }
-
+    
 }

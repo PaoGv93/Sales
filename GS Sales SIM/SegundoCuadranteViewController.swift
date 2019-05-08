@@ -10,7 +10,14 @@ import UIKit
 import Charts
 
 var valorGeneralC2: Int = 100
-var valoresBarChartC2 = [1.0, 2.0, 2.0, 2.0, 5.0, 5.0, 2.0, 1.0, 1.0, 2.0, 3.0, 3.0]
+var valoresRadarChartC2 = [0.0, 0.0, 0.0]
+var valoresBarChartC2 = [0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -3.0, 0.0]
+
+var bonoC2 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+//valores para validar los bonos en otros viewControllers
+var switchC2A4: Bool = true
+
 
 class SegundoCuadranteViewController: UIViewController {
     
@@ -24,11 +31,8 @@ class SegundoCuadranteViewController: UIViewController {
     var fraseFinal = String()
 
     
-    //valores para grafica de radar
+    //nombres para las graficas
     let nombresRadarChart = ["A", "B", "C"]
-    var valoresRadarChart = [100.0, 100.0, 100.0]
-    
-    //valores para grafica de barras
     let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "B1", "B2", "B3", "B4", "C1", "C2", "C3"]
     
     weak var axisFormatDelegate: IAxisValueFormatter?
@@ -50,15 +54,78 @@ class SegundoCuadranteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
+        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChartC2)
         let  xAxis : XAxis = self.radarChart.xAxis
         xAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 16.0)!
         let  yAxis : YAxis = self.radarChart.yAxis
         yAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 10.0)!
         
         axisFormatDelegate = self as? IAxisValueFormatter
-        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC2)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC2, values2: bonoC2, sortIndex: 0)
+
+        C2A1.isOn =  UserDefaults.standard.bool(forKey: "StateC2A1")
+        C2A2.isOn =  UserDefaults.standard.bool(forKey: "StateC2A2")
+        C2A3.isOn =  UserDefaults.standard.bool(forKey: "StateC2A3")
+        C2A4.isOn =  UserDefaults.standard.bool(forKey: "StateC2A4")
+        C2A5.isOn =  UserDefaults.standard.bool(forKey: "StateC2A5")
+        C2B1.isOn =  UserDefaults.standard.bool(forKey: "StateC2B1")
+        C2B2.isOn =  UserDefaults.standard.bool(forKey: "StateC2B2")
+        C2B3.isOn =  UserDefaults.standard.bool(forKey: "StateC2B3")
+        C2B4.isOn =  UserDefaults.standard.bool(forKey: "StateC2B4")
+        C2C1.isOn =  UserDefaults.standard.bool(forKey: "StateC2C1")
+        C2C2.isOn =  UserDefaults.standard.bool(forKey: "StateC2C2")
+        C2C3.isOn =  UserDefaults.standard.bool(forKey: "StateC2C3")
+        
     }
+    
+    @IBAction func saveStateA1(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2A1")
+    }
+    
+    @IBAction func saveStateA2(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2A2")
+    }
+    
+    @IBAction func saveStateA3(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2A3")
+    }
+    
+    @IBAction func saveStateA4(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2A4")
+    }
+    
+    @IBAction func saveStateA5(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2A5")
+    }
+    
+    @IBAction func saveStateB1(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2B1")
+    }
+    
+    @IBAction func saveStateB2(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2B2")
+    }
+    
+    @IBAction func saveStateB3(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2B3")
+    }
+    
+    @IBAction func saveStateB4(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2B4")
+    }
+    
+    @IBAction func saveStateC1(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2C1")
+    }
+    
+    @IBAction func saveStateC2(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2C2")
+    }
+    
+    @IBAction func saveStateC3(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "StateC2C3")
+    }
+    
     
     @IBAction func estadoUno(_ sender: UISwitch) {
         if (sender.isOn == true){
@@ -194,10 +261,12 @@ class SegundoCuadranteViewController: UIViewController {
         }
         if(C2A4.isOn == true){
             valoresBarChartC2[3] = 2
+            switchC2A4 = true
             updateCharts()
         }
         else{
             valoresBarChartC2[3] = -2
+            switchC2A4 = false
             updateCharts()
         }
         if(C2A5.isOn == true){
@@ -268,23 +337,23 @@ class SegundoCuadranteViewController: UIViewController {
         //Para los cuadrantes en RadarChart
         let valorA = (((valoresBarChartC2[0] + valoresBarChartC2[1] + valoresBarChartC2[2] + valoresBarChartC2[3] + valoresBarChartC2[4]) * 100) / 12)
         if(valorA > 0){
-            valoresRadarChart[0] = valorA
+            valoresRadarChartC2[0] = valorA
         }else{
-            valoresRadarChart[0] = 0
+            valoresRadarChartC2[0] = 0
         }
         
         let valorB = (((valoresBarChartC2[5] + valoresBarChartC2[6] + valoresBarChartC2[7] + valoresBarChartC2[8]) * 100) / 9)
         if(valorB > 0){
-            valoresRadarChart[1] = valorB
+            valoresRadarChartC2[1] = valorB
         }else{
-            valoresRadarChart[1] = 0
+            valoresRadarChartC2[1] = 0
         }
         
         let valorC = (((valoresBarChartC2[9] + valoresBarChartC2[10] + valoresBarChartC2[11]) * 100) / 8)
         if(valorC > 0){
-            valoresRadarChart[2] = valorC
+            valoresRadarChartC2[2] = valorC
         }else{
-            valoresRadarChart[2] = 0
+            valoresRadarChartC2[2] = 0
         }
         updateCharts()
         
@@ -293,8 +362,27 @@ class SegundoCuadranteViewController: UIViewController {
     }
     
     func updateCharts(){
-        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC2)
-        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
+        setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC2, values2: bonoC2, sortIndex: 0)
+        setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChartC2)
+    }
+    
+    //Funciones de los bonos
+    @IBAction func bonos(){
+        if (switchC1A1 == true && switchC1A2 == true && switchC1B2 == true && C2A4.isOn == true){
+            bonoC2[3] = 2
+        }else{
+            bonoC2[3] = 0
+        }
+        if (switchC1A6 == true && switchC1B3 == true && switchC1B4 == true && C2A5.isOn == true && C2B1.isOn == true){
+            bonoC2[5] = 2
+        }else{
+            bonoC2[5] = 0
+        }
+        if (C2A4.isOn == true && C2C3.isOn == true){
+            bonoC2[11] = 1
+        }else{
+            bonoC2[11] = 0
+        }
     }
     
    
@@ -375,26 +463,27 @@ class SegundoCuadranteViewController: UIViewController {
     
     
     //Funcion de la barChart
-    func setBarChart(dataPoints: [String], values: [Double]) {
-        
+    func setBarChart(dataPoints: [String], values: [Double], values2: [Double],sortIndex:Int) {
+
         var dataEntries:[BarChartDataEntry] = []
         
         for i in 0..<dataPoints.count {
-            let dataEntry = BarChartDataEntry(x: Double(i), yValues: [Double(values[i])])
+            let dataEntry = BarChartDataEntry(x: Double(i), yValues: [Double(values[i]), Double(values2[i])])
             dataEntries.append(dataEntry)
         }
         
-        let chartDataSet = BarChartDataSet(values: dataEntries, label: "Peso")
+        let chartDataSet = BarChartDataSet(values: dataEntries, label: " ")
+        chartDataSet.colors = [UIColor.blue, UIColor.orange]
+        chartDataSet.stackLabels = ["Puntos", "Bono"]
         let chartData = BarChartData(dataSet: chartDataSet)
+        barChart.data = chartData
+        chartDataSet.drawValuesEnabled = false
         
         //Quitar el double y pasarlo a Int
         let format = NumberFormatter()
         format.numberStyle = .none
         let formatter = DefaultValueFormatter(formatter: format)
         chartData.setValueFormatter(formatter)
-        
-        barChart.data = chartData
-        chartDataSet.setColor(.gray)
 
         
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
