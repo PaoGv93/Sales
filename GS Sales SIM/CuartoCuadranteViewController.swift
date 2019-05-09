@@ -9,10 +9,13 @@
 import UIKit
 import Charts
 
-var valorGeneralC4: Int = 100
+var valorGeneralC4: Int = 0
 var valoresBarChartC4 = [-2.0, 0.0, 0.0, -4.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
 var bonoC4 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+//recomendaciones
+var arrayRecomendacionesC4 = ["- Dejar pasar demasiado tiempo entre la visita y nuestro seguimiento, puede confundirse con desinteres o informalidad. No dejes pasar más de 24 horas en contactar a tu prospecto con información de valor. \n\n", "- Que tu correo tenga agradecimiento, compromisos, cotización, plan de adquisición, casos homologos, promociones vigentes y broshure de marca. No dejar claros los siguientes pasos de tu seguimiento puede hacerlo mas dificil de programar. Siempre deja claro cuando será tu proximo contacto y cumple. \n\n"]
 
 
 class CuartoCuadranteViewController: UIViewController {
@@ -20,11 +23,6 @@ class CuartoCuadranteViewController: UIViewController {
     @IBOutlet weak var barChart: BarChartView!
     
     @IBOutlet weak var recomendaciones: UILabel!
-    
-    //recomendaciones
-    var arrayRecomendaciones = ["", ""]
-    
-    var fraseFinal = String()
     
     //nombres para grafica de barras
     let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9"]
@@ -44,6 +42,8 @@ class CuartoCuadranteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateRecomendaciones()
         
         axisFormatDelegate = self as? IAxisValueFormatter
         setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC4, values2: bonoC4, sortIndex: 0)
@@ -113,28 +113,27 @@ class CuartoCuadranteViewController: UIViewController {
     //FUNCIONES PARA LAS RECOMENDACIONES
     @IBAction func Recomendaciones(_ sender: UISwitch) {
         if (C4A1.isOn == true){
-            arrayRecomendaciones[0] = ""
+            arrayRecomendacionesC4[0] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "- Dejar pasar demasiado tiempo entre la visita y nuestro seguimiento, puede confundirse con desinteres o informalidad. No dejes pasar más de 24 horas en contactar a tu prospecto con información de valor. \n\n"
+            arrayRecomendacionesC4[0] = "- Dejar pasar demasiado tiempo entre la visita y nuestro seguimiento, puede confundirse con desinteres o informalidad. No dejes pasar más de 24 horas en contactar a tu prospecto con información de valor. \n\n"
             updateRecomendaciones()
         }
 
         if (C4A2.isOn == true && C4A3.isOn == true && C4A4.isOn == true && C4A5.isOn == true && C4A6.isOn == true && C4A7.isOn == true && C4A8.isOn == true && C4A9.isOn == true){
-            arrayRecomendaciones[1] = ""
+            arrayRecomendacionesC4[1] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[1] = "- Que tu correo tenga agradecimiento, compromisos, cotización, plan de adquisición, casos homologos, promociones vigentes y broshure de marca. No dejar claros los siguientes pasos de tu seguimiento puede hacerlo mas dificil de programar. Siempre deja claro cuando será tu proximo contacto y cumple. \n\n"
+            arrayRecomendacionesC4[1] = "- Que tu correo tenga agradecimiento, compromisos, cotización, plan de adquisición, casos homologos, promociones vigentes y broshure de marca. No dejar claros los siguientes pasos de tu seguimiento puede hacerlo mas dificil de programar. Siempre deja claro cuando será tu proximo contacto y cumple. \n\n"
             updateRecomendaciones()
         }
     }
 
     func updateRecomendaciones() {
-        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1]
         
-        recomendaciones.text = fraseFinal
+        recomendaciones.text = arrayRecomendacionesC4[0] + arrayRecomendacionesC4[1]
     }
     
     @IBAction func updateValor(_ sender: UISwitch){
@@ -212,7 +211,6 @@ class CuartoCuadranteViewController: UIViewController {
         }
         
         valorGeneralC4 = Int((((valoresBarChartC4[0] + valoresBarChartC4[1] + valoresBarChartC4[2] + valoresBarChartC4[3] + valoresBarChartC4[4] + valoresBarChartC4[5] + valoresBarChartC4[6] + valoresBarChartC4[7] + valoresBarChartC4[8]) * 100) / 26))
-        print(valorGeneralC4)
     }
     
     func updateCharts(){
@@ -270,6 +268,8 @@ class CuartoCuadranteViewController: UIViewController {
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
         barChart.xAxis.granularity = 1
         
+        //lengens en el centro
+        barChart.legend.horizontalAlignment = .center
         //quita labels de arriba
         barChart.xAxis.labelPosition = .bottom
         barChart.legend.enabled = true

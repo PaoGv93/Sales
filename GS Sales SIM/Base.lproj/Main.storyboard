@@ -3739,8 +3739,8 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="egU-dw-Ul5">
                                                 <rect key="frame" x="680" y="960.5" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="diH-Sc-EFr"/>
                                                     <action selector="bonos" destination="fCs-Pw-xX6" eventType="valueChanged" id="W9i-MR-VoT"/>
-                                                    <action selector="estadoOcho:" destination="fCs-Pw-xX6" eventType="valueChanged" id="8Ug-Um-pqD"/>
                                                     <action selector="saveStateC3:" destination="fCs-Pw-xX6" eventType="valueChanged" id="d0B-Xe-2s3"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="Hal-Fo-2xU"/>
                                                 </connections>
@@ -3900,7 +3900,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mT5-tw-qgr">
                                                 <rect key="frame" x="679" y="190.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoUno:" destination="fCs-Pw-xX6" eventType="valueChanged" id="wEA-IU-EGN"/>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="OM3-Mx-FUw"/>
                                                     <action selector="saveStateA1:" destination="fCs-Pw-xX6" eventType="valueChanged" id="yZz-9f-3h9"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="xRy-F6-41f"/>
                                                 </connections>
@@ -3908,7 +3908,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PhK-nH-6qn">
                                                 <rect key="frame" x="679" y="259.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoDos:" destination="fCs-Pw-xX6" eventType="valueChanged" id="4pU-lL-QgG"/>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="Frt-AK-gRN"/>
                                                     <action selector="saveStateA2:" destination="fCs-Pw-xX6" eventType="valueChanged" id="RX6-a0-Myf"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="zON-BC-gmb"/>
                                                 </connections>
@@ -3916,7 +3916,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZHs-HP-PF9">
                                                 <rect key="frame" x="679" y="330.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTres:" destination="fCs-Pw-xX6" eventType="valueChanged" id="ow6-En-M85"/>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="NgS-Ri-Kj6"/>
                                                     <action selector="saveStateA3:" destination="fCs-Pw-xX6" eventType="valueChanged" id="AT7-yK-vti"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="sVa-Mg-aey"/>
                                                 </connections>
@@ -3924,8 +3924,8 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNL-Th-atp">
                                                 <rect key="frame" x="679" y="399.5" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="1WJ-B2-MJU"/>
                                                     <action selector="bonos" destination="fCs-Pw-xX6" eventType="valueChanged" id="KHb-Tg-4hw"/>
-                                                    <action selector="estadoCuatro:" destination="fCs-Pw-xX6" eventType="valueChanged" id="Vki-cu-vKc"/>
                                                     <action selector="saveStateA4:" destination="fCs-Pw-xX6" eventType="valueChanged" id="CMe-2K-Xdi"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="GSm-Rc-MN5"/>
                                                 </connections>
@@ -3933,8 +3933,8 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vuE-sK-g88">
                                                 <rect key="frame" x="679" y="470" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="V25-Rw-sQX"/>
                                                     <action selector="bonos" destination="fCs-Pw-xX6" eventType="valueChanged" id="Ghs-Ai-ICZ"/>
-                                                    <action selector="estadoCinco:" destination="fCs-Pw-xX6" eventType="valueChanged" id="l28-EU-5zQ"/>
                                                     <action selector="saveStateA5:" destination="fCs-Pw-xX6" eventType="valueChanged" id="1xc-NF-tQg"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="kRj-HY-1L4"/>
                                                 </connections>
@@ -3942,8 +3942,8 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXY-0i-Vtl">
                                                 <rect key="frame" x="679" y="539" width="51" height="31"/>
                                                 <connections>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="ESr-fg-vYB"/>
                                                     <action selector="bonos" destination="fCs-Pw-xX6" eventType="valueChanged" id="h6P-4v-W8l"/>
-                                                    <action selector="estadoSeis:" destination="fCs-Pw-xX6" eventType="valueChanged" id="JSH-GO-MlU"/>
                                                     <action selector="saveStateB1:" destination="fCs-Pw-xX6" eventType="valueChanged" id="fTs-iE-zZh"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="pPe-Tc-A9J"/>
                                                 </connections>
@@ -3951,7 +3951,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yt2-2y-Ucb">
                                                 <rect key="frame" x="679" y="610.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoTres:" destination="fCs-Pw-xX6" eventType="valueChanged" id="6u0-2s-zeM"/>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="igZ-Gx-4o1"/>
                                                     <action selector="saveStateB2:" destination="fCs-Pw-xX6" eventType="valueChanged" id="HNa-ki-MlV"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="r5N-vp-W45"/>
                                                 </connections>
@@ -3959,7 +3959,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OiB-no-LOx">
                                                 <rect key="frame" x="679" y="679.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoSiete:" destination="fCs-Pw-xX6" eventType="valueChanged" id="sDZ-hL-cus"/>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="rcl-wm-4h1"/>
                                                     <action selector="saveStateB3:" destination="fCs-Pw-xX6" eventType="valueChanged" id="dQl-xn-PEe"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="MgI-DI-Hsn"/>
                                                 </connections>
@@ -3967,7 +3967,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dmf-Ev-c1U">
                                                 <rect key="frame" x="679" y="749.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoOcho:" destination="fCs-Pw-xX6" eventType="valueChanged" id="eyq-uK-HCh"/>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="x2t-kT-cqC"/>
                                                     <action selector="saveStateB4:" destination="fCs-Pw-xX6" eventType="valueChanged" id="JLl-sA-yuP"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="DNu-wa-EPv"/>
                                                 </connections>
@@ -3982,7 +3982,7 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4xo-yp-Fhq">
                                                 <rect key="frame" x="679" y="889.5" width="51" height="31"/>
                                                 <connections>
-                                                    <action selector="estadoNueve:" destination="fCs-Pw-xX6" eventType="valueChanged" id="q1v-Il-jmP"/>
+                                                    <action selector="Recomendaciones:" destination="fCs-Pw-xX6" eventType="valueChanged" id="tZS-AT-mxB"/>
                                                     <action selector="saveStateC2:" destination="fCs-Pw-xX6" eventType="valueChanged" id="vrQ-ST-fSf"/>
                                                     <action selector="updateValor:" destination="fCs-Pw-xX6" eventType="valueChanged" id="22b-gL-tlo"/>
                                                 </connections>
@@ -4532,9 +4532,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="s7G-Nq-AGz"/>
-        <segue reference="aR2-TI-bcX"/>
+        <segue reference="cON-CF-0Kp"/>
         <segue reference="fIB-2o-vym"/>
-        <segue reference="lud-zc-aiC"/>
-        <segue reference="Snu-zA-9tY"/>
+        <segue reference="zcY-Lh-r56"/>
+        <segue reference="VNr-yP-Jak"/>
     </inferredMetricsTieBreakers>
 </document>

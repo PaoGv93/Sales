@@ -9,11 +9,14 @@
 import UIKit
 import Charts
 
-var valorGeneralC3: Int = 100
+var valorGeneralC3: Int = 0
 var valoresRadarChartC3 = [0.0, 0.0, 0.0, 0.0, 0.0]
 var valoresBarChartC3 = [0.0, -1.0, 0.0, -5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0]
 
 var bonoC3 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+//Recomendaciones
+var arrayRecomendacionesC3 = ["- Recuerda que no es lo mismo hablar con la persona que tiene los conocimientos tecnicos que con la persona que tiene como prioridad las finanzas del despacho o empresa. \n\n", "- La identificación de las necesidades correctas del prospecto es indispensables para tener el correcto angulo de venta. ¿Hiciste suficientes preguntas correctas? \n\n", "- No se trata de sólo ir identificando las necesidades tecnicas, ve estructurando un plan de las herramientas que podrías mostrarle que resuelvan su necesidad a traves de un BIMx. \n\n", "- Lo más importante para crear una relación de confianza y credibilidad, es que sepas con quien estas hablando y lo que para el es importante en su negocio. \n\n", "- Si identifico la cantidad de personas, se determina el mejor uso de ArchiCAD y beneficios. (Corroborar complejidad colaborativa, niveles de aprobación) \n\n", "- Recuerda que toda implementación BIM exitosa viene desde \"arriba\". \n\n", "- Entre mas preguntas hagas, mas información tendras para formular los argumentos correctos. \n\n", "- Investiga y muestrale a tu cliente, como empresas similares que usan ArchiCAD, han logrado desarrollar proyectos exitosos. \n\n", "- BIMx es la herramienta visual que nos ayuda a soportar de una forma didactica todos nuestros argumentos de venta. ¡No los desperdicies! \n\n", "- Dar información sobre todo nuestro entorno de productos abre las posibilidades de crecer la cuenta. \n\n", "- Abrir ArchiCAD sin hacer una demo, significa que probablemente no estes sentado con el tomado de desiciones. \n\n", "- Mencionar nuestro servicio al cliente y servicios adicionales es uno de nuestros grandes distintivos como marca. \n\n", "- Invitar al prospecto a que visite nuestras redes sociales, y que pueda ver nuestras campañas y videos, puede generar más interes. \n\n", "- Solo si estas acompañado de alguien Técnico, es recomendable que se abra ArchiCAD y se demuestre su funcionamiento. \n\n"]
 
 //valores para validar los bonos en otros viewControllers
 var switchC3A2: Bool = true
@@ -28,11 +31,6 @@ class TercerCuadranteViewController: UIViewController {
     @IBOutlet weak var barChart: BarChartView!
     
     @IBOutlet weak var recomendaciones: UITextView!
-    
-    //Recomendaciones
-    var arrayRecomendaciones = ["", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-    
-    var fraseFinal = String()
     
     //nombres para las graficas
     let nombresRadarChart = ["A", "B", "C", "D", "E"]
@@ -73,6 +71,8 @@ class TercerCuadranteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateRecomendaciones()
         
         setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChartC3)
         let  xAxis : XAxis = self.radarChart.xAxis
@@ -186,136 +186,135 @@ class TercerCuadranteViewController: UIViewController {
     
     @IBAction func Recomendaciones(_ sender: Any) {
         if (C3A1.isOn == true){
-            arrayRecomendaciones[0] = ""
+            arrayRecomendacionesC3[0] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "- Recuerda que no es lo mismo hablar con la persona que tiene los conocimientos tecnicos que con la persona que tiene como prioridad las finanzas del despacho o empresa. \n\n"
+            arrayRecomendacionesC3[0] = "- Recuerda que no es lo mismo hablar con la persona que tiene los conocimientos tecnicos que con la persona que tiene como prioridad las finanzas del despacho o empresa. \n\n"
             updateRecomendaciones()
         }
 
         if (C3A2.isOn == true){
-            arrayRecomendaciones[1] = ""
+            arrayRecomendacionesC3[1] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[1] = "- La identificación de las necesidades correctas del prospecto es indispensables para tener el correcto angulo de venta. ¿Hiciste suficientes preguntas correctas? \n\n"
+            arrayRecomendacionesC3[1] = "- La identificación de las necesidades correctas del prospecto es indispensables para tener el correcto angulo de venta. ¿Hiciste suficientes preguntas correctas? \n\n"
             updateRecomendaciones()
         }
 
         if (C3A3.isOn == true){
-            arrayRecomendaciones[2] = ""
+            arrayRecomendacionesC3[2] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[2] = "- No se trata de sólo ir identificando las necesidades tecnicas, ve estructurando un plan de las herramientas que podrías mostrarle que resuelvan su necesidad a traves de un BIMx. \n\n"
+            arrayRecomendacionesC3[2] = "- No se trata de sólo ir identificando las necesidades tecnicas, ve estructurando un plan de las herramientas que podrías mostrarle que resuelvan su necesidad a traves de un BIMx. \n\n"
             updateRecomendaciones()
         }
 
         if (C3B1.isOn == true){
-            arrayRecomendaciones[3] = ""
+            arrayRecomendacionesC3[3] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[3] = "- Lo más importante para crear una relación de confianza y credibilidad, es que sepas con quien estas hablando y lo que para el es importante en su negocio. \n\n"
+            arrayRecomendacionesC3[3] = "- Lo más importante para crear una relación de confianza y credibilidad, es que sepas con quien estas hablando y lo que para el es importante en su negocio. \n\n"
             updateRecomendaciones()
         }
 
         if (C3B2.isOn == true && C3B3.isOn == true){
-            arrayRecomendaciones[4] = ""
+            arrayRecomendacionesC3[4] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[4] = "- Si identifico la cantidad de personas, se determina el mejor uso de ArchiCAD y beneficios. (Corroborar complejidad colaborativa, niveles de aprobación) \n\n"
+            arrayRecomendacionesC3[4] = "- Si identifico la cantidad de personas, se determina el mejor uso de ArchiCAD y beneficios. (Corroborar complejidad colaborativa, niveles de aprobación) \n\n"
             updateRecomendaciones()
         }
 
         if (C3B4.isOn == true){
-            arrayRecomendaciones[5] = ""
+            arrayRecomendacionesC3[5] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[5] = "- Recuerda que toda implementación BIM exitosa viene desde \"arriba\". \n\n"
+            arrayRecomendacionesC3[5] = "- Recuerda que toda implementación BIM exitosa viene desde \"arriba\". \n\n"
             updateRecomendaciones()
         }
  
         if (C3C1Opt1.isSelected == false && C3C1Opt2.isSelected == false && C3C1Opt3.isSelected == false && C3C1Opt4.isSelected == false && C3D1.isOn == true && C3D2.isOn == true && C3D3.isOn == true && C3D4Opt1.isSelected == false && C3D4Opt2.isSelected == false && C3D4Opt3.isSelected == false && C3D4Opt4.isSelected == false){
-            arrayRecomendaciones[6] = ""
+            arrayRecomendacionesC3[6] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[6] = "- Entre mas preguntas hagas, mas información tendras para formular los argumentos correctos. \n\n"
+            arrayRecomendacionesC3[6] = "- Entre mas preguntas hagas, mas información tendras para formular los argumentos correctos. \n\n"
             updateRecomendaciones()
         }
 
         if (C3E1.isOn == true){
-            arrayRecomendaciones[7] = ""
+            arrayRecomendacionesC3[7] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[7] = "- Investiga y muestrale a tu cliente, como empresas similares que usan ArchiCAD, han logrado desarrollar proyectos exitosos. \n\n"
+            arrayRecomendacionesC3[7] = "- Investiga y muestrale a tu cliente, como empresas similares que usan ArchiCAD, han logrado desarrollar proyectos exitosos. \n\n"
             updateRecomendaciones()
         }
 
         if (C3E2.isOn == true){
-            arrayRecomendaciones[8] = ""
+            arrayRecomendacionesC3[8] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[8] = "- BIMx es la herramienta visual que nos ayuda a soportar de una forma didactica todos nuestros argumentos de venta. ¡No los desperdicies! \n\n"
+            arrayRecomendacionesC3[8] = "- BIMx es la herramienta visual que nos ayuda a soportar de una forma didactica todos nuestros argumentos de venta. ¡No los desperdicies! \n\n"
             updateRecomendaciones()
         }
 
         if (C3E3.isOn == true){
-            arrayRecomendaciones[9] = ""
+            arrayRecomendacionesC3[9] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[9] = "- Dar información sobre todo nuestro entorno de productos abre las posibilidades de crecer la cuenta. \n\n"
+            arrayRecomendacionesC3[9] = "- Dar información sobre todo nuestro entorno de productos abre las posibilidades de crecer la cuenta. \n\n"
             updateRecomendaciones()
         }
 
         if (C3E4.isOn == true){
-            arrayRecomendaciones[10] = ""
+            arrayRecomendacionesC3[10] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[10] = "- Abrir ArchiCAD sin hacer una demo, significa que probablemente no estes sentado con el tomado de desiciones. \n\n"
+            arrayRecomendacionesC3[10] = "- Abrir ArchiCAD sin hacer una demo, significa que probablemente no estes sentado con el tomado de desiciones. \n\n"
             updateRecomendaciones()
         }
 
         if (C3E5.isOn == true){
-            arrayRecomendaciones[11] = ""
+            arrayRecomendacionesC3[11] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[11] = "- Mencionar nuestro servicio al cliente y servicios adicionales es uno de nuestros grandes distintivos como marca. \n\n"
+            arrayRecomendacionesC3[11] = "- Mencionar nuestro servicio al cliente y servicios adicionales es uno de nuestros grandes distintivos como marca. \n\n"
             updateRecomendaciones()
         }
 
         if (C3E6.isOn == true){
-            arrayRecomendaciones[12] = ""
+            arrayRecomendacionesC3[12] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[12] = "- Invitar al prospecto a que visite nuestras redes sociales, y que pueda ver nuestras campañas y videos, puede generar más interes. \n\n"
+            arrayRecomendacionesC3[12] = "- Invitar al prospecto a que visite nuestras redes sociales, y que pueda ver nuestras campañas y videos, puede generar más interes. \n\n"
             updateRecomendaciones()
         }
 
         if (C3E7.isOn == true){
-            arrayRecomendaciones[13] = ""
+            arrayRecomendacionesC3[13] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[13] = "- Solo si estas acompañado de alguien Técnico, es recomendable que se abra ArchiCAD y se demuestre su funcionamiento. \n\n"
+            arrayRecomendacionesC3[13] = "- Solo si estas acompañado de alguien Técnico, es recomendable que se abra ArchiCAD y se demuestre su funcionamiento. \n\n"
             updateRecomendaciones()
         }
     }
     
     func updateRecomendaciones(){
-        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8] + arrayRecomendaciones[9] + arrayRecomendaciones[10] + arrayRecomendaciones[11] + arrayRecomendaciones[12] + arrayRecomendaciones[13]
         
-        recomendaciones.text = fraseFinal
+        recomendaciones.text = arrayRecomendacionesC3[0] + arrayRecomendacionesC3[1] + arrayRecomendacionesC3[2] + arrayRecomendacionesC3[3] + arrayRecomendacionesC3[4] + arrayRecomendacionesC3[5] + arrayRecomendacionesC3[6] + arrayRecomendacionesC3[7] + arrayRecomendacionesC3[8] + arrayRecomendacionesC3[9] + arrayRecomendacionesC3[10] + arrayRecomendacionesC3[11] + arrayRecomendacionesC3[12] + arrayRecomendacionesC3[13]
     }
     
     
@@ -470,15 +469,15 @@ class TercerCuadranteViewController: UIViewController {
             updateCharts()
         }
         else{
-            valoresBarChartC3[15] = -2
+            valoresBarChartC3[15] = 0
             updateCharts()
         }
-        if(C3E4.isOn == true){
-            valoresBarChartC3[16] = -2
+        if(C3E4.isOn == true && C3E2.isOn == true){
+            valoresBarChartC3[16] = 0
             updateCharts()
         }
         else{
-            valoresBarChartC3[16] = 0
+            valoresBarChartC3[16] = -2
             updateCharts()
         }
         if(C3E5.isOn == true){
@@ -507,44 +506,52 @@ class TercerCuadranteViewController: UIViewController {
         }
         
         //Para los cuadrantes en RadarChart
-        let valorA = (((valoresBarChartC3[0] + valoresBarChartC3[1] + valoresBarChartC3[2]) * 100) / 7)
-        if(valorA > 0){
-            valoresRadarChartC3[0] = valorA
+        let valorA = (valoresBarChartC3[0] + valoresBarChartC3[1] + valoresBarChartC3[2])
+        let A = ((valorA / 7) * 100)
+        
+        if(A > 0){
+            valoresRadarChartC3[0] = A
         }else{
             valoresRadarChartC3[0] = 0
         }
         
-        let valorB = (((valoresBarChartC3[3] + valoresBarChartC3[4] + valoresBarChartC3[5] + valoresBarChartC3[6] + valoresBarChartC3[7]) * 100) / 18)
-        if(valorB > 0){
-            valoresRadarChartC3[1] = valorB
+        let valorB = (valoresBarChartC3[3] + valoresBarChartC3[4] + valoresBarChartC3[5] + valoresBarChartC3[6] + valoresBarChartC3[7])
+        let B = (((valorB + bonoC3[3] + bonoC3[4] + bonoC3[6]) / 18) * 100)
+        
+        if(B > 0){
+            valoresRadarChartC3[1] = B
         }else{
             valoresRadarChartC3[1] = 0
         }
         
-        let valorC = (((valoresBarChartC3[8]) * 100) / 5)
-        if(valorC > 0){
-            valoresRadarChartC3[2] = valorC
+        let C = (((valoresBarChartC3[8]) / 5) * 100)
+        
+        if(C > 0){
+            valoresRadarChartC3[2] = C
         }else{
             valoresRadarChartC3[2] = 0
         }
         
-        let valorD = (((valoresBarChartC3[9] + valoresBarChartC3[10] + valoresBarChartC3[11] + valoresBarChartC3[12]) * 100) / 16)
-        if(valorD > 0){
-            valoresRadarChartC3[3] = valorD
+        let valorD = (valoresBarChartC3[9] + valoresBarChartC3[10] + valoresBarChartC3[11] + valoresBarChartC3[12])
+        let D = (((valorD + bonoC3[11]) / 14) * 100)
+        
+        if(D > 0){
+            valoresRadarChartC3[3] = D
         }else{
             valoresRadarChartC3[3] = 0
         }
         
-        let valorE = (((valoresBarChartC3[13] + valoresBarChartC3[14] + valoresBarChartC3[15] + valoresBarChartC3[16] + valoresBarChartC3[17] + valoresBarChartC3[18] + valoresBarChartC3[19]) * 100) / 9)
-        if(valorE > 0){
-            valoresRadarChartC3[4] = valorE
+        let valorE = (valoresBarChartC3[13] + valoresBarChartC3[14] + valoresBarChartC3[15] + valoresBarChartC3[16] + valoresBarChartC3[17] + valoresBarChartC3[18] + valoresBarChartC3[19])
+        let E = (((valorE + bonoC3[13] + bonoC3[14] + bonoC3[16] + bonoC3[19]) / 9) * 100)
+        
+        if(E > 0){
+            valoresRadarChartC3[4] = E
         }else{
             valoresRadarChartC3[4] = 0
         }
         updateCharts()
         
-        valorGeneralC3 = Int(((valorA + valorB + valorC + valorD + valorE) / 5))
-
+        valorGeneralC3 = Int(((A + B + C + D + E) / 5))
         
     }
     
@@ -656,7 +663,7 @@ class TercerCuadranteViewController: UIViewController {
             bonoC3[6] = 0
         }
         if(C3D1.isOn == true && C3D3.isOn == true){
-            bonoC3[11] = 2
+            bonoC3[11] = 1
         }else{
             bonoC3[11] = 0
         }
@@ -669,11 +676,6 @@ class TercerCuadranteViewController: UIViewController {
             bonoC3[14] = 1
         }else{
             bonoC3[14] = 0
-        }
-        if(C3E2.isOn == true && C3E4.isOn == true){
-            bonoC3[16] = 2
-        }else{
-            bonoC3[16] = 0
         }
         if(C3E1.isOn == true && C3E2.isOn == true && C3E3.isOn == true && C3E7.isOn == true){
             bonoC3[19] = 3
@@ -714,7 +716,7 @@ class TercerCuadranteViewController: UIViewController {
         radarChart.yAxis.forceLabelsEnabled = true
         //radarChart.yAxis.labelCount = 10
         radarChart.yAxis.axisMinimum = 0.0
-        radarChart.yAxis.axisMaximum = 100.0
+        radarChart.yAxis.axisMaximum = 180.0
         radarChart.yAxis.drawLabelsEnabled = true
         
         radarChart.rotationEnabled = false
@@ -786,6 +788,8 @@ class TercerCuadranteViewController: UIViewController {
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
         barChart.xAxis.granularity = 1
         
+        //lengens en el centro
+        barChart.legend.horizontalAlignment = .center
         //quita labels de arriba
         barChart.xAxis.labelPosition = .bottom
         barChart.legend.enabled = true

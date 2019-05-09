@@ -9,11 +9,14 @@
 import UIKit
 import Charts
 
-    var valorGeneralC1: Int = 100
+    var valorGeneralC1: Int = 0
     var valoresRadarChartC1 = [0.0, 0.0, 0.0]
     var valoresBarChartC1 = [0.0, -2.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0, -5.0, 0.0]
 
     var bonoC1 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+    //recomendaciones
+    var arrayRecomendacionesC1 = ["- Es importante para obtener información valiosa del prospecto, comprender mejor sus necesidades, quien es, que es importante para el, y como ofrecerle eso que esta necesitando. \n\n", "- Es indispensable para hablar el mismo idioma en relación a las necesidades de su negocio. Conociendolo, es como aseguramos que el vea el valor de nuestro producto. \n\n", "- Nos dan información no sólo sobre los aspectos profresionales del prospecto al que nos estamos acercando, nos ayudan a saber más sobre la persona, con el fin de entablar una comunicación más empatica. \n\n", "- Nos habla de lo que al prospecto le hace negocio y como quiere llegar alla, nosotros debemos utilizar esta información con el fin de explicarle como a traves de las mejores practicas y el uso adecuado de la tecnología puede llegar a ese objetivo más rapido. \n\n", "- La implementeación de metodologías BIM debe de venir de altos mandos para que realmente se respete y exista un cambio de mentalidad interno. No podemos dejar de ver a las personas, cuando vendemos ARCHICAD / La cabeza de la orgranizaición es quien puede tomar la desicion de compra. \n\n", "- Observar que es lo que a lo largo del tiempo lo ha hecho exitoso, el tamaño del despacho al que nos acercamos, que es importante para ellos a la hora de crear nuevos proyectos. Y sobre todo, hacen sentir al prospecto comprendido, importante, y establecer un dialogo de confianza y empatía, basico para la venta de ARCHICAD. \n\n", "- Confirma los datos de contacto, es necesario saber que te estas acercando a las personas correctas. \n\n", "- Te permite un número aproximado de licencias que va a necesitar, y el tiempo de cierre de venta que puede llevar. \n\n", "- Esto te puede aportar nuevas oportunidades de venta. \n\n", "- Al realizar la llamada recuerda modular tu tono de voz, estar relajado, presentarte y mencionar el producto. \n\n", "- El primer argumento de valor para el cliente genera suficiente interes para que se cierre la cita. \n\n", "- Lo importante para vender ARCHICAD es llegar a la mesa con el cliente. \n\n", "- Es muy importante para despertar el interes, que nos ayude a llegar mejor a la cita. Envía un video con información no tecnica sobre lo que hace el programa y sus beneficios, o tambien podrías enviar la liga para que descarguen BIMx y un proyecto con el cual puedan empezar a jugar. \n\n"]
 
     //valores para validar los bonos en otros viewControllers
     var switchC1A1: Bool = true
@@ -34,10 +37,6 @@ class PrimerCuadranteViewController: UIViewController {
     //nombres para las graficas
     let nombresRadarChart = ["A", "B", "C"]
     let nombresBarChart = ["A1", "A2", "A3", "A4", "A5", "A6", "B1", "B2", "B3", "B4", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8"]
-    
-    //recomendaciones
-    var arrayRecomendaciones = ["", "", "", "", "", "", "", "", "", "", "", "", ""]
-    var fraseFinal = String()
     
     
     weak var axisFormatDelegate: IAxisValueFormatter?
@@ -64,6 +63,8 @@ class PrimerCuadranteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateRecomendaciones()
         
         setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChartC1)
         let  xAxis : XAxis = self.radarChart.xAxis
@@ -170,130 +171,129 @@ class PrimerCuadranteViewController: UIViewController {
     
     @IBAction func Recomendaciones(_ sender: UISwitch) {
         if (C1B3.isOn == true && C1A1.isOn == true){
-            arrayRecomendaciones[0] = ""
+            arrayRecomendacionesC1[0] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "- Es importante para obtener información valiosa del prospecto, comprender mejor sus necesidades, quien es, que es importante para el, y como ofrecerle eso que esta necesitando. \n\n"
+            arrayRecomendacionesC1[0] = "- Es importante para obtener información valiosa del prospecto, comprender mejor sus necesidades, quien es, que es importante para el, y como ofrecerle eso que esta necesitando. \n\n"
             updateRecomendaciones()
         }
         
         if (C1A2.isOn == true){
-            arrayRecomendaciones[1] = ""
+            arrayRecomendacionesC1[1] = ""
             updateRecomendaciones()
 
         }
         else{
-            arrayRecomendaciones[1] = "- Es indispensable para hablar el mismo idioma en relación a las necesidades de su negocio. Conociendolo, es como aseguramos que el vea el valor de nuestro producto. \n\n"
+            arrayRecomendacionesC1[1] = "- Es indispensable para hablar el mismo idioma en relación a las necesidades de su negocio. Conociendolo, es como aseguramos que el vea el valor de nuestro producto. \n\n"
             updateRecomendaciones()
         }
 
         if (C1A3.isOn == true){
-            arrayRecomendaciones[2] = ""
+            arrayRecomendacionesC1[2] = ""
             updateRecomendaciones()
 
         }
         else{
-            arrayRecomendaciones[2] = "- Nos dan información no sólo sobre los aspectos profresionales del prospecto al que nos estamos acercando, nos ayudan a saber más sobre la persona, con el fin de entablar una comunicación más empatica. \n\n"
+            arrayRecomendacionesC1[2] = "- Nos dan información no sólo sobre los aspectos profresionales del prospecto al que nos estamos acercando, nos ayudan a saber más sobre la persona, con el fin de entablar una comunicación más empatica. \n\n"
             updateRecomendaciones()
         }
 
         if (C1A4.isOn == true){
-            arrayRecomendaciones[3] = ""
+            arrayRecomendacionesC1[3] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[3] = "- Nos habla de lo que al prospecto le hace negocio y como quiere llegar alla, nosotros debemos utilizar esta información con el fin de explicarle como a traves de las mejores practicas y el uso adecuado de la tecnología puede llegar a ese objetivo más rapido. \n\n"
+            arrayRecomendacionesC1[3] = "- Nos habla de lo que al prospecto le hace negocio y como quiere llegar alla, nosotros debemos utilizar esta información con el fin de explicarle como a traves de las mejores practicas y el uso adecuado de la tecnología puede llegar a ese objetivo más rapido. \n\n"
             updateRecomendaciones()
         }
 
         if (C1A5.isOn == true){
-            arrayRecomendaciones[4] = ""
+            arrayRecomendacionesC1[4] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[4] = "- La implementeación de metodologías BIM debe de venir de altos mandos para que realmente se respete y exista un cambio de mentalidad interno. No podemos dejar de ver a las personas, cuando vendemos ARCHICAD / La cabeza de la orgranizaición es quien puede tomar la desicion de compra. \n\n"
+            arrayRecomendacionesC1[4] = "- La implementeación de metodologías BIM debe de venir de altos mandos para que realmente se respete y exista un cambio de mentalidad interno. No podemos dejar de ver a las personas, cuando vendemos ARCHICAD / La cabeza de la orgranizaición es quien puede tomar la desicion de compra. \n\n"
             updateRecomendaciones()
         }
 
         if (C1A6.isOn == true){
-            arrayRecomendaciones[5] = ""
+            arrayRecomendacionesC1[5] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[5] = "- Observar que es lo que a lo largo del tiempo lo ha hecho exitoso, el tamaño del despacho al que nos acercamos, que es importante para ellos a la hora de crear nuevos proyectos. Y sobre todo, hacen sentir al prospecto comprendido, importante, y establecer un dialogo de confianza y empatía, basico para la venta de ARCHICAD. \n\n"
+            arrayRecomendacionesC1[5] = "- Observar que es lo que a lo largo del tiempo lo ha hecho exitoso, el tamaño del despacho al que nos acercamos, que es importante para ellos a la hora de crear nuevos proyectos. Y sobre todo, hacen sentir al prospecto comprendido, importante, y establecer un dialogo de confianza y empatía, basico para la venta de ARCHICAD. \n\n"
             updateRecomendaciones()
         }
 
         if (C1B1.isOn == true){
-            arrayRecomendaciones[6] = ""
+            arrayRecomendacionesC1[6] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[6] = "- Confirma los datos de contacto, es necesario saber que te estas acercando a las personas correctas. \n\n"
+            arrayRecomendacionesC1[6] = "- Confirma los datos de contacto, es necesario saber que te estas acercando a las personas correctas. \n\n"
             updateRecomendaciones()
         }
 
         if (C1B2.isOn == true){
-            arrayRecomendaciones[7] = ""
+            arrayRecomendacionesC1[7] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[7] = "- Te permite un número aproximado de licencias que va a necesitar, y el tiempo de cierre de venta que puede llevar. \n\n"
+            arrayRecomendacionesC1[7] = "- Te permite un número aproximado de licencias que va a necesitar, y el tiempo de cierre de venta que puede llevar. \n\n"
             updateRecomendaciones()
         }
 
         if (C1B4.isOn == true){
-            arrayRecomendaciones[8] = ""
+            arrayRecomendacionesC1[8] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[8] = "- Esto te puede aportar nuevas oportunidades de venta. \n\n"
+            arrayRecomendacionesC1[8] = "- Esto te puede aportar nuevas oportunidades de venta. \n\n"
             updateRecomendaciones()
         }
 
         if (C1C1.isOn == true){
-            arrayRecomendaciones[9] = ""
+            arrayRecomendacionesC1[9] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[9] = "- Al realizar la llamada recuerda modular tu tono de voz, estar relajado, presentarte y mencionar el producto. \n\n"
+            arrayRecomendacionesC1[9] = "- Al realizar la llamada recuerda modular tu tono de voz, estar relajado, presentarte y mencionar el producto. \n\n"
             updateRecomendaciones()
         }
 
         if (C1C3.isOn == true){
-            arrayRecomendaciones[10] = ""
+            arrayRecomendacionesC1[10] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[10] = "- El primer argumento de valor para el cliente genera suficiente interes para que se cierre la cita. \n\n"
+            arrayRecomendacionesC1[10] = "- El primer argumento de valor para el cliente genera suficiente interes para que se cierre la cita. \n\n"
             updateRecomendaciones()
         }
 
         if (C1C7.isOn == true){
-            arrayRecomendaciones[11] = ""
+            arrayRecomendacionesC1[11] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[11] = "- Lo importante para vender ARCHICAD es llegar a la mesa con el cliente. \n\n"
+            arrayRecomendacionesC1[11] = "- Lo importante para vender ARCHICAD es llegar a la mesa con el cliente. \n\n"
             updateRecomendaciones()
         }
 
         if (C1C8.isOn == true){
-            arrayRecomendaciones[12] = ""
+            arrayRecomendacionesC1[12] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[12] = "- Es muy importante para despertar el interes, que nos ayude a llegar mejor a la cita. Envía un video con información no tecnica sobre lo que hace el programa y sus beneficios, o tambien podrías enviar la liga para que descarguen BIMx y un proyecto con el cual puedan empezar a jugar. \n\n"
+            arrayRecomendacionesC1[12] = "- Es muy importante para despertar el interes, que nos ayude a llegar mejor a la cita. Envía un video con información no tecnica sobre lo que hace el programa y sus beneficios, o tambien podrías enviar la liga para que descarguen BIMx y un proyecto con el cual puedan empezar a jugar. \n\n"
             updateRecomendaciones()
         }
     }
     
     func updateRecomendaciones(){
-        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8] + arrayRecomendaciones[9] + arrayRecomendaciones[10] + arrayRecomendaciones[11] + arrayRecomendaciones[12]
         
-        recomendaciones.text = fraseFinal
-    }
+        recomendaciones.text = arrayRecomendacionesC1[0] + arrayRecomendacionesC1[1] + arrayRecomendacionesC1[2] + arrayRecomendacionesC1[3] + arrayRecomendacionesC1[4] + arrayRecomendacionesC1[5] + arrayRecomendacionesC1[6] + arrayRecomendacionesC1[7] + arrayRecomendacionesC1[8] + arrayRecomendacionesC1[9] + arrayRecomendacionesC1[10] + arrayRecomendacionesC1[11] + arrayRecomendacionesC1[12]
+            }
     
     //FUNCIONES PARA EL CALCULO
     @IBAction func updateValor(_ sender: UISwitch){
@@ -457,29 +457,35 @@ class PrimerCuadranteViewController: UIViewController {
         }
         
         //Para los cuadrantes en RadarChart
-        let valorA = (((valoresBarChartC1[0] + valoresBarChartC1[1] + valoresBarChartC1[2] + valoresBarChartC1[3] + valoresBarChartC1[4] + valoresBarChartC1[5]) * 100) / 17)
-        if(valorA > 0){
-            valoresRadarChartC1[0] = valorA
+        let valorA = (valoresBarChartC1[0] + valoresBarChartC1[1] + valoresBarChartC1[2] + valoresBarChartC1[3] + valoresBarChartC1[4] + valoresBarChartC1[5])
+        let A = (((valorA + bonoC1[5]) / 17) * 100)
+        
+        if(A > 0){
+            valoresRadarChartC1[0] = A
         }else{
             valoresRadarChartC1[0] = 0
         }
         
-        let valorB = (((valoresBarChartC1[6] + valoresBarChartC1[7] + valoresBarChartC1[8] + valoresBarChartC1[9]) * 100) / 5)
-        if(valorB > 0){
-            valoresRadarChartC1[1] = valorB
+        let valorB = (valoresBarChartC1[6] + valoresBarChartC1[7] + valoresBarChartC1[8] + valoresBarChartC1[9])
+        let B = ((valorB / 5) * 100)
+        
+        if(B > 0){
+            valoresRadarChartC1[1] = B
         }else{
             valoresRadarChartC1[1] = 0
         }
         
-        let valorC = (((valoresBarChartC1[10] + valoresBarChartC1[11] + valoresBarChartC1[12] + valoresBarChartC1[13] + valoresBarChartC1[14] + valoresBarChartC1[15] + valoresBarChartC1[16] + valoresBarChartC1[17]) * 100) / 30)
-        if(valorC > 0){
-            valoresRadarChartC1[2] = valorC
+        let valorC = (valoresBarChartC1[10] + valoresBarChartC1[11] + valoresBarChartC1[12] + valoresBarChartC1[13] + valoresBarChartC1[14] + valoresBarChartC1[15] + valoresBarChartC1[16] + valoresBarChartC1[17])
+        let C = (((valorC + bonoC1[16]) / 30) * 100)
+        
+        if(C > 0){
+            valoresRadarChartC1[2] = C
         }else{
             valoresRadarChartC1[2] = 0
         }
         updateCharts()
         
-        valorGeneralC1 = Int(((valorA + valorB + valorC) / 3))
+        valorGeneralC1 = Int(((A + B + C) / 3))
     }
     
     func updateCharts(){
@@ -532,7 +538,7 @@ class PrimerCuadranteViewController: UIViewController {
         radarChart.yAxis.forceLabelsEnabled = true
         //radarChart.yAxis.labelCount = 10
         radarChart.yAxis.axisMinimum = 0.0
-        radarChart.yAxis.axisMaximum = 100.0
+        radarChart.yAxis.axisMaximum = 110.0
         radarChart.yAxis.drawLabelsEnabled = true
         
         radarChart.rotationEnabled = false

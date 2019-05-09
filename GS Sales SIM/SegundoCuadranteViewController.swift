@@ -9,11 +9,14 @@
 import UIKit
 import Charts
 
-var valorGeneralC2: Int = 100
+var valorGeneralC2: Int = 0
 var valoresRadarChartC2 = [0.0, 0.0, 0.0]
 var valoresBarChartC2 = [0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -3.0, 0.0]
 
 var bonoC2 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+//recomendaciones
+var arrayRecomendacionesC2 = ["- Como nos vemos predispone a nuestro prospecto a sentir afinidad por nosotros y lo que tenemos que decir. Recuerda ir vestido de acuerdo al contexto. \n\n", "- Para asegurar una presentación efectiva, recuerda asegurarte de cuanto tiempo para presentar, y que no por una confusión de tiempo, pierdas la oportunidad de hacer una entrevista de impacto. \n\n", "- No dejes que un descuido te arruine una oportunidad de venta. Recuerda llevar todo lo que necesites, desde un Ipad, los adaptadores que puedas necesitar, llevar tu material de trabajo cargado etc. \n\n", "- ¿Pudiste constatar que lo que investigaste es congruente con lo que viste cuando entraste al despacho? Recuerda que todo prospecto requiere tiempo, y ese tiempo depende tambien de la inversión, aunque no hay cliente pequeño. \n\n", "- Descubre la modalidad en la que puedo hacerlo mi cliente (Renta de 12 o Full). \n\n", "- No tener una buena tecnica rompe hielo, puede costarte la calidad de la presentación. Recuerda siempre decir algo agradable sobre el contexto en el que te encuentras. \n\n", "- Presta atención al ambiente y entorno de la empresa y usalo para resaltar los aspectos positivos que identifiques. \n\n", "- Identifica algo positivo a mencionar sobre el cliente y usalo para establecer un vinculo con el cliente. \n\n", "- Para vender, siempre es mas importante escuchar. \n\n"]
 
 //valores para validar los bonos en otros viewControllers
 var switchC2A4: Bool = true
@@ -24,12 +27,6 @@ class SegundoCuadranteViewController: UIViewController {
     @IBOutlet weak var radarChart: RadarChartView!
     @IBOutlet weak var barChart: BarChartView!
     @IBOutlet weak var recomendaciones: UITextView!
-    
-    //recomendaciones
-    var arrayRecomendaciones = ["", "", "", "", "", "", "", "", ""]
-    
-    var fraseFinal = String()
-
     
     //nombres para las graficas
     let nombresRadarChart = ["A", "B", "C"]
@@ -53,6 +50,8 @@ class SegundoCuadranteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateRecomendaciones()
         
         setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChartC2)
         let  xAxis : XAxis = self.radarChart.xAxis
@@ -127,109 +126,84 @@ class SegundoCuadranteViewController: UIViewController {
     }
     
     
-    @IBAction func estadoUno(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[0] = ""
+    @IBAction func Recomendaciones(_ sender: UISwitch) {
+        if (C2A1.isOn == true){
+            arrayRecomendacionesC2[0] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[0] = "- Como nos vemos predispone a nuestro prospecto a sentir afinidad por nosotros y lo que tenemos que decir. Recuerda ir vestido de acuerdo al contexto. \n\n"
+            arrayRecomendacionesC2[0] = "- Como nos vemos predispone a nuestro prospecto a sentir afinidad por nosotros y lo que tenemos que decir. Recuerda ir vestido de acuerdo al contexto. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoDos(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[1] = ""
+        if (C2A2.isOn == true){
+            arrayRecomendacionesC2[1] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[1] = "- Para asegurar una presentación efectiva, recuerda asegurarte de cuanto tiempo para presentar, y que no por una confusión de tiempo, pierdas la oportunidad de hacer una entrevista de impacto. \n\n"
+            arrayRecomendacionesC2[1] = "- Para asegurar una presentación efectiva, recuerda asegurarte de cuanto tiempo para presentar, y que no por una confusión de tiempo, pierdas la oportunidad de hacer una entrevista de impacto. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoTres(_ sender: UISwitch) {
         if (C2A3.isOn == true && C2B2.isOn == true){
-            arrayRecomendaciones[2] = ""
+            arrayRecomendacionesC2[2] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[2] = "- No dejes que un descuido te arruine una oportunidad de venta. Recuerda llevar todo lo que necesites, desde un Ipad, los adaptadores que puedas necesitar, llevar tu material de trabajo cargado etc. \n\n"
+            arrayRecomendacionesC2[2] = "- No dejes que un descuido te arruine una oportunidad de venta. Recuerda llevar todo lo que necesites, desde un Ipad, los adaptadores que puedas necesitar, llevar tu material de trabajo cargado etc. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoCuatro(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[3] = ""
+        if (C2A4.isOn == true){
+            arrayRecomendacionesC2[3] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[3] = "- ¿Pudiste constatar que lo que investigaste es congruente con lo que viste cuando entraste al despacho? Recuerda que todo prospecto requiere tiempo, y ese tiempo depende tambien de la inversión, aunque no hay cliente pequeño. \n\n"
+            arrayRecomendacionesC2[3] = "- ¿Pudiste constatar que lo que investigaste es congruente con lo que viste cuando entraste al despacho? Recuerda que todo prospecto requiere tiempo, y ese tiempo depende tambien de la inversión, aunque no hay cliente pequeño. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoCinco(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[4] = ""
+        if (C2A5.isOn == true){
+            arrayRecomendacionesC2[4] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[4] = "- Descubre la modalidad en la que puedo hacerlo mi cliente (Renta de 12 o Full). \n\n"
+            arrayRecomendacionesC2[4] = "- Descubre la modalidad en la que puedo hacerlo mi cliente (Renta de 12 o Full). \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoSeis(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[5] = ""
+        if (C2B1.isOn == true){
+            arrayRecomendacionesC2[5] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[5] = "- No tener una buena tecnica rompe hielo, puede costarte la calidad de la presentación. Recuerda siempre decir algo agradable sobre el contexto en el que te encuentras. \n\n"
+            arrayRecomendacionesC2[5] = "- No tener una buena tecnica rompe hielo, puede costarte la calidad de la presentación. Recuerda siempre decir algo agradable sobre el contexto en el que te encuentras. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoSiete(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[6] = ""
+        if (C2B3.isOn == true){
+            arrayRecomendacionesC2[6] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[6] = "- Presta atención al ambiente y entorno de la empresa y usalo para resaltar los aspectos positivos que identifiques. \n\n"
+            arrayRecomendacionesC2[6] = "- Presta atención al ambiente y entorno de la empresa y usalo para resaltar los aspectos positivos que identifiques. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoOcho(_ sender: UISwitch) {
         if (C2B4.isOn == true && C2C3.isOn == true){
-            arrayRecomendaciones[7] = ""
+            arrayRecomendacionesC2[7] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[7] = "- Identifica algo positivo a mencionar sobre el cliente y usalo para establecer un vinculo con el cliente. \n\n"
+            arrayRecomendacionesC2[7] = "- Identifica algo positivo a mencionar sobre el cliente y usalo para establecer un vinculo con el cliente. \n\n"
             updateRecomendaciones()
         }
-    }
-    
-    @IBAction func estadoNueve(_ sender: UISwitch) {
-        if (sender.isOn == true){
-            arrayRecomendaciones[8] = ""
+        if (C2C2.isOn == true){
+            arrayRecomendacionesC2[8] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendaciones[8] = "- Para vender, siempre es mas importante escuchar. \n\n"
+            arrayRecomendacionesC2[8] = "- Para vender, siempre es mas importante escuchar. \n\n"
             updateRecomendaciones()
         }
     }
     
     func updateRecomendaciones(){
-        fraseFinal = arrayRecomendaciones[0] + arrayRecomendaciones[1] + arrayRecomendaciones[2] + arrayRecomendaciones[3] + arrayRecomendaciones[4] + arrayRecomendaciones[5] + arrayRecomendaciones[6] + arrayRecomendaciones[7] + arrayRecomendaciones[8]
         
-        recomendaciones.text = fraseFinal
+        recomendaciones.text = arrayRecomendacionesC2[0] + arrayRecomendacionesC2[1] + arrayRecomendacionesC2[2] + arrayRecomendacionesC2[3] + arrayRecomendacionesC2[4] + arrayRecomendacionesC2[5] + arrayRecomendacionesC2[6] + arrayRecomendacionesC2[7] + arrayRecomendacionesC2[8]
     }
     
     
@@ -335,29 +309,35 @@ class SegundoCuadranteViewController: UIViewController {
         }
         
         //Para los cuadrantes en RadarChart
-        let valorA = (((valoresBarChartC2[0] + valoresBarChartC2[1] + valoresBarChartC2[2] + valoresBarChartC2[3] + valoresBarChartC2[4]) * 100) / 12)
-        if(valorA > 0){
-            valoresRadarChartC2[0] = valorA
+        let valorA = (valoresBarChartC2[0] + valoresBarChartC2[1] + valoresBarChartC2[2] + valoresBarChartC2[3] + valoresBarChartC2[4])
+        let A = (((valorA + bonoC2[3]) / 12) * 100)
+        
+        if(A > 0){
+            valoresRadarChartC2[0] = A
         }else{
             valoresRadarChartC2[0] = 0
         }
         
-        let valorB = (((valoresBarChartC2[5] + valoresBarChartC2[6] + valoresBarChartC2[7] + valoresBarChartC2[8]) * 100) / 9)
-        if(valorB > 0){
-            valoresRadarChartC2[1] = valorB
+        let valorB = (valoresBarChartC2[5] + valoresBarChartC2[6] + valoresBarChartC2[7] + valoresBarChartC2[8])
+        let B = (((valorB + bonoC2[5]) / 9) * 100)
+        
+        if(B > 0){
+            valoresRadarChartC2[1] = B
         }else{
             valoresRadarChartC2[1] = 0
         }
         
-        let valorC = (((valoresBarChartC2[9] + valoresBarChartC2[10] + valoresBarChartC2[11]) * 100) / 8)
-        if(valorC > 0){
-            valoresRadarChartC2[2] = valorC
+        let valorC = (valoresBarChartC2[9] + valoresBarChartC2[10] + valoresBarChartC2[11])
+        let C = (((valorC + bonoC2[11]) / 8) * 100)
+        
+        if(C > 0){
+            valoresRadarChartC2[2] = C
         }else{
             valoresRadarChartC2[2] = 0
         }
         updateCharts()
         
-        valorGeneralC2 = Int(((valorA + valorB + valorC) / 3))
+        valorGeneralC2 = Int(((A + B + C) / 3))
         
     }
     
@@ -417,7 +397,7 @@ class SegundoCuadranteViewController: UIViewController {
         radarChart.yAxis.forceLabelsEnabled = true
         //radarChart.yAxis.labelCount = 10
         radarChart.yAxis.axisMinimum = 0.0
-        radarChart.yAxis.axisMaximum = 100.0
+        radarChart.yAxis.axisMaximum = 130.0
         radarChart.yAxis.drawLabelsEnabled = true
         
         radarChart.rotationEnabled = false
@@ -489,6 +469,8 @@ class SegundoCuadranteViewController: UIViewController {
         barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values:dataPoints)
         barChart.xAxis.granularity = 1
         
+        //lengens en el centro
+        barChart.legend.horizontalAlignment = .center
         //quita labels de arriba
         barChart.xAxis.labelPosition = .bottom
         barChart.legend.enabled = true
