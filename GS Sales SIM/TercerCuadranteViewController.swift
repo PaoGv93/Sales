@@ -9,6 +9,10 @@
 import UIKit
 import Charts
 
+var imagenRadarChartC3: UIImage!
+var imagenBarChartC3: UIImage!
+
+
 var valorGeneralC3: Int = 0
 var valoresRadarChartC3 = [0.0, 0.0, 0.0, 0.0, 0.0]
 var valoresBarChartC3 = [0.0, -1.0, 0.0, -5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0]
@@ -184,6 +188,25 @@ class TercerCuadranteViewController: UIViewController {
         UserDefaults.standard.set(sender.isOn, forKey: "StateC3E7")
     }
     
+    @IBAction func siguiente(_ sender: Any) {
+        
+        imagenBarChartC3 = barChart.asImage()
+        imagenRadarChartC3 = radarChart.asImage()
+        
+        if(C3C1Opt1.isSelected == false && C3C1Opt2.isSelected == false && C3C1Opt3.isSelected == false && C3C1Opt4.isSelected == false && C3D4Opt1.isSelected == false && C3D4Opt2.isSelected == false && C3D4Opt3.isSelected == false && C3D4Opt4.isSelected == false){
+            
+            let alert = UIAlertController(title: "Error", message: "Necesitas completar las preguntas", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+            
+            self.present(alert, animated: true)
+        }
+        else{
+            performSegue(withIdentifier: "cuartoCuadrante", sender: self)
+        }
+    }
+    
+    
     @IBAction func Recomendaciones(_ sender: Any) {
         if (C3A1.isOn == true){
             arrayRecomendacionesC3[0] = ""
@@ -319,192 +342,128 @@ class TercerCuadranteViewController: UIViewController {
     
     
     //FUNCIONES PARA EL CALCULO
-    @IBAction func updateValor(_ sender: AnyObject){
+    @IBAction func updateValor(_ sender: UISwitch){
         if(C3A1.isOn == true){
             valoresBarChartC3[0] = 2
-            updateCharts()
         }
         else{
             valoresBarChartC3[0] = 0
-            updateCharts()
         }
         if(C3A2.isOn == true){
             valoresBarChartC3[1] = 3
             switchC3A2 = true
-            updateCharts()
         }
         else{
             valoresBarChartC3[1] = -1
             switchC3A2 = false
-            updateCharts()
         }
         if(C3A3.isOn == true){
             valoresBarChartC3[2] = 2
-            updateCharts()
         }
         else{
             valoresBarChartC3[2] = 0
-            updateCharts()
         }
         if(C3B1.isOn == true){
             valoresBarChartC3[3] = 10
-            updateCharts()
         }
         else{
             valoresBarChartC3[3] = -5
-            updateCharts()
         }
         if(C3B2.isOn == true){
             valoresBarChartC3[4] = 1
-            updateCharts()
         }
         else{
             valoresBarChartC3[4] = 0
-            updateCharts()
         }
         if(C3B3.isOn == true){
             valoresBarChartC3[5] = 4
             switchC3B3 = true
-            updateCharts()
         }
         else{
             valoresBarChartC3[5] = 0
             switchC3B3 = false
-            updateCharts()
         }
         if(C3B4.isOn == true){
             valoresBarChartC3[6] = 2
-            updateCharts()
         }
         else{
             valoresBarChartC3[6] = 0
-            updateCharts()
         }
         if(C3B5.isOn == true){
             valoresBarChartC3[7] = 1
             switchC3B5 = true
-            updateCharts()
         }
         else{
             valoresBarChartC3[7] = 0
             switchC3B5 = false
-            updateCharts()
-        }
-        if(C3C1Opt1.isSelected == true){
-            valoresBarChartC3[8] = -2
-            updateCharts()
-        }
-        if(C3C1Opt2.isSelected == true){
-            valoresBarChartC3[8] = 2
-            updateCharts()
-        }
-        if(C3C1Opt3.isSelected == true){
-            valoresBarChartC3[8] = 3
-            updateCharts()
-        }
-        if(C3C1Opt4.isSelected == true){
-            valoresBarChartC3[8] = 5
-            updateCharts()
         }
         if(C3D1.isOn == true){
             valoresBarChartC3[9] = 1
-            updateCharts()
         }
         else{
             valoresBarChartC3[9] = 0
-            updateCharts()
         }
         if(C3D2.isOn == true){
             valoresBarChartC3[10] = 5
-            updateCharts()
         }
         else{
             valoresBarChartC3[10] = -2
-            updateCharts()
         }
         if(C3D3.isOn == true){
             valoresBarChartC3[11] = 3
-            updateCharts()
         }
         else{
             valoresBarChartC3[11] = 0
-            updateCharts()
-        }
-        if(C3D4Opt1.isSelected == true){
-            valoresBarChartC3[12] = 1
-            updateCharts()
-        }
-        if(C3D4Opt2.isSelected == true){
-            valoresBarChartC3[12] = 2
-            updateCharts()
-        }
-        if(C3D4Opt3.isSelected == true){
-            valoresBarChartC3[12] = 4
-            updateCharts()
-        }
-        if(C3D4Opt4.isSelected == true){
-            valoresBarChartC3[12] = 5
-            updateCharts()
         }
         if(C3E1.isOn == true){
             valoresBarChartC3[13] = 2
             switchC3E1 = true
-            updateCharts()
         }
         else{
             valoresBarChartC3[13] = 0
             switchC3E1 = false
-            updateCharts()
         }
         if(C3E2.isOn == true){
             valoresBarChartC3[14] = 3
-            updateCharts()
         }
         else{
             valoresBarChartC3[14] = 0
-            updateCharts()
         }
         if(C3E3.isOn == true){
             valoresBarChartC3[15] = 1
-            updateCharts()
         }
         else{
             valoresBarChartC3[15] = 0
-            updateCharts()
         }
         if(C3E4.isOn == true && C3E2.isOn == true){
             valoresBarChartC3[16] = 0
-            updateCharts()
         }
         else{
             valoresBarChartC3[16] = -2
-            updateCharts()
         }
         if(C3E5.isOn == true){
             valoresBarChartC3[17] = 2
-            updateCharts()
         }
         else{
             valoresBarChartC3[17] = 0
-            updateCharts()
         }
         if(C3E6.isOn == true){
             valoresBarChartC3[18] = 1
-            updateCharts()
         }
         else{
             valoresBarChartC3[18] = 0
-            updateCharts()
         }
         if(C3E7.isOn == true){
             valoresBarChartC3[19] = 2
-            updateCharts()
         }
         else{
             valoresBarChartC3[19] = 0
-            updateCharts()
         }
-        
+        calculosTotales()
+    }
+    
+    
+    func calculosTotales(){
         //Para los cuadrantes en RadarChart
         let valorA = (valoresBarChartC3[0] + valoresBarChartC3[1] + valoresBarChartC3[2])
         let A = ((valorA / 7) * 100)
@@ -555,20 +514,63 @@ class TercerCuadranteViewController: UIViewController {
         
     }
     
+    @IBAction func updateValorButton1(_ sender: Any){
+        switch (sender as! UIButton).tag {
+        case 1:
+            valoresBarChartC3[8] = -2
+            break;
+        case 2:
+            valoresBarChartC3[8] = 2
+            break;
+        case 3:
+            valoresBarChartC3[8] = 3
+            break;
+        case 4:
+            valoresBarChartC3[8] = 5
+            break;
+        default:
+            valoresBarChartC3[8] = 0
+            break;
+        }
+        
+        calculosTotales()
+    }
+    
+    @IBAction func updateValorButton2(_ sender: Any){
+        switch (sender as! UIButton).tag {
+        case 1:
+            valoresBarChartC3[12] = 1
+            break;
+        case 2:
+            valoresBarChartC3[12] = 2
+            break;
+        case 3:
+            valoresBarChartC3[12] = 4
+            break;
+        case 4:
+            valoresBarChartC3[12] = 5
+            break;
+        default:
+            valoresBarChartC3[12] = 0
+            break;
+        }
+        
+        calculosTotales()
+    }
+    
     func updateCharts(){
         setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChartC3)
         setBarChart(dataPoints: nombresBarChart, values: valoresBarChartC3, values2: bonoC3, sortIndex: 0)
     }
     
     
-    
     @IBAction func clickedC1(_ sender: Any) {
-        switch (sender as AnyObject).tag {
-        case 1:            C3C1Opt1.setImage(UIImage(named:"checkmark"), for: .normal)
-        C3C1Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        C3C1Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        C3C1Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-
+        switch (sender as! UIButton).tag {
+        case 1:
+            C3C1Opt1.setImage(UIImage(named:"checkmark"), for: .normal)
+            C3C1Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
         break;
         case 2:
             C3C1Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
@@ -589,21 +591,21 @@ class TercerCuadranteViewController: UIViewController {
             C3C1Opt4.setImage(UIImage(named:"checkmark"), for: .normal)
             break;
         default:
-        C3C1Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        C3C1Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        C3C1Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        C3C1Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3C1Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
         break;
         }
     }
     
     @IBAction func clickedD4(_ sender: Any) {
         switch (sender as AnyObject).tag {
-        case 1:            C3D4Opt1.setImage(UIImage(named:"checkmark"), for: .normal)
-        C3D4Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        C3D4Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        C3D4Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
-        
+        case 1:
+            C3D4Opt1.setImage(UIImage(named:"checkmark"), for: .normal)
+            C3D4Opt2.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt3.setImage(UIImage(named:"checkmarkempty"), for: .normal)
+            C3D4Opt4.setImage(UIImage(named:"checkmarkempty"), for: .normal)
         break;
         case 2:
             C3D4Opt1.setImage(UIImage(named:"checkmarkempty"), for: .normal)
@@ -696,7 +698,7 @@ class TercerCuadranteViewController: UIViewController {
             let dataEntryA = ChartDataEntry(x: Double(i), y: numAprobatorio[i])
             dataEntriesA.append(dataEntryA)
         }
-        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "Número Aprobatorio")
+        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "Número Aprobatorio         ")
         chartDataSetA.setColor(.blue)
         
         //set de los numeros que saca el usuario
@@ -773,7 +775,7 @@ class TercerCuadranteViewController: UIViewController {
         
         let chartDataSet = BarChartDataSet(values: dataEntries, label: " ")
         chartDataSet.colors = [UIColor.blue, UIColor.orange]
-        chartDataSet.stackLabels = ["Puntos", "Bono"]
+        chartDataSet.stackLabels = ["Puntos   ", "Bono"]
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
         chartDataSet.drawValuesEnabled = false
@@ -800,5 +802,6 @@ class TercerCuadranteViewController: UIViewController {
         
         barChart.legend.font = UIFont(name: "Arial", size: 14.0)!
     }
+
     
 }

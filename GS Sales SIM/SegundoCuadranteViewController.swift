@@ -9,6 +9,9 @@
 import UIKit
 import Charts
 
+var imagenRadarChartC2: UIImage!
+var imagenBarChartC2: UIImage!
+
 var valorGeneralC2: Int = 0
 var valoresRadarChartC2 = [0.0, 0.0, 0.0]
 var valoresBarChartC2 = [0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -3.0, 0.0]
@@ -377,7 +380,7 @@ class SegundoCuadranteViewController: UIViewController {
             let dataEntryA = ChartDataEntry(x: Double(i), y: numAprobatorio[i])
             dataEntriesA.append(dataEntryA)
         }
-        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "Número aprobatorio")
+        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "Número aprobatorio         ")
         chartDataSetA.setColor(.blue)
         
         //set de los numeros que saca el usuario
@@ -454,7 +457,7 @@ class SegundoCuadranteViewController: UIViewController {
         
         let chartDataSet = BarChartDataSet(values: dataEntries, label: " ")
         chartDataSet.colors = [UIColor.blue, UIColor.orange]
-        chartDataSet.stackLabels = ["Puntos", "Bono"]
+        chartDataSet.stackLabels = ["Puntos   ", "Bono"]
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
         chartDataSet.drawValuesEnabled = false
@@ -482,5 +485,9 @@ class SegundoCuadranteViewController: UIViewController {
         barChart.legend.font = UIFont(name: "Arial", size: 14.0)!
     }
     
-
+    @IBAction func saveChartImage(sender: AnyObject) {
+        
+        imagenBarChartC2 = barChart.asImage()
+        imagenRadarChartC2 = radarChart.asImage()
+    }
 }

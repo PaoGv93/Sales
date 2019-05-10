@@ -11,6 +11,7 @@ import AVKit
 
 //Valor afuera de la clase para poder acceder a el valor en otro controller cuando cambio
 var botonElegido: Int = 0
+var textoRFC: String = ""
 
 class ViewController: UIViewController {
     
@@ -105,6 +106,7 @@ class ViewController: UIViewController {
 
         //valor para saber si selecciono una empresa o en caso contrario manda alerta
         if let text = rfc.text, !text.isEmpty {
+            textoRFC = text
             performSegue(withIdentifier: "primerCuadrante", sender: self)
         }
         else{

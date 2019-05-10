@@ -9,6 +9,10 @@
 import UIKit
 import Charts
 
+var imagenRadarChartC1: UIImage!
+var imagenBarChartC1: UIImage!
+
+
     var valorGeneralC1: Int = 0
     var valoresRadarChartC1 = [0.0, 0.0, 0.0]
     var valoresBarChartC1 = [0.0, -2.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, -2.0, 0.0, 0.0, 0.0, 0.0, 0.0, -5.0, 0.0]
@@ -518,7 +522,7 @@ class PrimerCuadranteViewController: UIViewController {
             let dataEntryA = ChartDataEntry(x: Double(i), y: numAprobatorio[i])
             dataEntriesA.append(dataEntryA)
         }
-        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "Número aprobatorio")
+        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "Número aprobatorio         ")
         chartDataSetA.setColor(.blue)
 
         //set de los numeros que saca el usuario
@@ -596,7 +600,7 @@ class PrimerCuadranteViewController: UIViewController {
             
             let chartDataSet = BarChartDataSet(values: dataEntries, label: " ")
             chartDataSet.colors = [UIColor.blue, UIColor.orange]
-            chartDataSet.stackLabels = ["Puntos", "Bono"]
+            chartDataSet.stackLabels = ["Puntos   ", "Bono"]
             let chartData = BarChartData(dataSet: chartDataSet)
             barChart.data = chartData
             chartDataSet.drawValuesEnabled = false
@@ -622,4 +626,33 @@ class PrimerCuadranteViewController: UIViewController {
             barChart.legend.font = UIFont(name: "Arial", size: 14.0)!
         }
     
+    
+    
+    @IBAction func saveChartImage(sender: AnyObject) {
+
+        imagenBarChartC1 = barChart.asImage()
+        imagenRadarChartC1 = radarChart.asImage()
+    }
+}
+
+extension UIView {
+    
+    // Using a function since `var image` might conflict with an existing variable
+    // (like on `UIImageView`)
+    func asImage() -> UIImage {
+        let size = CGSize(width: 640, height: 640)
+
+        if #available(iOS 10.0, *) {
+            let renderer = UIGraphicsImageRenderer(size: size)
+            return renderer.image { rendererContext in
+                layer.render(in: rendererContext.cgContext)
+            }
+        } else {
+            UIGraphicsBeginImageContext(size)
+            self.layer.render(in:UIGraphicsGetCurrentContext()!)
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return UIImage(cgImage: image!.cgImage!)
+        }
+    }
 }

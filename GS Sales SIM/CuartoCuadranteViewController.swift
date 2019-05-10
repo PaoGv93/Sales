@@ -9,6 +9,8 @@
 import UIKit
 import Charts
 
+var imagenBarChartC4: UIImage!
+
 var valorGeneralC4: Int = 0
 var valoresBarChartC4 = [-2.0, 0.0, 0.0, -4.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
@@ -100,6 +102,7 @@ class CuartoCuadranteViewController: UIViewController {
     @IBAction func siguiente(_ sender: Any) {
         
         let valor = botonElegido
+        imagenBarChartC4 = barChart.asImage()
 
         if(valor == 1){
             performSegue(withIdentifier: "finalPractica", sender: self)
@@ -254,7 +257,7 @@ class CuartoCuadranteViewController: UIViewController {
         
         let chartDataSet = BarChartDataSet(values: dataEntries, label: " ")
         chartDataSet.colors = [UIColor.blue, UIColor.orange]
-        chartDataSet.stackLabels = ["Puntos", "Bono"]
+        chartDataSet.stackLabels = ["Puntos   ", "Bono"]
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
         chartDataSet.drawValuesEnabled = false
@@ -280,5 +283,6 @@ class CuartoCuadranteViewController: UIViewController {
         
         barChart.legend.font = UIFont(name: "Arial", size: 14.0)!
     }
+    
     
 }

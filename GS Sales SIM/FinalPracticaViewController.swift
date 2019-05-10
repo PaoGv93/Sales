@@ -8,12 +8,14 @@
 
 import UIKit
 import Charts
-import MessageUI
+
 
 class FinalPracticaViewController: UIViewController {
 
     @IBOutlet weak var radarChart: RadarChartView!
     @IBOutlet weak var barChart: BarChartView!
+    @IBOutlet weak var calificacionUsuario: UILabel!
+    var valorCalUsuario: Int = 0
     
     var GeneralC1 = 0.0
     var GeneralC2 = 0.0
@@ -50,6 +52,10 @@ class FinalPracticaViewController: UIViewController {
         
         let valoresRadarChart = [GeneralC1, GeneralC2, GeneralC3, GeneralC4]
         
+        valorCalUsuario = Int(((GeneralC1 + GeneralC2 + GeneralC3 + GeneralC4) / 4))
+        
+        calificacionUsuario.text = ("Cal. Usuario: " + String(valorCalUsuario) + "%")
+        
         setRadarChart(dataPoints: nombresRadarChart, values: valoresRadarChart)
         let  xAxis : XAxis = self.radarChart.xAxis
         xAxis.labelFont = UIFont(name: "Arial-BoldMT", size: 16.0)!
@@ -59,28 +65,7 @@ class FinalPracticaViewController: UIViewController {
         axisFormatDelegate = self as? IAxisValueFormatter
         setBarChart(dataPoints: nombresBarChart, values: valoresBarChart, values2: valoresBonos, sortIndex: 0)
     }
-    
-    
-    @IBAction func enviarCorreo(_ sender: Any) {
-        sendEmail()
-    }
-    
-    func sendEmail() {
-        if MFMailComposeViewController.canSendMail() {
-            let mail = MFMailComposeViewController()
-            mail.mailComposeDelegate = self as? MFMailComposeViewControllerDelegate
-            mail.setToRecipients(["Pao_Gv93@hotmail"])
-            mail.setMessageBody("<p>You're so awesome!</p>", isHTML: true)
-            
-            present(mail, animated: true)
-        } else {
-            // show failure alert
-        }
-    }
-    
-    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
-        controller.dismiss(animated: true)
-    }
+
     
     //Funcion de la radarChart
     func setRadarChart(dataPoints: [String], values: [Double]) {
@@ -93,7 +78,7 @@ class FinalPracticaViewController: UIViewController {
             let dataEntryA = ChartDataEntry(x: Double(i), y: numAprobatorio[i])
             dataEntriesA.append(dataEntryA)
         }
-        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "Número aprobatorio")
+        let chartDataSetA = RadarChartDataSet(values: dataEntriesA, label: "Número aprobatorio         ")
         chartDataSetA.setColor(.blue)
         
         //set de los numeros que saca el usuario
@@ -106,6 +91,7 @@ class FinalPracticaViewController: UIViewController {
         
         //Options of radarChart
         radarChart.sizeToFit()
+        radarChart.setExtraOffsets(left: 0, top: 10, right: 0, bottom: 0)
         radarChart.chartDescription?.text = nil
         radarChart.legend.horizontalAlignment = .center
         
@@ -168,7 +154,7 @@ class FinalPracticaViewController: UIViewController {
         
         let chartDataSet = BarChartDataSet(values: dataEntries, label: " ")
         chartDataSet.colors = [UIColor.blue, UIColor.orange]
-        chartDataSet.stackLabels = ["Puntos", "Bono"]
+        chartDataSet.stackLabels = ["Puntos   ", "Bono"]
         let chartData = BarChartData(dataSet: chartDataSet)
         barChart.data = chartData
         chartDataSet.drawValuesEnabled = false
