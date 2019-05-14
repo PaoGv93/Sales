@@ -20,7 +20,7 @@ var valoresBarChartC3 = [0.0, -1.0, 0.0, -5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -2.
 var bonoC3 = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
 //Recomendaciones
-var arrayRecomendacionesC3 = ["- Recuerda que no es lo mismo hablar con la persona que tiene los conocimientos tecnicos que con la persona que tiene como prioridad las finanzas del despacho o empresa. \n\n", "- La identificación de las necesidades correctas del prospecto es indispensables para tener el correcto angulo de venta. ¿Hiciste suficientes preguntas correctas? \n\n", "- No se trata de sólo ir identificando las necesidades tecnicas, ve estructurando un plan de las herramientas que podrías mostrarle que resuelvan su necesidad a traves de un BIMx. \n\n", "- Lo más importante para crear una relación de confianza y credibilidad, es que sepas con quien estas hablando y lo que para el es importante en su negocio. \n\n", "- Si identifico la cantidad de personas, se determina el mejor uso de ArchiCAD y beneficios. (Corroborar complejidad colaborativa, niveles de aprobación) \n\n", "- Recuerda que toda implementación BIM exitosa viene desde \"arriba\". \n\n", "- Entre mas preguntas hagas, mas información tendras para formular los argumentos correctos. \n\n", "- Investiga y muestrale a tu cliente, como empresas similares que usan ArchiCAD, han logrado desarrollar proyectos exitosos. \n\n", "- BIMx es la herramienta visual que nos ayuda a soportar de una forma didactica todos nuestros argumentos de venta. ¡No los desperdicies! \n\n", "- Dar información sobre todo nuestro entorno de productos abre las posibilidades de crecer la cuenta. \n\n", "- Abrir ArchiCAD sin hacer una demo, significa que probablemente no estes sentado con el tomado de desiciones. \n\n", "- Mencionar nuestro servicio al cliente y servicios adicionales es uno de nuestros grandes distintivos como marca. \n\n", "- Invitar al prospecto a que visite nuestras redes sociales, y que pueda ver nuestras campañas y videos, puede generar más interes. \n\n", "- Solo si estas acompañado de alguien Técnico, es recomendable que se abra ArchiCAD y se demuestre su funcionamiento. \n\n"]
+var arrayRecomendacionesC3 = ["- Recuerda que no es lo mismo hablar con la persona que tiene los conocimientos tecnicos que con la persona que tiene como prioridad las finanzas del despacho o empresa. \n\n", "- La identificación de las necesidades correctas del prospecto es indispensables para tener el correcto angulo de venta. ¿Hiciste suficientes preguntas correctas? \n\n", "- No se trata de sólo ir identificando las necesidades tecnicas, ve estructurando un plan de las herramientas que podrías mostrarle que resuelvan su necesidad a traves de un BIMx. \n\n", "- Lo más importante para crear una relación de confianza y credibilidad, es que sepas con quien estas hablando y lo que para el es importante en su negocio. \n\n", "- Si identifico la cantidad de personas, se determina el mejor uso de ArchiCAD y beneficios. (Corroborar complejidad colaborativa, niveles de aprobación) \n\n", "- Recuerda que toda implementación BIM exitosa viene desde \"arriba\". \n\n", "- Entre mas preguntas hagas, mas información tendras para formular los argumentos correctos. \n\n", "Dejar claras nuestras fortalezas frente a la competencia, nos deja en una posición de poder, sin siquiera tener que mencionar el nombre de otra marca.", "Tenemos estos dos planes de licenciamiento para brindar flexibilidad al negocio de nuestros clientes.", "El conocimiento de nuestras soluciones y la correcta exposición de ellas es básico para que quede claro como resolveremos el problema técnico o de negocio de nuestros clientes! Conoce tu producto.", "- Investiga y muestrale a tu cliente, como empresas similares que usan ArchiCAD, han logrado desarrollar proyectos exitosos. \n\n", "- BIMx es la herramienta visual que nos ayuda a soportar de una forma didactica todos nuestros argumentos de venta. ¡No los desperdicies! \n\n", "- Dar información sobre todo nuestro entorno de productos abre las posibilidades de crecer la cuenta. \n\n", "- Abrir ArchiCAD sin hacer una demo, significa que probablemente no estes sentado con el tomado de desiciones. \n\n", "- Mencionar nuestro servicio al cliente y servicios adicionales es uno de nuestros grandes distintivos como marca. \n\n", "- Invitar al prospecto a que visite nuestras redes sociales, y que pueda ver nuestras campañas y videos, puede generar más interes. \n\n", "- Solo si estas acompañado de alguien Técnico, es recomendable que se abra ArchiCAD y se demuestre su funcionamiento. \n\n"]
 
 //valores para validar los bonos en otros viewControllers
 var switchC3A2: Bool = true
@@ -262,7 +262,7 @@ class TercerCuadranteViewController: UIViewController {
             updateRecomendaciones()
         }
  
-        if (C3C1Opt1.isSelected == false && C3C1Opt2.isSelected == false && C3C1Opt3.isSelected == false && C3C1Opt4.isSelected == false && C3D1.isOn == true && C3D2.isOn == true && C3D3.isOn == true && C3D4Opt1.isSelected == false && C3D4Opt2.isSelected == false && C3D4Opt3.isSelected == false && C3D4Opt4.isSelected == false){
+        if (C3C1Opt1.isSelected == false && C3C1Opt2.isSelected == false && C3C1Opt3.isSelected == false && C3C1Opt4.isSelected == false){
             arrayRecomendacionesC3[6] = ""
             updateRecomendaciones()
         }
@@ -270,74 +270,97 @@ class TercerCuadranteViewController: UIViewController {
             arrayRecomendacionesC3[6] = "- Entre mas preguntas hagas, mas información tendras para formular los argumentos correctos. \n\n"
             updateRecomendaciones()
         }
-
-        if (C3E1.isOn == true){
+        if (C3D1.isOn == true && C3D2.isOn == true){
             arrayRecomendacionesC3[7] = ""
             updateRecomendaciones()
-        }
-        else{
-            arrayRecomendacionesC3[7] = "- Investiga y muestrale a tu cliente, como empresas similares que usan ArchiCAD, han logrado desarrollar proyectos exitosos. \n\n"
+        }else{
+            arrayRecomendacionesC3[7] = "- Dejar claras nuestras fortalezas frente a la competencia, nos deja en una posición de poder, sin siquiera tener que mencionar el nombre de otra marca. \n\n"
             updateRecomendaciones()
         }
 
-        if (C3E2.isOn == true){
+        if (C3D3.isOn == true){
             arrayRecomendacionesC3[8] = ""
             updateRecomendaciones()
-        }
-        else{
-            arrayRecomendacionesC3[8] = "- BIMx es la herramienta visual que nos ayuda a soportar de una forma didactica todos nuestros argumentos de venta. ¡No los desperdicies! \n\n"
+        }else{
+            arrayRecomendacionesC3[8] = "- Tenemos estos dos planes de licenciamiento para brindar flexibilidad al negocio de nuestros clientes. \n\n"
             updateRecomendaciones()
         }
 
-        if (C3E3.isOn == true){
+        if (C3D4Opt1.isSelected == false && C3D4Opt2.isSelected == false && C3D4Opt3.isSelected == false && C3D4Opt4.isSelected == false){
             arrayRecomendacionesC3[9] = ""
             updateRecomendaciones()
-        }
-        else{
-            arrayRecomendacionesC3[9] = "- Dar información sobre todo nuestro entorno de productos abre las posibilidades de crecer la cuenta. \n\n"
+        }else{
+            arrayRecomendacionesC3[9] = "- El conocimiento de nuestras soluciones y la correcta exposición de ellas es básico para que quede claro como resolveremos el problema técnico o de negocio de nuestros clientes! Conoce tu producto. \n\n"
             updateRecomendaciones()
         }
 
-        if (C3E4.isOn == true){
+        if (C3E1.isOn == true){
             arrayRecomendacionesC3[10] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendacionesC3[10] = "- Abrir ArchiCAD sin hacer una demo, significa que probablemente no estes sentado con el tomado de desiciones. \n\n"
+            arrayRecomendacionesC3[10] = "- Investiga y muestrale a tu cliente, como empresas similares que usan ArchiCAD, han logrado desarrollar proyectos exitosos. \n\n"
             updateRecomendaciones()
         }
 
-        if (C3E5.isOn == true){
+        if (C3E2.isOn == true){
             arrayRecomendacionesC3[11] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendacionesC3[11] = "- Mencionar nuestro servicio al cliente y servicios adicionales es uno de nuestros grandes distintivos como marca. \n\n"
+            arrayRecomendacionesC3[11] = "- BIMx es la herramienta visual que nos ayuda a soportar de una forma didactica todos nuestros argumentos de venta. ¡No los desperdicies! \n\n"
             updateRecomendaciones()
         }
 
-        if (C3E6.isOn == true){
+        if (C3E3.isOn == true){
             arrayRecomendacionesC3[12] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendacionesC3[12] = "- Invitar al prospecto a que visite nuestras redes sociales, y que pueda ver nuestras campañas y videos, puede generar más interes. \n\n"
+            arrayRecomendacionesC3[12] = "- Dar información sobre todo nuestro entorno de productos abre las posibilidades de crecer la cuenta. \n\n"
             updateRecomendaciones()
         }
 
-        if (C3E7.isOn == true){
+        if (C3E4.isOn == true){
             arrayRecomendacionesC3[13] = ""
             updateRecomendaciones()
         }
         else{
-            arrayRecomendacionesC3[13] = "- Solo si estas acompañado de alguien Técnico, es recomendable que se abra ArchiCAD y se demuestre su funcionamiento. \n\n"
+            arrayRecomendacionesC3[13] = "- Abrir ArchiCAD sin hacer una demo, significa que probablemente no estes sentado con el tomado de desiciones. \n\n"
+            updateRecomendaciones()
+        }
+
+        if (C3E5.isOn == true){
+            arrayRecomendacionesC3[14] = ""
+            updateRecomendaciones()
+        }
+        else{
+            arrayRecomendacionesC3[14] = "- Mencionar nuestro servicio al cliente y servicios adicionales es uno de nuestros grandes distintivos como marca. \n\n"
+            updateRecomendaciones()
+        }
+
+        if (C3E6.isOn == true){
+            arrayRecomendacionesC3[15] = ""
+            updateRecomendaciones()
+        }
+        else{
+            arrayRecomendacionesC3[15] = "- Invitar al prospecto a que visite nuestras redes sociales, y que pueda ver nuestras campañas y videos, puede generar más interes. \n\n"
+            updateRecomendaciones()
+        }
+
+        if (C3E7.isOn == true){
+            arrayRecomendacionesC3[16] = ""
+            updateRecomendaciones()
+        }
+        else{
+            arrayRecomendacionesC3[16] = "- Solo si estas acompañado de alguien Técnico, es recomendable que se abra ArchiCAD y se demuestre su funcionamiento. \n\n"
             updateRecomendaciones()
         }
     }
     
     func updateRecomendaciones(){
         
-        recomendaciones.text = arrayRecomendacionesC3[0] + arrayRecomendacionesC3[1] + arrayRecomendacionesC3[2] + arrayRecomendacionesC3[3] + arrayRecomendacionesC3[4] + arrayRecomendacionesC3[5] + arrayRecomendacionesC3[6] + arrayRecomendacionesC3[7] + arrayRecomendacionesC3[8] + arrayRecomendacionesC3[9] + arrayRecomendacionesC3[10] + arrayRecomendacionesC3[11] + arrayRecomendacionesC3[12] + arrayRecomendacionesC3[13]
+        recomendaciones.text = arrayRecomendacionesC3[0] + arrayRecomendacionesC3[1] + arrayRecomendacionesC3[2] + arrayRecomendacionesC3[3] + arrayRecomendacionesC3[4] + arrayRecomendacionesC3[5] + arrayRecomendacionesC3[6] + arrayRecomendacionesC3[7] + arrayRecomendacionesC3[8] + arrayRecomendacionesC3[9] + arrayRecomendacionesC3[10] + arrayRecomendacionesC3[11] + arrayRecomendacionesC3[12] + arrayRecomendacionesC3[13] + arrayRecomendacionesC3[14] + arrayRecomendacionesC3[15] + arrayRecomendacionesC3[16]
     }
     
     
