@@ -94,7 +94,7 @@ class FinalRegistroViewController: UIViewController, MFMailComposeViewController
             let mailComposer = MFMailComposeViewController()
             mailComposer.mailComposeDelegate = self
             
-            mailComposer.setToRecipients(["Pao_Gv93@hotmail.com"])
+            mailComposer.setToRecipients(["mcolinaarroyo@graphisoft.com"])
             mailComposer.setSubject("PDF")
             mailComposer.setMessageBody("", isHTML: true)
             

@@ -3781,7 +3781,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXq-Ln-WZB">
-                                                <rect key="frame" x="313" y="82" width="209" height="28"/>
+                                                <rect key="frame" x="312.5" y="82" width="209" height="28"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="28" id="1AI-jF-c3e"/>
                                                 </constraints>
@@ -4599,9 +4599,9 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="s7G-Nq-AGz"/>
-        <segue reference="IsQ-Wj-mwA"/>
+        <segue reference="cON-CF-0Kp"/>
         <segue reference="2hO-Pz-fGE"/>
         <segue reference="lud-zc-aiC"/>
-        <segue reference="d6T-V0-3XI"/>
+        <segue reference="VNr-yP-Jak"/>
     </inferredMetricsTieBreakers>
 </document>
