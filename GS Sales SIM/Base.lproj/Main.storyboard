@@ -40,7 +40,7 @@
                                     <constraint firstAttribute="height" constant="400" id="MjY-1A-2jj"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RFC" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Wc-be-wEs">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CLAVE DE DISTRIBUIDOR" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Wc-be-wEs">
                                 <rect key="frame" x="207" y="724" width="420" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="KY6-ks-baQ"/>
@@ -4601,7 +4601,7 @@
         <segue reference="s7G-Nq-AGz"/>
         <segue reference="cON-CF-0Kp"/>
         <segue reference="2hO-Pz-fGE"/>
-        <segue reference="lud-zc-aiC"/>
+        <segue reference="zcY-Lh-r56"/>
         <segue reference="VNr-yP-Jak"/>
     </inferredMetricsTieBreakers>
 </document>

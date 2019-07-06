@@ -98,16 +98,18 @@ class FinalRegistroViewController: UIViewController, MFMailComposeViewController
             mailComposer.setSubject("PDF")
             mailComposer.setMessageBody("", isHTML: true)
             
+            let DateTime = Date(timeIntervalSinceReferenceDate: -123456789.0) // Feb 2, 1997, 10:26 AM
+            
+            
             if let fileData = data {
-                mailComposer.addAttachmentData(fileData, mimeType: "application/pdf", fileName: "PDF.pdf")
+                mailComposer.addAttachmentData(fileData, mimeType: "application/pdf", fileName: "\(textoRFC)_\(DateTime).pdf")
             }
             
             
             self.present(mailComposer, animated: true, completion: nil)
             return
         }
-        print("Email is not configured")
-        
+        //print("Email is not configured")
     }
     
     
