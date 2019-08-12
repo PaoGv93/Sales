@@ -94,11 +94,11 @@ class FinalRegistroViewController: UIViewController, MFMailComposeViewController
             let mailComposer = MFMailComposeViewController()
             mailComposer.mailComposeDelegate = self
             
-            mailComposer.setToRecipients(["mcolinaarroyo@graphisoft.com"])
-            mailComposer.setSubject("PDF")
-            mailComposer.setMessageBody("", isHTML: true)
+            let DateTime = Date()
             
-            let DateTime = Date(timeIntervalSinceReferenceDate: -123456789.0) // Feb 2, 1997, 10:26 AM
+            mailComposer.setToRecipients(["mcolinaarroyo@graphisoft.com"])
+            mailComposer.setSubject("Simulador | Reg. de Venta: \(textoRFC)_\(DateTime).pdf")
+            mailComposer.setMessageBody("", isHTML: true)
             
             
             if let fileData = data {
@@ -109,7 +109,6 @@ class FinalRegistroViewController: UIViewController, MFMailComposeViewController
             self.present(mailComposer, animated: true, completion: nil)
             return
         }
-        //print("Email is not configured")
     }
     
     
@@ -121,7 +120,9 @@ class FinalRegistroViewController: UIViewController, MFMailComposeViewController
     //CREACION DEL PDF
     func pdf(image: [UIImage]){
         
-        let html = "<br><br><b>&nbsp;&nbsp;RFC: </b>\(textoRFC)<br><hr><br>&nbsp;&nbsp;&nbsp;&nbsp; 1er Cuadrante<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp; 2do Cuadrante"
+        let DateTime = Date()
+        
+        let html = "<br><br><b>&nbsp;&nbsp;RFC: </b>\("\(textoRFC)_\(DateTime)")<br><hr><br>&nbsp;&nbsp;&nbsp;&nbsp; 1er Cuadrante<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp; 2do Cuadrante"
         let fmt = UIMarkupTextPrintFormatter(markupText: html)
         
         // 2. Assign print formatter to UIPrintPageRenderer

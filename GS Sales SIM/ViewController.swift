@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let timestamp = DateFormatter.localizedString(from: NSDate() as Date, dateStyle: .medium, timeStyle: .short)
+        print(timestamp)
+
             resetDefaults()
             resetValores()
     }
@@ -110,7 +114,7 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "primerCuadrante", sender: self)
         }
         else{
-            let alert = UIAlertController(title: "Error", message: "Necesitas escribir tu RFC para avanzar", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Error", message: "Necesitas escribir tu CLAVE DE DISTRIBUIDOR para avanzar", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
             
